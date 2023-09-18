@@ -1,7 +1,8 @@
 import Image from "next/image";
 import { Inter } from "next/font/google";
 import Layout from "@/layouts/Layout";
-import {BsFillPlayFill } from 'react-icons/bs'
+import { BsFillPlayFill } from "react-icons/bs";
+import Service from "@/components/Service";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -13,9 +14,9 @@ const inter = Inter({ subsets: ["latin"] });
 export default function Home() {
 	return (
 		<Layout>
-			<section className="custom-bg w-full flex justify-center items-center ">
+			<section className="custom-bg w-full flex justify-center  ">
 				<div className="bg-image"></div>
-				<div className="flex items-center justify-between gap-10 max-w-[1040px] mx-auto z-50 relative">
+				<div className="flex items-center justify-between gap-10 max-w-[1040px] mx-auto z-50 relative max-h-[600px]">
 					<div className=" flex flex-col items-start gap-6 w-full">
 						<h1 className="hidden">Иноовации в каждом пикселе</h1>
 						<Image
@@ -44,6 +45,11 @@ export default function Home() {
 						<BsFillPlayFill color="white" size="50" />
 					</div>
 				</div>
+			</section>
+			<section className="grid grid-cols-3 gap-3 w-full max-w-[1400px] mx-auto p-5 bg-[rgba(255,255,255,0.5)] backdrop-blur-md -translate-y-[350px] rounded-[40px]">
+				<Service />
+				<Service />
+				<Service />
 			</section>
 		</Layout>
 	);

@@ -9,6 +9,7 @@
     max-height: 1020px;
     position: relative;
 }
+
 .bg-image {
     background-image: url("/images/utp.png");
     background-size: contain;
@@ -20,15 +21,21 @@
     position: absolute;
     z-index: 1;
 }
+
 .bg-image::after {
     content: "";
     display: block;
     position: absolute;
-    top: 0px ;
+    top: 0px;
     width: 100%;
     background: linear-gradient(to bottom, #FFC00090, transparent);
     height: 500px;
 }
+
 .custom-shadow {
     box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.15);
+}
+
+.custom-gradient {
+    background: linear-gradient(119deg, #068FFF 4.83%, #2E51ED 80.15%);
 }

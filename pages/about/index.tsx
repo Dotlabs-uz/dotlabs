@@ -21,10 +21,46 @@ export default function AboutUs() {
             DOT LABS - Ваш надежный партнер в веб-разработке
           </p>
         </div>
-        <section className="flex justify-center items-center gap-6  w-full max-w-[1500px] mx-auto" >
-          <OurGoal/>
-          <OurGoal/>
-          <OurGoal/>
+        <section className="w-full px-8 grid md:grid-cols-2 md:px-8 lg:px-8  lg:grid-cols-3  xl:grid-cols-3 xl:px-0 gap-5 max-w-[1500px] mx-auto mb-14 ">
+          <OurGoal />
+          <OurGoal />
+          <OurGoal />
+        </section>
+
+        <section className="w-full  h-full aboutBg  py-16 ">
+          <h1 className="text-white mx-8 text-2xl lg:mx-16 xl:mx-16 lg:text-4xl uppercase font-semibold mb-10">
+            наши принципы
+          </h1>
+          <div className="w-full px-8 lg:px-16 xl:px-16 grid lg:grid-cols-2 xl:grid-cols-2 ">
+            <div className="w-full mb-6 lg:pr-16 lg:mb-14">
+              <h1 className="text-[#A3A7AC] text-2xl md:text-3xl lg:text-3xl font-normal mb-4 ">1.</h1>
+              <p className="text-white text-lg md:text-2xl lg:text-2xl">
+                Всегда искренны с клиентами. Слышим, предлагаем и стараемся быть
+                гибкими, не боимся говорить «нет».
+              </p>
+            </div>
+            <div className="w-full mb-6 lg:pr-16 lg:mb-14">
+              <h1 className="text-[#A3A7AC] text-2xl md:text-3xl lg:text-3xl font-normal mb-4 ">2.</h1>
+              <p className="text-white text-lg md:text-2xl lg:text-2xl">
+                Нацелены не только на качественный результат, но и на комфортный
+                и понятный процесс решения клиентских задач.
+              </p>
+            </div>
+            <div className="w-full mb-6 lg:pr-16 lg:mb-14">
+              <h1 className="text-[#A3A7AC] text-2xl md:text-3xl lg:text-3xl font-normal mb-4 ">3.</h1>
+              <p className="text-white text-lg md:text-2xl lg:text-2xl">
+                Не берем проекты с политическим подтекстом. Имеем свой взгляд и
+                допускаем наличие других точек зрения.
+              </p>
+            </div>
+            <div className="w-full mb-6 lg:pr-16 lg:mb-14">
+              <h1 className="text-[#A3A7AC] text-2xl md:text-3xl lg:text-3xl font-normal mb-4 ">4.</h1>
+              <p className="text-white text-lg md:text-2xl lg:text-2xl">
+                Не участвуем в фиктивных тендерах, различных закупках, бартерных
+                проектах и прочих непрозрачных схемах.
+              </p>
+            </div>
+          </div>
         </section>
       </section>
     </Layout>

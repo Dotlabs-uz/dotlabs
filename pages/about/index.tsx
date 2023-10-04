@@ -11,7 +11,7 @@ export default function AboutUs() {
   return (
     <Layout>
       <section className=" pt-5 max-w-[1650px] mx-auto mb-32  ">
-        <div className="w-full px-9 sm:px-9 xl:ml-10 xl:w-3/4 f-full  ">
+        <div className="w-full px-9 sm:px-9 xl:ml-10 xl:w-3/4 f-full mb-12  ">
           <p className="text-xl font-medium sm:text-4xl  sm:leading-snug mb-3  xl:text-5xl xl:font-semibold text-black xl:leading-tight xl:mb-10 ">
             <span className="text-[#068FFF] font-extrabold ">Наша цель</span> -
             помочь вам достичь онлайн-успеха, предоставляя инновационные решения
@@ -21,7 +21,7 @@ export default function AboutUs() {
             DOT LABS - Ваш надежный партнер в веб-разработке
           </p>
         </div>
-        <section className="grid grid-cols-3 gap-3 w-full max-w-[1650px] mx-auto border " >
+        <section className="flex justify-center items-center gap-6  w-full max-w-[1500px] mx-auto" >
           <OurGoal/>
           <OurGoal/>
           <OurGoal/>

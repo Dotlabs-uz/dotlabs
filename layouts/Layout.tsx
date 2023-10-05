@@ -18,11 +18,11 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
 							height="80"
 						/>
 						<nav className="hidden md:flex items-center gap-6">
-							<Link href="#" className="font-semibold">
+							<Link href="/" className="font-semibold">
 								Home
 							</Link>
-							<Link href="#" className="font-semibold">
-								Home
+							<Link href="/about" className="font-semibold">
+								About
 							</Link>
 							<Link href="#" className="font-semibold">
 								Home

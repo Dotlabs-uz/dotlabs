@@ -1,6 +1,7 @@
 import React from "react";
 import Layout from "@/layouts/Layout";
 import OurGoal from "@/components/OurGoal";
+import Team from "@/components/Team";
 
 // md:700
 // sm: 600
@@ -8,6 +9,49 @@ import OurGoal from "@/components/OurGoal";
 // xl: 1280
 
 export default function AboutUs() {
+  const team = [
+    {
+      name: "Алексей Задорожный",
+      position: "Дизайн-директор, основатель",
+      img: "/images/aboutTeamImg.png",
+    },
+    {
+      name: "Алексей Задорожный",
+      position: "Дизайн-директор, основатель",
+      img: "/images/aboutTeamImg.png",
+    },
+    {
+      name: "Алексей Задорожный",
+      position: "Дизайн-директор, основатель",
+      img: "/images/aboutTeamImg.png",
+    },
+    {
+      name: "Алексей Задорожный",
+      position: "Дизайн-директор, основатель",
+      img: "/images/aboutTeamImg.png",
+    },
+    {
+      name: "Алексей Задорожный",
+      position: "Дизайн-директор, основатель",
+      img: "/images/aboutTeamImg.png",
+    },
+    {
+      name: "Алексей Задорожный",
+      position: "Дизайн-директор, основатель",
+      img: "/images/aboutTeamImg.png",
+    },
+    {
+      name: "Алексей Задорожный",
+      position: "Дизайн-директор, основатель",
+      img: "/images/aboutTeamImg.png",
+    },
+    {
+      name: "Алексей Задорожный",
+      position: "Дизайн-директор, основатель",
+      img: "/images/aboutTeamImg.png",
+    },
+  ];
+
   return (
     <Layout>
       <section className=" pt-5 max-w-[1650px] mx-auto mb-32  ">
@@ -21,6 +65,7 @@ export default function AboutUs() {
             DOT LABS - Ваш надежный партнер в веб-разработке
           </p>
         </div>
+
         <section className="w-full px-8 grid md:grid-cols-2 md:px-8 lg:px-8  lg:grid-cols-3  xl:grid-cols-3 xl:px-0 gap-5 max-w-[1500px] mx-auto mb-14 ">
           <OurGoal />
           <OurGoal />
@@ -33,33 +78,50 @@ export default function AboutUs() {
           </h1>
           <div className="w-full px-8 lg:px-16 xl:px-16 grid lg:grid-cols-2 xl:grid-cols-2 ">
             <div className="w-full mb-6 lg:pr-16 lg:mb-14">
-              <h1 className="text-[#A3A7AC] text-2xl md:text-3xl lg:text-3xl font-normal mb-4 ">1.</h1>
+              <h1 className="text-[#A3A7AC] text-2xl md:text-3xl lg:text-3xl font-normal mb-4 ">
+                1.
+              </h1>
               <p className="text-white text-lg md:text-2xl lg:text-2xl">
                 Всегда искренны с клиентами. Слышим, предлагаем и стараемся быть
                 гибкими, не боимся говорить «нет».
               </p>
             </div>
             <div className="w-full mb-6 lg:pr-16 lg:mb-14">
-              <h1 className="text-[#A3A7AC] text-2xl md:text-3xl lg:text-3xl font-normal mb-4 ">2.</h1>
+              <h1 className="text-[#A3A7AC] text-2xl md:text-3xl lg:text-3xl font-normal mb-4 ">
+                2.
+              </h1>
               <p className="text-white text-lg md:text-2xl lg:text-2xl">
                 Нацелены не только на качественный результат, но и на комфортный
                 и понятный процесс решения клиентских задач.
               </p>
             </div>
             <div className="w-full mb-6 lg:pr-16 lg:mb-14">
-              <h1 className="text-[#A3A7AC] text-2xl md:text-3xl lg:text-3xl font-normal mb-4 ">3.</h1>
+              <h1 className="text-[#A3A7AC] text-2xl md:text-3xl lg:text-3xl font-normal mb-4 ">
+                3.
+              </h1>
               <p className="text-white text-lg md:text-2xl lg:text-2xl">
                 Не берем проекты с политическим подтекстом. Имеем свой взгляд и
                 допускаем наличие других точек зрения.
               </p>
             </div>
             <div className="w-full mb-6 lg:pr-16 lg:mb-14">
-              <h1 className="text-[#A3A7AC] text-2xl md:text-3xl lg:text-3xl font-normal mb-4 ">4.</h1>
+              <h1 className="text-[#A3A7AC] text-2xl md:text-3xl lg:text-3xl font-normal mb-4 ">
+                4.
+              </h1>
               <p className="text-white text-lg md:text-2xl lg:text-2xl">
                 Не участвуем в фиктивных тендерах, различных закупках, бартерных
                 проектах и прочих непрозрачных схемах.
               </p>
             </div>
+          </div>
+        </section>
+
+        <section className="w-full h-full max-w-[1650px] px-16 py-16  ">
+          <h1 className="text-4xl font-semibold mb-10 uppercase " >команда</h1>
+          <div className="w-full h-full grid grid-cols-4 gap-5 ">
+            {team.map((item) => (
+              <Team name={item.name} position={item.position} img={item.img} />
+            ))}
           </div>
         </section>
       </section>

@@ -3,6 +3,14 @@ import Layout from "@/layouts/Layout";
 import OurGoal from "@/components/OurGoal";
 import Team from "@/components/Team";
 
+import { Swiper, SwiperSlide } from "swiper/react";
+
+import "swiper/css";
+import "swiper/css/pagination";
+
+// import "./styles.css";
+import { Pagination } from "swiper/modules";
+
 // md:700
 // sm: 600
 // lg: 1024
@@ -116,14 +124,56 @@ export default function AboutUs() {
           </div>
         </section>
 
-        <section className="w-full h-full max-w-[1650px] px-16 py-16  ">
-          <h1 className="text-4xl font-semibold mb-10 uppercase " >команда</h1>
-          <div className="w-full h-full grid grid-cols-4 gap-5 ">
+        <section className="w-full h-full max-w-[1650px] pt-10 pl-7  md:px-16 md:py-16  ">
+          <h1 className="text-4xl font-semibold mb-10 uppercase ">команда</h1>
+          <div className="w-full h-full hidden  sm:hidden md:grid md:grid-cols-2  lg:grid-cols-3 xl:grid-cols-4 gap-5 ">
             {team.map((item) => (
               <Team name={item.name} position={item.position} img={item.img} />
             ))}
           </div>
         </section>
+        <div className="block w-full px-0 mb-10  md:hidden ">
+          <Swiper
+            slidesPerView={1.8}
+            //  spaceBetween={30}
+            pagination={{
+              clickable: true,
+            }}
+            modules={[Pagination]}
+            className="mySwiper"
+          >
+            {team.map((item) => (
+              <SwiperSlide className="mr-4 ">
+                <Team
+                  name={item.name}
+                  position={item.position}
+                  img={item.img}
+                />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
+        <div className="block w-full px-0  md:hidden ">
+          <Swiper
+            slidesPerView={1.8}
+            //  spaceBetween={30}
+            pagination={{
+              clickable: true,
+            }}
+            modules={[Pagination]}
+            className="mySwiper"
+          >
+            {team.map((item) => (
+              <SwiperSlide className="mr-4 ">
+                <Team
+                  name={item.name}
+                  position={item.position}
+                  img={item.img}
+                />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
       </section>
     </Layout>
   );

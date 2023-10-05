@@ -9,7 +9,7 @@ interface Props {
 
 export default function Team({ name, position, img }: Props) {
   return (
-    <div className="mb-6" >
+    <div className="mb-6">
       <div>
         <Image
           src={String(img)}
@@ -18,8 +18,10 @@ export default function Team({ name, position, img }: Props) {
           height="100"
           className="w-full  object-contain xl:mb-4 "
         />
-        <h1 className="text-2xl font-semibold mb-1 " >{name}</h1>
-        <p className="text-lg font-normal " >{position}</p>
+        <h1 className="text-start text-base font-medium  md:text-2xl md:font-semibold mb-1 ">
+          {name}
+        </h1>
+        <p className="text-start text-sm md:text-lg font-normal ">{position}</p>
       </div>
     </div>
   );

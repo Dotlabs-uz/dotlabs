@@ -16,12 +16,12 @@ export default function Team({ name, position, img }: Props) {
           alt=""
           width="450"
           height="100"
-          className="w-full  object-contain xl:mb-4 "
+          className="w-full  object-contain xl:mb-4 rounded-xl "
         />
         <h1 className="text-start text-base font-medium  md:text-2xl md:font-semibold mb-1 ">
           {name}
         </h1>
-        <p className="text-start text-sm md:text-lg font-normal ">{position}</p>
+        <p className="text-start text-xs md:text-lg font-normal ">{position}</p>
       </div>
     </div>
   );

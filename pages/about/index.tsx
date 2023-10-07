@@ -6,10 +6,9 @@ import Team from "@/components/Team";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/css";
-import "swiper/css/pagination";
+import "swiper/css/grid";
 
-// import "./styles.css";
-import { Pagination } from "swiper/modules";
+import { Grid } from "swiper/modules";
 
 // md:700
 // sm: 600
@@ -62,8 +61,8 @@ export default function AboutUs() {
 
   return (
     <Layout>
-      <section className=" pt-5 max-w-[1650px] mx-auto mb-32  ">
-        <div className="w-full px-9 sm:px-9 xl:ml-10 xl:w-3/4 f-full mb-12  ">
+      <section className=" pt-5  mx-auto mb-32  ">
+        <div className="w-full max-w-[1650px] px-9 sm:px-9 xl:ml-10 xl:w-3/4 f-full mb-12  ">
           <p className="text-xl font-medium sm:text-4xl  sm:leading-snug mb-3  xl:text-5xl xl:font-semibold text-black xl:leading-tight xl:mb-10 ">
             <span className="text-[#068FFF] font-extrabold ">Наша цель</span> -
             помочь вам достичь онлайн-успеха, предоставляя инновационные решения
@@ -74,18 +73,18 @@ export default function AboutUs() {
           </p>
         </div>
 
-        <section className="w-full px-8 grid md:grid-cols-2 md:px-8 lg:px-8  lg:grid-cols-3  xl:grid-cols-3 xl:px-0 gap-5 max-w-[1500px] mx-auto mb-14 ">
+        <section className=" w-full  px-8 grid md:grid-cols-2 md:px-8 lg:px-8  lg:grid-cols-3  xl:grid-cols-3 xl:px-0 gap-5 max-w-[1500px] mx-auto mb-14 ">
           <OurGoal />
           <OurGoal />
           <OurGoal />
         </section>
 
-        <section className="w-full  h-full aboutBg  py-16 ">
-          <h1 className="text-white mx-8 text-2xl lg:mx-16 xl:mx-16 lg:text-4xl uppercase font-semibold mb-10">
+        <section className="w-full   h-full aboutBg  py-16 ">
+          <h1 className="text-white mx-8 text-2xl lg:mx-16 xl:mx-52 lg:text-4xl uppercase font-semibold mb-10">
             наши принципы
           </h1>
-          <div className="w-full px-8 lg:px-16 xl:px-16 grid lg:grid-cols-2 xl:grid-cols-2 ">
-            <div className="w-full mb-6 lg:pr-16 lg:mb-14">
+          <div className="w-full px-8 lg:px-16 xl:pl-52 xl:pr-20 grid lg:grid-cols-2 xl:grid-cols-2 ">
+            <div className="w-full   mb-6 lg:pr-16 lg:mb-14">
               <h1 className="text-[#A3A7AC] text-2xl md:text-3xl lg:text-3xl font-normal mb-4 ">
                 1.
               </h1>
@@ -124,47 +123,34 @@ export default function AboutUs() {
           </div>
         </section>
 
-        <section className="w-full h-full max-w-[1650px] pt-10 pl-7  md:px-16 md:py-16  ">
+        <section className="w-full max-w-[1650px] mx-auto h-full  pt-10 pl-7  md:px-16 md:py-16  ">
           <h1 className="text-4xl font-semibold mb-10 uppercase ">команда</h1>
           <div className="w-full h-full hidden  sm:hidden md:grid md:grid-cols-2  lg:grid-cols-3 xl:grid-cols-4 gap-5 ">
-            {team.map((item) => (
-              <Team name={item.name} position={item.position} img={item.img} />
+            {team.map((item, index) => (
+              <Team
+                key={index}
+                name={item.name}
+                position={item.position}
+                img={item.img}
+              />
             ))}
           </div>
         </section>
-        <div className="block w-full px-0 mb-10  md:hidden ">
+        <div className="block w-full px-5 mb-10  md:hidden ">
           <Swiper
             slidesPerView={1.8}
-            //  spaceBetween={30}
+            grid={{
+              rows: 2,
+            }}
+            spaceBetween={20}
             pagination={{
               clickable: true,
             }}
-            modules={[Pagination]}
+            modules={[Grid]}
             className="mySwiper"
           >
-            {team.map((item) => (
-              <SwiperSlide className="mr-4 ">
-                <Team
-                  name={item.name}
-                  position={item.position}
-                  img={item.img}
-                />
-              </SwiperSlide>
-            ))}
-          </Swiper>
-        </div>
-        <div className="block w-full px-0  md:hidden ">
-          <Swiper
-            slidesPerView={1.8}
-            //  spaceBetween={30}
-            pagination={{
-              clickable: true,
-            }}
-            modules={[Pagination]}
-            className="mySwiper"
-          >
-            {team.map((item) => (
-              <SwiperSlide className="mr-4 ">
+            {team.map((item, index) => (
+              <SwiperSlide className="mr-4 h-48 " key={index}>
                 <Team
                   name={item.name}
                   position={item.position}

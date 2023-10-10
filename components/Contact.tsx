@@ -1,32 +1,43 @@
-import React from "react";
+import React, { useState } from "react";
 
 export default function Contact() {
+  const [active, setActive] = useState(false);
+
   return (
     <div className="w-full h-full bg-[#FFC000] ">
       <section className="max-w-[1040px] w-full mx-auto py-16">
         <h2 className="uppercase text-5xl font-semibold mb-16 leading-normal ">
           Расскажите о задачах, <br /> мы оперативно свяжемся:
         </h2>
-        <form className="w-full flex justify-between items-center ">
-          <label className="relative w-2/5">
+        <form className="w-full flex justify-between items-center relative ">
+          <div className="w-2/5 relative ">
             <input
               type="text"
               id="name"
-              className=" w-full h-14 pt-2 bg-transparent border-b-2 border-b-[#000] text-black outline-none transition duration-200"
+              autoFocus
+              placeholder=" "
+              className="relative z-10 bg-transparent border-b-2 border-b-[#000] w-full h-14 text-black pt-2 outline-none peer"
             />
-            <span className="text-2xl font-semibold transition duration-200 absolute top-2 left-0 input-text ">
+            <label
+              htmlFor="name"
+              className="peer-focus:font-medium absolute text-black  duration-500 transform -translate-y-5 scale-75 top-3 left-0  origin-[0] peer-focus:left-0 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0   text-2xl font-semibold"
+            >
               Имя
-            </span>
-          </label>
-          <label className="relative w-2/5 ">
+            </label>
+          </div>
+          <div className="w-2/5 relative ">
             <input
               type="tel"
-              className="w-full h-14 pt-2 bg-transparent border-b-2 border-b-[#000] text-black outline-none transition duration-200"
+              id="tel"
+              autoFocus
+              placeholder=" "
+              name="tel"
+              className="relative z-10 bg-transparent border-b-2 border-b-[#000] w-full h-14 text-black pt-2 outline-none peer"
             />
-            <span className="text-2xl font-semibold  transition duration-200 absolute top-2 left-0 input-text ">
+            <label className="peer-focus:font-medium absolute text-black  duration-500 transform -translate-y-5 scale-75 top-3 left-0  origin-[0] peer-focus:left-0 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0   text-2xl font-semibold">
               Номер телефона
-            </span>
-          </label>
+            </label>
+          </div>
           <button className=" uppercase hidden md:flex items-center gap-2 py-3 px-8 text-white font-semibold bg-black rounded-full">
             отправить{" "}
             <svg

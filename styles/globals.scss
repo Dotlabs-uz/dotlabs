@@ -117,10 +117,10 @@
 
 // input text
 
-input[type='text']:focus ~ .input-text {
-  transform: translateX(-5px) translateY(-18px) scale(0.8) ;
-}
+// .input-text {
+//   transform: translateX(-5px) translateY(-18px) scale(0.8) ;
+// }
 
-input[type='tel']:focus ~ .input-text {
-  transform: translateX(-18px) translateY(-18px) scale(0.8) ;
-}
+// input[type='tel']:focus ~ .input-text {
+//   transform: translateX(-18px) translateY(-18px) scale(0.8) ;
+// }

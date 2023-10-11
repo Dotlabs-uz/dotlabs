@@ -2,25 +2,16 @@ import Image from "next/image";
 import { Inter } from "next/font/google";
 import Layout from "@/layouts/Layout";
 import { BsFillPlayFill } from "react-icons/bs";
-import Service from "@/components/Service";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { useState } from "react";
 import "swiper/css";
 import ServicesCont from "@/components/containers/ServicesCont";
 
 const inter = Inter({ subsets: ["latin"] });
 
-// md:700
-// sm: 600
-// lg: 1024
-// xl: 1280
-
 export default function Home() {
-
 	return (
 		<Layout>
-			<section className="custom-bg w-full flex justify-center  ">
-				<div className="bg-image"></div>
+			<div className="custom-bg bg-image"></div>
+			<section className="w-full flex justify-center items-center md:py-20">
 				<div className="flex items-center justify-between flex-col md:flex-row gap-10 max-w-[1040px] mx-auto my-10 md:my-0 z-50 relative max-h-[600px] w-[90%]">
 					<div className=" flex flex-col items-start gap-6 w-full">
 						<h1 className="hidden">Иноовации в каждом пикселе</h1>
@@ -52,8 +43,8 @@ export default function Home() {
 					</div>
 				</div>
 			</section>
-			<ServicesCont/>
-			{/* <section className="flex items-start justify-between gap-6 w-full max-w-[1400px] mx-auto relative -translate-y-[180px] px-5">
+			<ServicesCont />
+			<section className="flex items-start justify-between flex-col md:flex-row gap-6 w-full max-w-[1400px] mx-auto relative px-5 my-[60px] md:my-[120px]">
 				<div className="flex flex-col items-start gap-4 w-full">
 					<Image
 						src="/icons/logo_text.svg"
@@ -61,13 +52,13 @@ export default function Home() {
 						width="100"
 						height="50"
 					/>
-					<h2 className="text-[44px] leading-[53px] uppercase">
+					<h2 className="text-3xl  md:text-[44px] leading-[39px] md:leading-[53px] md:uppercase font-bold">
 						Ваш надежный партнер в{" "}
 						<span className="text-main my-0 mx-0">
-							разработке по
+							разработке ПО
 						</span>
 					</h2>
-					<p className="font-normal text-lg text-[#747474]">
+					<p className="font-normal md:text-lg text-[#747474]">
 						В Dot Labs мы страстно преданы созданию выдающихся
 						веб-решений, которые поднимают ваш бизнес на новый
 						уровень. С нашей экспертизой в разработке веб-сайтов,
@@ -75,59 +66,61 @@ export default function Home() {
 						вашим надежным технологическим партнером.
 					</p>
 					<hr className="w-full" />
-					<div className="flex items-center justify-between w-full">
+					<div className="flex items-center justify-between w-full gap-3">
 						<div className="flex flex-col items-start">
-							<span className="font-semibold text-[44px]">
+							<span className="font-semibold text-3xl md:text-[44px]">
 								78%
 							</span>
-							<span className="font-semibold text-sm text-[#747474]">
+							<span className="font-semibold text-[12px] md:text-sm text-[#747474]">
 								Clients satisfaction
 							</span>
 						</div>
-						<div className="flex flex-col items-start border-l-[1px] border-r-[1px] px-10">
-							<span className="font-semibold text-[44px]">
+						<div className="flex flex-col items-start md:border-l-[1px] md:border-r-[1px] md:px-10">
+							<span className="font-semibold text-3xl md:text-[44px]">
 								20%
 							</span>
-							<span className="font-semibold text-sm text-[#747474]">
+							<span className="font-semibold text-[12px] md:text-sm text-[#747474]">
 								Clients satisfaction
 							</span>
 						</div>
 						<div className="flex flex-col items-start">
-							<span className="font-semibold text-[44px]">
+							<span className="font-semibold text-3xl md:text-[44px]">
 								2.3М
 							</span>
-							<span className="font-semibold text-sm text-[#747474]">
+							<span className="font-semibold text-[12px] md:text-sm text-[#747474]">
 								Clients satisfaction
 							</span>
 						</div>
 					</div>
 				</div>
-				<div className="custom-shadow custom-gradient w-full p-5 rounded-3xl h-full ">
+				<div className="custom-shadow-sec custom-gradient w-full p-[10px] md:p-5 rounded-3xl h-full ">
 					<div className="w-full bg-white flex flex-col items-center gap-5 text-center rounded-2xl py-7">
-						<h3 className="text-2xl font-bold">
+						<h3 className="text-xl md:text-2xl font-normal md:font-bold">
 							Специалисты с большим опытом
 						</h3>
 						<Image
 							src="/images/team.png"
 							alt="team"
-							width="300"
-							height="100"
+							width="270"
+							height="80"
 						/>
-						<p className="font-normal text-[#747474] w-[90%]">
+						<p className="font-normal  text-[#747474] w-[90%]">
 							В DOT LABS мы страстно преданы созданию выдающихся
 							веб-решений, которые поднимают ваш бизнес на новый
 							уровень.
 						</p>
-						<div className="flex flex-col items-center gap-2 py-2 px-5 text-white bg-main rounded-xl">
+						<div className="flex flex-row md:flex-col items-center gap-2 py-2 px-5 text-white bg-main rounded-xl">
 							<span className="text-sm font-semibold">
 								Всего сотрудников
 							</span>
-							<span className="text-3xl font-bold">24+</span>
+							<span className="text-xl md:text-3xl font-semibold md:font-bold">
+								24+
+							</span>
 						</div>
 					</div>
 				</div>
 			</section>
-			<section className="w-full max-w-[1400px] mx-auto px-5 -translate-y-[80px]">
+			<section className="w-full max-w-[1400px] mx-auto px-5">
 				<h2 className="text-[44px] font-semibold mb-3">Наши работы</h2>
 				<div className="custom-grid">
 					{[1, 2, 3, 4, 5, 6, 7, 8].map((item: any) => (
@@ -139,7 +132,7 @@ export default function Home() {
 						</div>
 					))}
 				</div>
-			</section> */}
+			</section>
 		</Layout>
 	);
 }

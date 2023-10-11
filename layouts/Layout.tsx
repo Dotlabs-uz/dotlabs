@@ -55,7 +55,7 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
 				</div>
 			</header>
 			<main>{children}</main>
-			<div className="h-[120px]" ></div>
+			{/* <div className="h-[120px]" ></div> */}
 			<Contact/>
 			<footer className="w-full bg-white my-10 px-6">
 				<div className="flex items-start justify-between flex-col-reverse gap-4 md:flex-row max-w-[1040px] w-full mx-auto">

@@ -124,7 +124,7 @@ export default function Home() {
 				<h2 className="text-[44px] font-semibold mb-3">Наши работы</h2>
 				<div className="custom-grid">
 					{[1, 2, 3, 4, 5, 6, 7, 8].map((item: any) => (
-						<div className="job">
+						<div className="job" key={item} >
 							<div></div>
 							<span className="text-xl md:text-2xl font-semibold">
 								Eleven CRM

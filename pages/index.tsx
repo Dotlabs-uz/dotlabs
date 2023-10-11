@@ -126,7 +126,7 @@ export default function Home() {
 					{[1, 2, 3, 4, 5, 6, 7, 8].map((item: any) => (
 						<div className="job">
 							<div></div>
-							<span className="text-2xl font-semibold">
+							<span className="text-xl md:text-2xl font-semibold">
 								Eleven CRM
 							</span>
 						</div>

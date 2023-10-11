@@ -3,6 +3,10 @@ import { Inter } from "next/font/google";
 import Layout from "@/layouts/Layout";
 import { BsFillPlayFill } from "react-icons/bs";
 import Service from "@/components/Service";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { useState } from "react";
+import "swiper/css";
+import ServicesCont from "@/components/containers/ServicesCont";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -12,11 +16,12 @@ const inter = Inter({ subsets: ["latin"] });
 // xl: 1280
 
 export default function Home() {
+
 	return (
 		<Layout>
 			<section className="custom-bg w-full flex justify-center  ">
 				<div className="bg-image"></div>
-				<div className="flex items-center justify-between gap-10 max-w-[1040px] mx-auto z-50 relative max-h-[600px]">
+				<div className="flex items-center justify-between flex-col md:flex-row gap-10 max-w-[1040px] mx-auto my-10 md:my-0 z-50 relative max-h-[600px] w-[90%]">
 					<div className=" flex flex-col items-start gap-6 w-full">
 						<h1 className="hidden">Иноовации в каждом пикселе</h1>
 						<Image
@@ -37,7 +42,7 @@ export default function Home() {
 						</button>
 					</div>
 					<div
-						className="flex justify-center items-center w-full h-[256px] rounded-xl cursor-pointer"
+						className="hidden md:flex justify-center items-center w-full h-[256px] rounded-xl cursor-pointer"
 						style={{
 							backgroundImage: "url(/images/video.png)",
 						}}
@@ -47,12 +52,8 @@ export default function Home() {
 					</div>
 				</div>
 			</section>
-			<section className="grid grid-cols-3 gap-3 w-full max-w-[1400px] mx-auto p-5 bg-[rgba(255,255,255,0.5)] backdrop-blur-md -translate-y-[350px] rounded-[40px] relative z-10">
-				<Service />
-				<Service />
-				<Service />
-			</section>
-			<section className="flex items-start justify-between gap-6 w-full max-w-[1400px] mx-auto relative -translate-y-[180px] px-5">
+			<ServicesCont/>
+			{/* <section className="flex items-start justify-between gap-6 w-full max-w-[1400px] mx-auto relative -translate-y-[180px] px-5">
 				<div className="flex flex-col items-start gap-4 w-full">
 					<Image
 						src="/icons/logo_text.svg"
@@ -127,7 +128,7 @@ export default function Home() {
 				</div>
 			</section>
 			<section className="w-full max-w-[1400px] mx-auto px-5 -translate-y-[80px]">
-				<h2 className="text-[44px] font-semibold mb-3" >Наши работы</h2>
+				<h2 className="text-[44px] font-semibold mb-3">Наши работы</h2>
 				<div className="custom-grid">
 					{[1, 2, 3, 4, 5, 6, 7, 8].map((item: any) => (
 						<div className="job">
@@ -138,7 +139,7 @@ export default function Home() {
 						</div>
 					))}
 				</div>
-			</section>
+			</section> */}
 		</Layout>
 	);
 }

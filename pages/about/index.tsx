@@ -2,11 +2,11 @@ import React from "react";
 import Layout from "@/layouts/Layout";
 import OurGoal from "@/components/OurGoal";
 import Team from "@/components/Team";
-
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/css";
 import "swiper/css/grid";
+
 
 import { Grid } from "swiper/modules";
 

@@ -10,7 +10,7 @@
     grid-auto-rows: 420px !important;
 }
 
-.swiper-slide {
+.swiperSlide {
     text-align: center;
     font-size: 18px;
     background: #fff;
@@ -40,21 +40,3 @@
     background: rgba(0, 0, 0, 0.77);
     z-index: -1;
 }
-
-
-
-// input text
-
-// .input-text {
-//   transform: translateX(-5px) translateY(-18px) scale(0.8) ;
-// }
-
-// input[type='tel']:focus ~ .input-text {
-//   transform: translateX(-18px) translateY(-18px) scale(0.8) ;
-// }
-
-/* Center slide text vertically */
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-// }

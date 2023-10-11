@@ -6,7 +6,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/css";
 import "swiper/css/grid";
-
+import aboutCss from "../../styles/about.module.scss";
 
 import { Grid } from "swiper/modules";
 
@@ -79,7 +79,7 @@ export default function AboutUs() {
           <OurGoal />
         </section>
 
-        <section className="w-full   h-full aboutBg  py-16 ">
+        <section className={`w-full   h-full   py-16 ${aboutCss.aboutBg} `}>
           <h1 className="text-white mx-8 text-2xl lg:mx-16 xl:mx-52 lg:text-4xl uppercase font-semibold mb-10">
             наши принципы
           </h1>
@@ -147,10 +147,13 @@ export default function AboutUs() {
               clickable: true,
             }}
             modules={[Grid]}
-            className="mySwiper"
+            className={`mySwiper ${aboutCss.swiper} `}
           >
             {team.map((item, index) => (
-              <SwiperSlide className="mr-4 h-48 " key={index}>
+              <SwiperSlide
+                className={`mr-4 h-48 ${aboutCss.swiperSlide} `}
+                key={index}
+              >
                 <Team
                   name={item.name}
                   position={item.position}

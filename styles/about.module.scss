@@ -40,3 +40,17 @@
     background: rgba(0, 0, 0, 0.77);
     z-index: -1;
 }
+
+// .input:-internal-autofill-selected {
+//     appearance: menulist-button;
+//     background-image: none !important;
+//     background-color: #FFC000 !important;
+//     color: fieldtext !important;
+// }
+
+.input:-webkit-autofill,
+.input:-webkit-autofill:hover, 
+.input:-webkit-autofill:focus, 
+.input:-webkit-autofill:active{
+    -webkit-box-shadow: 0 0 0 30px #FFC000 inset !important;
+}

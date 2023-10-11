@@ -9,6 +9,7 @@ import "swiper/css/grid";
 import aboutCss from "../../styles/about.module.scss";
 
 import { Grid } from "swiper/modules";
+import Contact from "@/components/Contact";
 
 // md:700
 // sm: 600
@@ -163,6 +164,7 @@ export default function AboutUs() {
             ))}
           </Swiper>
         </div>
+        <Contact />
       </section>
     </Layout>
   );

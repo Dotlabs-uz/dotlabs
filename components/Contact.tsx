@@ -49,15 +49,15 @@ export default function Contact() {
 							<path
 								d="M1 11L11 1"
 								stroke="white"
-								stroke-width="2"
-								stroke-linecap="round"
+								strokeWidth="2"
+								strokeLinecap="round"
 								stroke-linejoin="round"
 							/>
 							<path
 								d="M1 1H11V11"
 								stroke="white"
-								stroke-width="2"
-								stroke-linecap="round"
+								strokeWidth="2"
+								strokeLinecap="round"
 								stroke-linejoin="round"
 							/>
 						</svg>

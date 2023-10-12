@@ -62,7 +62,7 @@ export default function AboutUs() {
   return (
     <Layout>
       <section className=" pt-5   mx-auto   ">
-        <div className="w-full max-w-[1650px] mx-auto px-9 xl:px-0 sm:px-9  f-full mb-12  ">
+        <div className="w-full max-w-[1300px] mx-auto px-9 xl:px-0 sm:px-9  f-full mb-12  ">
           <div className="h-full   lg:w-3/5 pr-5 ">
             <p className="text-xl font-medium sm:text-4xl  sm:leading-snug mb-3  xl:text-5xl xl:font-semibold text-black xl:leading-tight xl:mb-10 ">
               <span className="text-[#068FFF] font-extrabold ">Наша цель</span>{" "}
@@ -75,18 +75,18 @@ export default function AboutUs() {
           </div>
         </div>
 
-        <section className=" w-full  px-8 grid md:grid-cols-2 md:px-8 lg:px-8  lg:grid-cols-3  xl:grid-cols-3 xl:px-0 gap-5 max-w-[1650px] mx-auto mb-14 ">
+        <section className=" w-full  px-8 grid md:grid-cols-2 md:px-8 lg:px-8  lg:grid-cols-3  xl:grid-cols-3 xl:px-0 gap-5 max-w-[1300px] mx-auto mb-14 ">
           <OurGoal />
           <OurGoal />
           <OurGoal />
         </section>
 
         <section className={`w-full  h-full   py-16 ${aboutCss.aboutBg} `}>
-          <div className="w-full max-w-[1650px] mx-auto">
+          <div className="w-full max-w-[1300px] mx-auto">
             <h1 className="text-white mx-8 xl:mx-0 text-2xl lg:mx-16  lg:text-4xl uppercase font-semibold mb-10">
               наши принципы
             </h1>
-            <div className="w-full max-w-[1650px] mx-auto px-8 lg:px-16  grid lg:grid-cols-2 xl:grid-cols-2 xl:px-0 ">
+            <div className="w-full max-w-[1300px] mx-auto px-8   grid lg:grid-cols-2 xl:grid-cols-2 xl:px-0 ">
               <div className="w-full   mb-6 lg:pr-16 lg:mb-14 xl:pr-0 ">
                 <h1 className="text-[#A3A7AC] text-2xl md:text-3xl lg:text-3xl font-normal mb-4 ">
                   1.
@@ -127,7 +127,7 @@ export default function AboutUs() {
           </div>
         </section>
 
-        <section className="w-full mb-16 max-w-[1650px] mx-auto h-full  pt-10 pl-7  md:px-16 md:pt-16  xl:px-0 ">
+        <section className="w-full mb-16 max-w-[1300px] mx-auto h-full  pt-10 pl-7  md:px-6 md:pt-16  xl:px-0 ">
           <h1 className="text-4xl font-semibold mb-10 uppercase ">команда</h1>
           <div className="w-full h-full hidden  sm:hidden md:grid md:grid-cols-2  lg:grid-cols-3 xl:grid-cols-4 gap-5 ">
             {team.map((item, index) => (

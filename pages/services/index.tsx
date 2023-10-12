@@ -1,6 +1,6 @@
 import Layout from "@/layouts/Layout";
 import React from "react";
-import { FiFigma, FiServer, FiCode } from "react-icons/fi";
+import { FiFigma, FiServer, FiCode, FiArrowUpRight } from "react-icons/fi";
 
 export default function index() {
   return (
@@ -8,7 +8,9 @@ export default function index() {
       <section className="pt-5 mx-auto">
         <div className="w-full max-w-[1300px] mx-auto px-9 xl:px-0 sm:px-9 f-full mb-12">
           <div className="  lg:w-[70%] mb-7 ">
-            <h1 className=" md:text-5xl lg:text-6xl font-extrabold mb-3">Чем мы занимаемся</h1>
+            <h1 className=" md:text-5xl lg:text-6xl font-extrabold mb-3">
+              Чем мы занимаемся
+            </h1>
             <p className="text-4xl font-normal leading-tight ">
               Мы - команда профессионалов, специализирующихся на создании
               веб-решений и разработке программного обеспечения.
@@ -45,6 +47,13 @@ export default function index() {
                 удивлять и вдохновлять наших клиентов.
               </p>
             </div>
+          </div>
+        </div>
+        <div className="w-full h-full bg-[#068FFF] ">
+          <div className="max-w-[1040px] mx-auto py-14 " >
+            <h2 className="uppercase text-5xl font-semibold w-9/12 leading-snug text-white mb-5" >посмотрите реализованные <br /> проекты</h2>
+            <p className="text-white w-7/12 text-xl font-normal mb-5 " >Наши работы - это не просто проекты, это истории успеха, и мы гордимся ими. Посмотрите нашу коллекцию, и вы убедитесь, как мы помогли другим клиентам достичь своих целей и преуспеть в онлайне. Ваша история успеха может быть следующей</p>
+            <button className="border border-solid border-white font-normal uppercase px-6 py-2 rounded-full flex items-center justify-between text-white" >перейти <FiArrowUpRight className='text-white text-xl ' /> </button>
           </div>
         </div>
       </section>

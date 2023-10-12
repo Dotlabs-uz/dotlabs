@@ -1,6 +1,9 @@
 import Layout from "@/layouts/Layout";
+import Image from "next/image";
 import React from "react";
 import { FiFigma, FiServer, FiCode, FiArrowUpRight } from "react-icons/fi";
+import { BsArrowReturnRight } from "react-icons/bs";
+import { BiRightArrowAlt } from "react-icons/bi";
 
 export default function index() {
   return (
@@ -50,10 +53,62 @@ export default function index() {
           </div>
         </div>
         <div className="w-full h-full bg-[#068FFF] ">
-          <div className="max-w-[1040px] mx-auto py-14 " >
-            <h2 className="uppercase text-5xl font-semibold w-9/12 leading-snug text-white mb-5" >посмотрите реализованные <br /> проекты</h2>
-            <p className="text-white w-7/12 text-xl font-normal mb-5 " >Наши работы - это не просто проекты, это истории успеха, и мы гордимся ими. Посмотрите нашу коллекцию, и вы убедитесь, как мы помогли другим клиентам достичь своих целей и преуспеть в онлайне. Ваша история успеха может быть следующей</p>
-            <button className="border border-solid border-white font-normal uppercase px-6 py-2 rounded-full flex items-center justify-between text-white" >перейти <FiArrowUpRight className='text-white text-xl ' /> </button>
+          <div className="max-w-[1040px] mx-auto py-14 ">
+            <h2 className="uppercase text-5xl font-semibold w-9/12 leading-snug text-white mb-5">
+              посмотрите реализованные <br /> проекты
+            </h2>
+            <p className="text-white w-7/12 text-xl font-normal mb-5 ">
+              Наши работы - это не просто проекты, это истории успеха, и мы
+              гордимся ими. Посмотрите нашу коллекцию, и вы убедитесь, как мы
+              помогли другим клиентам достичь своих целей и преуспеть в онлайне.
+              Ваша история успеха может быть следующей
+            </p>
+            <button className="border border-solid border-white font-normal uppercase px-6 py-2 rounded-full flex items-center justify-between text-white">
+              перейти <FiArrowUpRight className="text-white text-xl " />{" "}
+            </button>
+          </div>
+        </div>
+        <div className="w-full max-w-[1300px] mx-auto flex items-center justify-between py-16 gap-8 ">
+          <div className="w-2/5 h-full ">
+            <Image
+              src="/images/services.png"
+              alt=""
+              width="500"
+              height="100"
+              className="object-contain"
+            />
+          </div>
+          <div className="w-3/5 h-full  ">
+            <h1 className="text-[44px] font-semibold uppercase  ">
+              проекты любой сложности
+            </h1>
+            <ul className="mb-6 h-full ">
+              <li className="flex items-center gap-2 text-2xl font-normal mb-3 ">
+                <BsArrowReturnRight /> Разработка веб-сайтов
+              </li>
+              <li className="flex items-center gap-2 text-2xl font-normal mb-3 ">
+                <BsArrowReturnRight /> Разработка мобильных приложений
+              </li>
+              <li className="flex items-center gap-2 text-2xl font-normal mb-3 ">
+                <BsArrowReturnRight /> Разработка CRM-систем
+              </li>
+              <li className="flex items-center gap-2 text-2xl font-normal mb-3 ">
+                <BsArrowReturnRight /> Веб-дизайн и UI/UX разработка
+              </li>
+              <li className="flex items-center gap-2 text-2xl font-normal mb-3 ">
+                <BsArrowReturnRight /> SEO и поисковая оптимизация
+              </li>
+              <li className="flex items-center gap-2 text-2xl font-normal mb-3 ">
+                <BsArrowReturnRight /> Электронная коммерция и онлайн-магазины
+              </li>
+              <li className="flex items-center gap-2 text-2xl font-normal mb-3 ">
+                <BsArrowReturnRight /> Веб-хостинг и обслуживание
+              </li>
+            </ul>
+            <button className="flex items-center gap-2 py-4 px-6 text-white font-medium text-lg bg-black rounded-full uppercase">
+              проконсультироваться{" "}
+              <BiRightArrowAlt size="25" className="font-normal" />{" "}
+            </button>
           </div>
         </div>
       </section>

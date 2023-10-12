@@ -113,3 +113,7 @@
 .custom-shadow-sec {
 	box-shadow: -5px 4px 8px 2px rgba(0, 0, 0, 0.25);
 }
+
+.service-component-li-icon {
+	@apply flex items-center justify-center min-w-[32px] min-h-[32px] bg-[#E9F0F9] rounded-full
+}

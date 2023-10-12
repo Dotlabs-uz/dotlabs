@@ -1,11 +1,8 @@
 import Image from "next/image";
-import { Inter } from "next/font/google";
 import Layout from "@/layouts/Layout";
 import { BsFillPlayFill } from "react-icons/bs";
 import "swiper/css";
 import ServicesCont from "@/components/containers/ServicesCont";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
 	return (
@@ -121,7 +118,7 @@ export default function Home() {
 				</div>
 			</section>
 			<section className="w-full max-w-[1400px] mx-auto px-5">
-				<h2 className="text-[44px] font-semibold mb-3">Наши работы</h2>
+				<h2 className="text-[44px] font-semibold mb-3 uppercase">Наши работы</h2>
 				<div className="custom-grid">
 					{[1, 2, 3, 4, 5, 6, 7, 8].map((item: any) => (
 						<div className="job" key={item} >

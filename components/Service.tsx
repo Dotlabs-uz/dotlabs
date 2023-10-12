@@ -19,19 +19,19 @@ const Service: React.FC<ServiceProps> = () => {
 				</p>
 				<div className="flex flex-col items-start gap-4 mt-4">
 					<div className="flex items-center gap-3">
-						<div className="flex items-center justify-center min-w-[32px] min-h-[32px] bg-[#E9F0F9] rounded-full">
+						<div className="service-component-li-icon">
 							<SiFigma color="#068FFF" size="20" />
 						</div>
 						<span className="font-normal md:font-semibold text-sm " >Уникальный дизайн, отражающий ваш бренд</span>
 					</div>
-					<div className="flex items-center gap-3">`
-						<div className="flex items-center just`ify-center min-w-[32px] min-h-[32px] bg-[#E9F0F9] rounded-full">
+					<div className="flex items-center gap-3">
+						<div className="service-component-li-icon">
 							<AiOutlineMobile color="#068FFF" size="20" />
 						</div>
 						<span className="font-normal md:font-semibold text-sm " >Уникальный дизайн, отражающий ваш бренд</span>
 					</div>
 					<div className="flex items-center gap-3">
-						<div className="flex items-center justify-center min-w-[32px] min-h-[32px] bg-[#E9F0F9] rounded-full">
+						<div className="service-component-li-icon">
 							<AiOutlineLike color="#068FFF" size="20" />
 						</div>
 						<span className="font-normal md:font-semibold text-sm " >Уникальный дизайн, отражающий ваш бренд</span>

@@ -1,12 +1,18 @@
 import Contact from "@/components/Contact";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 import { BsFillTelephoneFill, BsTelephoneFill } from "react-icons/bs";
 import { GoGlobe } from "react-icons/go";
 import { SlMenu } from "react-icons/sl";
 
 const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+	const [show, setShow] = useState<boolean>(false);
+
+	function changeLang() {
+		
+	}
+
 	return (
 		<>
 			<header className="w-full bg-white">
@@ -34,9 +40,14 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
 						</nav>
 					</div>
 					<div className="flex items-center gap-5">
-						<button className="hidden md:flex items-center gap-2 py-2 px-5 font-semibold">
+						<button onClick={changeLang} className="hidden md:flex items-center gap-2 py-2 px-5 font-semibold">
 							RU
 							<GoGlobe size="26" />
+							{/* <div onMouseEnter={() => setShow(true)} onMouseLeave={() => setShow(false)} >
+								{
+									show ? <GoGlobe size="26" /> : <Image src="/icons/anim.gif" alt="" width="26" height="26" />
+								}
+							</div> */}
 						</button>
 						<button className="hidden md:flex items-center gap-2 py-2 px-5 text-white font-semibold bg-main rounded-full">
 							Перезвоните мне

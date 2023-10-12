@@ -61,15 +61,15 @@ export default function AboutUs() {
 
   return (
     <Layout>
-      <section className=" pt-5   mx-auto   ">
-        <div className="w-full max-w-[1300px] mx-auto px-9 xl:px-0 sm:px-9  f-full mb-12  ">
-          <div className="h-full   lg:w-3/5 pr-5 ">
-            <p className="text-xl font-medium sm:text-4xl  sm:leading-snug mb-3  xl:text-5xl xl:font-semibold text-black xl:leading-tight xl:mb-10 ">
-              <span className="text-[#068FFF] font-extrabold ">Наша цель</span>{" "}
+      <section className="pt-5 mx-auto">
+        <div className="w-full max-w-[1300px] mx-auto px-9 xl:px-0 sm:px-9 f-full mb-12">
+          <div className="h-full lg:w-3/5 pr-5">
+            <p className="text-xl font-medium sm:text-4xl  sm:leading-snug mb-3  xl:text-[40px] xl:font-semibold text-black xl:leading-tight xl:mb-6">
+              <span className="text-[#068FFF] font-bold ">Наша цель</span>{" "}
               - помочь вам достичь онлайн-успеха, предоставляя инновационные
               решения и высокий уровень профессионализма.
             </p>
-            <p className=" text-lg font-normal  sm:text-2xl  xl:text-4xl  leading-normal ">
+            <p className=" text-lg font-normal  sm:text-2xl  xl:text-2xl  leading-normal ">
               DOT LABS - Ваш надежный партнер в веб-разработке
             </p>
           </div>
@@ -81,7 +81,7 @@ export default function AboutUs() {
           <OurGoal />
         </section>
 
-        <section className={`w-full  h-full   py-16 ${aboutCss.aboutBg} `}>
+        <section className={`w-full h-full py-16 ${aboutCss.aboutBg}`}>
           <div className="w-full max-w-[1300px] mx-auto">
             <h1 className="text-white mx-8 xl:mx-0 text-2xl lg:mx-16  lg:text-4xl uppercase font-semibold mb-10">
               наши принципы

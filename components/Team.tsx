@@ -9,7 +9,7 @@ interface Props {
 
 export default function Team({ name, position, img }: Props) {
   return (
-    <div className="mb-6">
+    <div >
       <div>
         <Image
           src={String(img)}

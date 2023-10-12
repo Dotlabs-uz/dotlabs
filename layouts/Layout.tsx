@@ -5,6 +5,7 @@ import React, { useState } from "react";
 import { BsFillTelephoneFill, BsTelephoneFill } from "react-icons/bs";
 import { GoGlobe } from "react-icons/go";
 import { SlMenu } from "react-icons/sl";
+// import gif from '../public/icons/anim.gif'
 
 const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
 	const [show, setShow] = useState<boolean>(false);
@@ -58,6 +59,7 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
 										alt=""
 										width="26"
 										height="26"
+										priority={true}
 									/>
 								)}
 							</div>
@@ -76,6 +78,7 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
 										alt=""
 										width="26"
 										height="26"
+										priority={true}
 									/>
 								)}
 							</div>

@@ -10,51 +10,69 @@ export default function index() {
     <Layout>
       <section className="pt-5 mx-auto">
         <div className="w-full max-w-[1300px] mx-auto px-9 xl:px-0 sm:px-9 f-full mb-12">
-          <div className="  lg:w-[70%] mb-7 ">
-            <h1 className=" md:text-5xl lg:text-6xl font-extrabold mb-3">
+          <div className=" w-full  lg:w-[70%] mb-7 ">
+            <h1 className=" text-3xl  md:text-5xl lg:text-6xl font-extrabold mb-3">
               Чем мы занимаемся
             </h1>
-            <p className="text-4xl font-normal leading-tight ">
+            <p className=" text-lg sm:text-xl md:text-4xl md:font-normal leading-tight ">
               Мы - команда профессионалов, специализирующихся на создании
               веб-решений и разработке программного обеспечения.
             </p>
           </div>
-          <div className="w-full grid grid-cols-3 gap-6 ">
-            <div>
-              <div className="w-12 h-12 border border-solid border-[#A3A7AC] rounded-full flex justify-center items-center mb-3">
-                <FiFigma className="text-[#068FFF] text-lg " />
+          <div className="w-full grid md:grid-cols-3 gap-6 ">
+            <div className="flex justify-between gap-4 md:block ">
+              <div>
+                <div className="w-12 h-12 md:w-12 md:h-12 border border-solid border-[#A3A7AC] rounded-full flex justify-center items-center mb-3">
+                  <FiFigma className="text-[#068FFF] text-lg " />
+                </div>
               </div>
-              <h2 className="text-4xl font-bold mb-2  ">Инновации</h2>
-              <p className="text-base font-normal leading-5 ">
-                Мы всегда в поиске новых идей и технологических решений, чтобы
-                удивлять и вдохновлять наших клиентов.
-              </p>
+              <div>
+                <h2 className=" text-xl md:text-4xl font-bold mb-2  ">
+                  Инновации
+                </h2>
+                <p className=" text-base font-normal leading-5 ">
+                  Мы всегда в поиске новых идей и технологических решений, чтобы
+                  удивлять и вдохновлять наших клиентов.
+                </p>
+              </div>
             </div>
-            <div>
-              <div className="w-12 h-12 border border-solid border-[#A3A7AC] rounded-full flex justify-center items-center mb-3">
-                <FiServer className="text-[#068FFF] text-lg " />
+            <div className="flex justify-between gap-4 md:block ">
+              <div>
+                <div className="w-12 h-12 md:w-12 md:h-12 border border-solid border-[#A3A7AC] rounded-full flex justify-center items-center mb-3">
+                  <FiServer className="text-[#068FFF] text-lg " />
+                </div>
               </div>
-              <h2 className="text-4xl font-bold mb-2  ">Инновации</h2>
-              <p className="text-base font-normal leading-5 ">
-                Мы всегда в поиске новых идей и технологических решений, чтобы
-                удивлять и вдохновлять наших клиентов.
-              </p>
+              <div>
+                <h2 className=" text-xl md:text-4xl font-bold mb-2  ">
+                  Инновации
+                </h2>
+                <p className=" text-base font-normal leading-5 ">
+                  Мы всегда в поиске новых идей и технологических решений, чтобы
+                  удивлять и вдохновлять наших клиентов.
+                </p>
+              </div>
             </div>
-            <div>
-              <div className="w-12 h-12 border border-solid border-[#A3A7AC] rounded-full flex justify-center items-center mb-3">
-                <FiCode className="text-[#068FFF] text-lg " />
+            <div className="flex justify-between gap-4 md:block ">
+              <div>
+                <div className="w-12 h-12 md:w-12 md:h-12 border border-solid border-[#A3A7AC] rounded-full flex justify-center items-center mb-3">
+                  <FiCode className="text-[#068FFF] text-lg " />
+                </div>
               </div>
-              <h2 className="text-4xl font-bold mb-2  ">Инновации</h2>
-              <p className="text-base font-normal leading-5 ">
-                Мы всегда в поиске новых идей и технологических решений, чтобы
-                удивлять и вдохновлять наших клиентов.
-              </p>
+              <div>
+                <h2 className=" text-xl md:text-4xl font-bold mb-2  ">
+                  Инновации
+                </h2>
+                <p className=" text-base font-normal leading-5 ">
+                  Мы всегда в поиске новых идей и технологических решений, чтобы
+                  удивлять и вдохновлять наших клиентов.
+                </p>
+              </div>
             </div>
           </div>
         </div>
         <div className="w-full h-full bg-[#068FFF] ">
-          <div className="max-w-[1040px] mx-auto py-14 ">
-            <h2 className="uppercase text-5xl font-semibold w-9/12 leading-snug text-white mb-5">
+          <div className=" max-w-[1040px] mx-auto px-6 py-14 ">
+            <h2 className="uppercase text-xl w-[90%] md:text-5xl font-semibold  md:w-9/12 leading-snug text-white mb-5">
               посмотрите реализованные <br /> проекты
             </h2>
             <p className="text-white w-7/12 text-xl font-normal mb-5 ">

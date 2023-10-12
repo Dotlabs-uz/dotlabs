@@ -4,7 +4,7 @@ import aboutCss from "../styles/about.module.scss";
 export default function Contact() {
 	return (
 		<div className="w-full h-full bg-[#FFC000] ">
-			<section className="max-w-[1040px] w-full mx-auto py-12 px-5 md:px-0  lg:py-16">
+			<section className="max-w-[1040px] w-full mx-auto py-12 px-5 md:px-6 xl:px-0  lg:py-16">
 				<h2 className=" uppercase text-2xl lg:text-5xl font-semibold mb-6 md:mb-16 leading-normal ">
 					Расскажите о задачах, <br /> мы оперативно свяжемся:
 				</h2>

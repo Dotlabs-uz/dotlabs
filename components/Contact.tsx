@@ -13,7 +13,6 @@ export default function Contact() {
 						<input
 							type="text"
 							id="name"
-							autoFocus
 							placeholder=" "
 							className={`${aboutCss.input} relative mb-4 md:mb-0 z-10 bg-transparent border-b-2 border-b-[#000] w-full h-14 text-black pt-2 outline-none peer autofill:bg-[#FFC000] `}
 						/>
@@ -28,7 +27,6 @@ export default function Contact() {
 						<input
 							type="tel"
 							id="tel"
-							autoFocus
 							placeholder=" "
 							name="tel"
 							className={` ${aboutCss.input} relative  mb-9 md:mb-0  z-10 bg-transparent border-b-2 border-b-[#000] w-full h-14 text-black pt-2 outline-none peer`}

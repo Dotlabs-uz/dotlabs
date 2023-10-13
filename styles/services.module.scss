@@ -1,0 +1,18 @@
+.progectBg::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 450px;
+  background: linear-gradient( 25deg, #fff, #ffffffeb,  transparent);
+  z-index: 100;
+  position: absolute;
+  top: 0;
+}
+
+@media (min-width: 768px) {
+    .progectBg::before {
+        display: none;
+    } 
+}
+
+// .progectBg::before

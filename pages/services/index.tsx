@@ -5,6 +5,8 @@ import { FiFigma, FiServer, FiCode, FiArrowUpRight } from "react-icons/fi";
 import { BsArrowReturnRight } from "react-icons/bs";
 import { BiRightArrowAlt } from "react-icons/bi";
 
+import serviceCss from "../../styles/services.module.scss";
+
 export default function index() {
   return (
     <Layout>
@@ -75,7 +77,7 @@ export default function index() {
             <h2 className="uppercase text-xl w-[90%] md:text-5xl font-semibold  md:w-9/12 leading-snug text-white mb-5">
               посмотрите реализованные <br /> проекты
             </h2>
-            <p className="text-white w-7/12 text-xl font-normal mb-5 ">
+            <p className="text-white text-base md:w-7/12 md:text-xl font-normal mb-5 ">
               Наши работы - это не просто проекты, это истории успеха, и мы
               гордимся ими. Посмотрите нашу коллекцию, и вы убедитесь, как мы
               помогли другим клиентам достичь своих целей и преуспеть в онлайне.
@@ -86,41 +88,50 @@ export default function index() {
             </button>
           </div>
         </div>
-        <div className="w-full max-w-[1300px] mx-auto flex items-center justify-between py-16 gap-8 ">
-          <div className="w-2/5 h-full ">
+        <div className="w-full px-9 max-w-[1300px] mx-auto block relative md:flex items-center justify-between py-16 gap-8 ">
+          <div
+            className={`absolute top-14 md:relative right-0 w-72 -z-10   md:w-2/5 h-full  ${serviceCss.progectBg} `}
+          >
             <Image
               src="/images/services.png"
               alt=""
               width="500"
               height="100"
-              className="object-contain"
+              className={`object-contain `}
             />
           </div>
-          <div className="w-3/5 h-full  ">
-            <h1 className="text-[44px] font-semibold uppercase  ">
+          <div className="w-full py-5 md:w-3/5 h-full  ">
+            <h1 className=" text-2xl md:text-[44px] md:leading-10 mb-3 font-semibold uppercase  ">
               проекты любой сложности
             </h1>
             <ul className="mb-6 h-full ">
-              <li className="flex items-center gap-2 text-2xl font-normal mb-3 ">
-                <BsArrowReturnRight /> Разработка веб-сайтов
+              <li className="flex items-center gap-2 text-xl md:text-2xl font-normal mb-3 ">
+                <BsArrowReturnRight className="text-lg text-[#A3A7AC] " />{" "}
+                Разработка веб-сайтов
               </li>
-              <li className="flex items-center gap-2 text-2xl font-normal mb-3 ">
-                <BsArrowReturnRight /> Разработка мобильных приложений
+              <li className="flex items-center gap-2 text-xl md:text-2xl font-normal mb-3 ">
+                <BsArrowReturnRight className="text-lg text-[#A3A7AC] " />{" "}
+                Разработка мобильных приложений
               </li>
-              <li className="flex items-center gap-2 text-2xl font-normal mb-3 ">
-                <BsArrowReturnRight /> Разработка CRM-систем
+              <li className="flex items-center gap-2 text-xl md:text-2xl font-normal mb-3 ">
+                <BsArrowReturnRight className="text-lg text-[#A3A7AC] " />{" "}
+                Разработка CRM-систем
               </li>
-              <li className="flex items-center gap-2 text-2xl font-normal mb-3 ">
-                <BsArrowReturnRight /> Веб-дизайн и UI/UX разработка
+              <li className="flex items-center gap-2 text-xl md:text-2xl font-normal mb-3 ">
+                <BsArrowReturnRight className="text-lg text-[#A3A7AC] " />{" "}
+                Веб-дизайн и UI/UX разработка
               </li>
-              <li className="flex items-center gap-2 text-2xl font-normal mb-3 ">
-                <BsArrowReturnRight /> SEO и поисковая оптимизация
+              <li className="flex items-center gap-2 text-xl md:text-2xl font-normal mb-3 ">
+                <BsArrowReturnRight className="text-lg text-[#A3A7AC] " /> SEO и
+                поисковая оптимизация
               </li>
-              <li className="flex items-center gap-2 text-2xl font-normal mb-3 ">
-                <BsArrowReturnRight /> Электронная коммерция и онлайн-магазины
+              <li className="flex items-center gap-2 text-xl md:text-2xl font-normal mb-3  ">
+                <BsArrowReturnRight className="text-lg text-[#A3A7AC] " />{" "}
+                Электронная коммерция и онлайн-магазины
               </li>
-              <li className="flex items-center gap-2 text-2xl font-normal mb-3 ">
-                <BsArrowReturnRight /> Веб-хостинг и обслуживание
+              <li className="flex items-center gap-2 text-xl md:text-2xl font-normal mb-3 ">
+                <BsArrowReturnRight className="text-lg text-[#A3A7AC] " />{" "}
+                Веб-хостинг и обслуживание
               </li>
             </ul>
             <button className="flex items-center gap-2 py-4 px-6 text-white font-medium text-lg bg-black rounded-full uppercase">

@@ -5,7 +5,7 @@ import React, { useState } from "react";
 import { BsFillTelephoneFill, BsTelephoneFill } from "react-icons/bs";
 import { GoGlobe } from "react-icons/go";
 import { SlMenu } from "react-icons/sl";
-// import gif from '../public/icons/anim.gif'
+import gif from '../public/icons/anim.gif'
 
 const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
 	const [show, setShow] = useState<boolean>(false);
@@ -51,11 +51,19 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
 						>
 							RU
 							<div>
+								<Image
+									src={gif}
+									alt=""
+									width="26"
+									height="26"
+									priority={true}
+									className="hidden"
+								/>
 								{!show ? (
 									<GoGlobe size="26" />
 								) : (
 									<Image
-										src="/icons/anim.gif"
+										src={gif}
 										alt=""
 										width="26"
 										height="26"
@@ -68,7 +76,7 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
 							Перезвоните мне
 							<BsTelephoneFill />
 						</button>
-						<button className="md:hidden" onClick={changeLang} >
+						<button className="md:hidden" onClick={changeLang}>
 							<div>
 								{!show ? (
 									<GoGlobe size="26" />

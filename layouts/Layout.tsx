@@ -36,8 +36,8 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
 							<Link href="/about" className="font-semibold">
 								About
 							</Link>
-							<Link href="#" className="font-semibold">
-								Home
+							<Link href="/services" className="font-semibold">
+								Services
 							</Link>
 							<Link href="#" className="font-semibold">
 								Home

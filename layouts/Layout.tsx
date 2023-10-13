@@ -20,7 +20,7 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
 	return (
 		<>
 			<header className="w-full bg-white">
-				<div className="flex justify-between items-center py-4 w-[98%] max-w-[1920px] my-0 mx-auto">
+				<div className="flex justify-between items-center py-4 md:w-[98%] w-full max-w-[1920px] my-0 mx-auto md:px-0 px-5">
 					<div className="flex items-center gap-10">
 						<Image
 							src={"/icons/logo.svg"}

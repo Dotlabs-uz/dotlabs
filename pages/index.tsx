@@ -3,6 +3,7 @@ import Layout from "@/layouts/Layout";
 import { BsFillPlayFill } from "react-icons/bs";
 import "swiper/css";
 import ServicesCont from "@/components/containers/ServicesCont";
+import PortfolioContainer from "@/components/containers/PortfolioContainer";
 
 export default function Home() {
 	return (
@@ -117,18 +118,9 @@ export default function Home() {
 					</div>
 				</div>
 			</section>
-			<section className="w-full max-w-[1400px] mx-auto px-5">
+			<section className="w-full max-w-[1400px] mx-auto px-5 pb-7">
 				<h2 className="text-[44px] font-semibold mb-3 uppercase">Наши работы</h2>
-				<div className="custom-grid">
-					{[1, 2, 3, 4, 5, 6, 7, 8].map((item: any) => (
-						<div className="job" key={item} >
-							<div></div>
-							<span className="text-xl md:text-2xl font-semibold">
-								Eleven CRM
-							</span>
-						</div>
-					))}
-				</div>
+				<PortfolioContainer arr={[1, 2, 3, 4, 5, 6, 7, 8]}/>
 			</section>
 		</Layout>
 	);

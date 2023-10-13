@@ -5,7 +5,6 @@ import React, { useState } from "react";
 import { BsFillTelephoneFill, BsTelephoneFill } from "react-icons/bs";
 import { GoGlobe } from "react-icons/go";
 import { SlMenu } from "react-icons/sl";
-// import gif from '../public/icons/anim.gif'
 
 const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
 	const [show, setShow] = useState<boolean>(false);
@@ -21,7 +20,7 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
 	return (
 		<>
 			<header className="w-full bg-white">
-				<div className="flex justify-between items-center py-4 w-full max-w-[1920px] my-0 mx-auto px-10">
+				<div className="flex justify-between items-center py-4 w-[98%] max-w-[1920px] my-0 mx-auto">
 					<div className="flex items-center gap-10">
 						<Image
 							src={"/icons/logo.svg"}

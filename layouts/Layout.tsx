@@ -24,12 +24,14 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
 			<header className="w-full bg-white">
 				<div className="flex justify-between items-center py-4 md:w-[98%] w-full max-w-[1920px] my-0 mx-auto md:px-0 px-5">
 					<div className="flex items-center gap-10">
-						<Image
-							src={"/icons/logo.svg"}
-							alt=""
-							width="80"
-							height="80"
-						/>
+						<Link href="/" >
+							<Image
+								src={"/icons/logo.svg"}
+								alt=""
+								width="80"
+								height="80"
+							/>
+						</Link>
 						<nav className="hidden md:flex items-center gap-6">
 							<Link
 								href="/"

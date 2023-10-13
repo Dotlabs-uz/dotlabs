@@ -1,6 +1,7 @@
 import Contact from "@/components/Contact";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import React, { useState } from "react";
 import { BsFillTelephoneFill, BsTelephoneFill } from "react-icons/bs";
 import { GoGlobe } from "react-icons/go";
@@ -8,6 +9,7 @@ import { SlMenu } from "react-icons/sl";
 
 const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
 	const [show, setShow] = useState<boolean>(false);
+	const { pathname } = useRouter();
 
 	function changeLang() {
 		setShow(true);
@@ -29,17 +31,49 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
 							height="80"
 						/>
 						<nav className="hidden md:flex items-center gap-6">
-							<Link href="/" className="font-semibold">
+							<Link
+								href="/"
+								className={`font-semibold ${
+									pathname === "/" && "text-main underline"
+								}`}
+							>
 								Home
 							</Link>
-							<Link href="/about" className="font-semibold">
+							<Link
+								href="/about"
+								className={`font-semibold ${
+									pathname === "/about" &&
+									"text-main underline"
+								}`}
+							>
 								About
 							</Link>
-							<Link href="#" className="font-semibold">
-								Home
+							<Link
+								href="#"
+								className={`font-semibold ${
+									pathname === "/services" &&
+									"text-main underline"
+								}`}
+							>
+								Services
 							</Link>
-							<Link href="#" className="font-semibold">
-								Home
+							<Link
+								href="/portfolio"
+								className={`font-semibold ${
+									pathname === "/portfolio" &&
+									"text-main underline"
+								}`}
+							>
+								Portfolio
+							</Link>
+							<Link
+								href="/portfolio"
+								className={`font-semibold ${
+									pathname === "/contacts" &&
+									"text-main underline"
+								}`}
+							>
+								Contacts
 							</Link>
 						</nav>
 					</div>
@@ -67,7 +101,7 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
 							Перезвоните мне
 							<BsTelephoneFill />
 						</button>
-						<button className="md:hidden" onClick={changeLang} >
+						<button className="md:hidden" onClick={changeLang}>
 							<div>
 								{!show ? (
 									<GoGlobe size="26" />

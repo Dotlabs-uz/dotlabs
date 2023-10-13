@@ -42,7 +42,7 @@ export default function Home() {
 				</div>
 			</section>
 			<ServicesCont />
-			<section className="flex items-start justify-between flex-col md:flex-row gap-6 w-full max-w-[1400px] mx-auto relative px-5 my-[60px] md:my-[120px]">
+			<section className="flex items-start justify-between flex-col md:flex-row gap-6 w-full md:w-[90%] max-w-[1400px] mx-auto relative px-5 my-[60px] md:my-[120px]">
 				<div className="flex flex-col items-start gap-4 w-full">
 					<Image
 						src="/icons/logo_text.svg"
@@ -118,7 +118,7 @@ export default function Home() {
 					</div>
 				</div>
 			</section>
-			<section className="w-full max-w-[1400px] mx-auto px-5 pb-7">
+			<section className="w-full md:w-[90%] max-w-[1400px] mx-auto px-5 pb-7">
 				<h2 className="text-[44px] font-semibold mb-3 uppercase">Наши работы</h2>
 				<PortfolioContainer arr={[1, 2, 3, 4, 5, 6, 7, 8]}/>
 			</section>

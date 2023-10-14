@@ -49,14 +49,14 @@ export default function Contact() {
 								stroke="white"
 								strokeWidth="2"
 								strokeLinecap="round"
-								stroke-linejoin="round"
+								strokeLinejoin="round"
 							/>
 							<path
 								d="M1 1H11V11"
 								stroke="white"
 								strokeWidth="2"
 								strokeLinecap="round"
-								stroke-linejoin="round"
+								strokeLinejoin="round"
 							/>
 						</svg>
 					</button>

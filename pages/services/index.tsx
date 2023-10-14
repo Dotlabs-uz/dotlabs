@@ -11,7 +11,7 @@ export default function index() {
 	return (
 		<Layout>
 			<section className="pt-5 mx-auto">
-				<div className="w-full md:w-[90%] mx-auto px-5 h-full mb-12">
+				<div className="w-full md:w-[90%] max-w-[1440px] mx-auto px-5 h-full mb-12">
 					<div className=" w-full  lg:w-[70%] mb-7 ">
 						<h1 className=" text-3xl  md:text-5xl lg:text-6xl font-extrabold mb-3">
 							Чем мы занимаемся

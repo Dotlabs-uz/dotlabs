@@ -96,7 +96,7 @@ export default function index() {
 				</div>
 				<div className="w-full md:w-[90%] px-5 max-w-[1440px] mx-auto block relative md:flex items-center justify-between py-16 gap-8 ">
 					<div
-						className={`absolute top-14 md:relative right-0 w-72 -z-10   md:w-2/5 h-full  ${serviceCss.progectBg} `}
+						className={`absolute top-14 md:top-0 md:relative right-0 w-72 -z-10   md:w-2/5 h-full  ${serviceCss.progectBg} `}
 					>
 						<Image
 							src="/images/services.png"
@@ -140,7 +140,7 @@ export default function index() {
 								Веб-хостинг и обслуживание
 							</li>
 						</ul>
-						<button className="flex items-center gap-2 py-4 px-6 text-white font-medium text-lg bg-black rounded-full uppercase">
+						<button className="flex items-center gap-2 py-2 px-4 md:py-4 md:px-6 text-white font-medium text-sm md:text-lg bg-black rounded-full uppercase">
 							проконсультироваться{" "}
 							<BiRightArrowAlt
 								size="25"

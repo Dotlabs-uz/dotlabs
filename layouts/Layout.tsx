@@ -2,10 +2,39 @@ import React, { useState } from "react";
 import { BsFillTelephoneFill, BsTelephoneFill } from "react-icons/bs";
 import { GoGlobe } from "react-icons/go";
 import { SlMenu } from "react-icons/sl";
+import { IoMdClose } from "react-icons/io";
+
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import Contact from "@/components/Contact";
+const pages = [
+	{
+		id: 1,
+		path: "/",
+		name: "Home",
+	},
+	{
+		id: 2,
+		path: "/about",
+		name: "About",
+	},
+	{
+		id: 3,
+		path: "/portfolio",
+		name: "Portfolio",
+	},
+	{
+		id: 4,
+		path: "/services",
+		name: "Services",
+	},
+	{
+		id: 5,
+		path: "/contact",
+		name: "Contact",
+	},
+];
 
 const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
 	const [show, setShow] = useState<boolean>(false);
@@ -33,50 +62,18 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
 							/>
 						</Link>
 						<nav className="hidden md:flex items-center gap-6">
-							<Link
-								href="/"
-								className={`font-semibold ${
-									pathname === "/" && "text-main underline"
-								}`}
-							>
-								Home
-							</Link>
-							<Link
-								href="/about"
-								className={`font-semibold ${
-									pathname === "/about" &&
-									"text-main underline"
-								}`}
-							>
-								About
-							</Link>
-							<Link
-								href="/services"
-								className={`font-semibold ${
-									pathname === "/services" &&
-									"text-main underline"
-								}`}
-							>
-								Services
-							</Link>
-							<Link
-								href="/portfolio"
-								className={`font-semibold ${
-									pathname === "/portfolio" &&
-									"text-main underline"
-								}`}
-							>
-								Portfolio
-							</Link>
-							<Link
-								href="/portfolio"
-								className={`font-semibold ${
-									pathname === "/contacts" &&
-									"text-main underline"
-								}`}
-							>
-								Contacts
-							</Link>
+							{pages.map((item) => (
+								<Link
+									key={item.id}
+									href={item.path}
+									className={`font-semibold ${
+										pathname === item.path &&
+										"text-main underline"
+									}`}
+								>
+									{item.name}
+								</Link>
+							))}
 						</nav>
 					</div>
 					<div className="flex items-center gap-5">
@@ -99,10 +96,10 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
 								)}
 							</div>
 						</button>
-						<button className="hidden md:flex items-center gap-2 py-2 px-5 text-white font-semibold bg-main rounded-full">
+						<Link href="tel:+998905047494" className="hidden md:flex items-center gap-2 py-2 px-5 text-white font-semibold bg-main rounded-full">
 							Перезвоните мне
 							<BsTelephoneFill />
-						</button>
+						</Link>
 						<button className="md:hidden" onClick={changeLang}>
 							<div>
 								{!show ? (
@@ -118,18 +115,17 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
 								)}
 							</div>
 						</button>
-						<button className="md:hidden">
+						<Link href="tel:+998905047494"  className="md:hidden">
 							<BsFillTelephoneFill size="26" />
-						</button>
-						<button className="md:hidden">
-							<SlMenu size="26" />
-							{/* <Menu/> */}
-						</button>
+						</Link>
+						<div className="md:hidden">
+							<Menu />
+						</div>
 					</div>
 				</div>
 			</header>
 			<main>{children}</main>
-			{/* <div className="h-[120px]" ></div> */}
+			<div className="h-[120px]" ></div>
 			<Contact />
 			<footer className="w-full bg-white my-10 px-6">
 				<div className="flex items-start justify-between flex-col-reverse gap-4 md:flex-row max-w-[1040px] w-full mx-auto">
@@ -199,21 +195,85 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
 export default Layout;
 
 export const Menu = () => {
+	const [open, setOpen] = useState<boolean>(false);
 	return (
-		<aside className="w-full h-full bg-white fixed top-0 left-0 bottom-0 " >
-			<h3>THE NETLIFY PLATFORM</h3>
-			<p>
-				<strong>Instantly build and deploy</strong> your sites to our global network from
-				Git. Custom domains, https, deploy previews, rollbacks and much
-				more.
-			</p>
-			<ul  >
-				<li><a href="#">Home</a></li>
-				<li><a href="#">About</a></li>
-				<li><a href="#">Portfolio</a></li>
-				<li><a href="#">Services</a></li>
-				<li><a href="#">Contact</a></li>
-			</ul>
-		</aside>
+		<>
+			{!open ? (
+				<button onClick={() => setOpen(true)} className="mt-2">
+					<SlMenu size="26" />
+				</button>
+			) : (
+				<aside className="w-full h-full bg-white fixed top-0 left-0 bottom-0 p-5 z-[1000]">
+					<nav className="w-full flex items-center justify-between mb-7">
+						<Image
+							src={"/icons/logo.svg"}
+							alt=""
+							width="90"
+							height="36"
+						/>
+
+						<button onClick={() => setOpen(false)}>
+							<IoMdClose size="36" />
+						</button>
+					</nav>
+					<div className="flex flex-col items-start gap-4">
+						<h3 className="text-sm text-[#545A61]">
+							THE NETLIFY PLATFORM
+						</h3>
+						<p className="text-start font-normal text-[#545A61]">
+							<strong className="font-bold text-base text-black">
+								Instantly build and deploy
+							</strong>{" "}
+							your sites to our global network from Git. Custom
+							domains, https, deploy previews, rollbacks and much
+							more.
+						</p>
+						<ul className="text-start flex flex-col gap-1">
+							{pages.map((item) => (
+								<li
+									key={item.id}
+									onClick={() => setOpen(false)}
+								>
+									<Link
+										href={item.path}
+										className="underline text-base"
+									>
+										{item.name}
+									</Link>
+								</li>
+							))}
+						</ul>
+						<h3 className="text-sm text-[#545A61]">KEY FEATURES</h3>
+						<ul className="text-start flex flex-col gap-1">
+							<li>
+								<Link href="#" className="underline text-base">
+									Home
+								</Link>
+							</li>
+							<li>
+								<Link href="#" className="underline text-base">
+									About
+								</Link>
+							</li>
+							<li>
+								<Link href="#" className="underline text-base">
+									Portfolio
+								</Link>
+							</li>
+							<li>
+								<Link href="#" className="underline text-base">
+									Services
+								</Link>
+							</li>
+							<li>
+								<Link href="#" className="underline text-base">
+									Contact
+								</Link>
+							</li>
+						</ul>
+					</div>
+				</aside>
+			)}
+		</>
 	);
 };

@@ -62,7 +62,7 @@ export default function AboutUs() {
 	return (
 		<Layout>
 			<section className="pt-5 mx-auto">
-				<div className="w-full md:w-[90%] max-w-[1440px] mx-auto px-5 f-full mb-12">
+				<div className="w-full md:w-[90%] max-w-[1440px] mx-auto px-5 md:px-0 f-full mb-12">
 					<div className="h-full lg:w-3/5 pr-5">
 						<p className="text-xl font-medium sm:text-4xl  sm:leading-snug mb-3  xl:text-[40px] xl:font-semibold text-black xl:leading-tight xl:mb-6">
 							<span className="text-[#068FFF] font-bold ">
@@ -85,7 +85,7 @@ export default function AboutUs() {
 				</section>
 
 				<section className={`w-full h-full py-16 ${aboutCss.aboutBg}`}>
-					<div className="w-full max-w-[1300px] mx-auto">
+					<div className="w-full md:w-[90%] max-w-[1440px] mx-auto">
 						<h1 className="text-white mx-8 xl:mx-0 text-2xl lg:mx-16  lg:text-4xl uppercase font-semibold mb-10">
 							наши принципы
 						</h1>
@@ -134,7 +134,7 @@ export default function AboutUs() {
 					</div>
 				</section>
 
-				<section className="w-full mb-16 max-w-[1300px] mx-auto h-full  pt-10 pl-7  md:px-6 md:pt-16  xl:px-0 ">
+				<section className="w-full md:w-[90%] mb-16 max-w-[1440px] mx-auto h-full  pt-10 pl-7 px-5 md:pt-16  xl:px-0 ">
 					<h1 className="text-4xl font-semibold mb-10 uppercase ">
 						команда
 					</h1>

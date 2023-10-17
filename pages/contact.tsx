@@ -15,9 +15,9 @@ const Contacts: React.FC<contactsProps> = () => {
 					<span className="text-xl md:text-[34px] font-normal">
 						Позвоните нам и мы ответим на все ваши вопросы
 					</span>
-					<button className="text-base px-4 py-3 md:px-6 md:py-4 bg-black text-white uppercase rounded-full">
+					<Link href="tel:+998905047494" className="text-base px-4 py-3 md:px-6 md:py-4 bg-black text-white uppercase rounded-full">
 						позвонить
-					</button>
+					</Link>
 				</div>
 				<div className="w-full md:w-[90%] max-w-[1440px] mx-auto flex  item-start flex-col md:flex-row justify-between my-6 px-5 md:px-0">
 					<div className="flex flex-col items-start">

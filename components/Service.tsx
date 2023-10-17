@@ -20,8 +20,8 @@ const Service: React.FC<ServiceProps> = ({ item }) => {
 					{item.description}
 				</p>
 				<div className="flex flex-col items-start gap-4 mt-4">
-					{item.points.map((point: any) => (
-						<div className="flex items-center gap-3">
+					{item.points.map((point: any, idx: number) => (
+						<div key={idx} className="flex items-center gap-3">
 							<div className="service-component-li-icon">
 								<Image
 									src={`/icons/services/${point.icon}.svg`}

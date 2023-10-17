@@ -1,9 +1,45 @@
 import Image from "next/image";
 import Layout from "@/layouts/Layout";
-import { BsFillPlayFill } from "react-icons/bs";
 import "swiper/css";
 import ServicesCont from "@/components/containers/ServicesCont";
 import PortfolioContainer from "@/components/containers/PortfolioContainer";
+import { BsFillPlayFill } from "react-icons/bs";
+
+const services_arr = [
+	{
+		id: 1,
+		ru_title: "Веб-сайты",
+		description: "Наши опытные дизайнеры и разработчики создадут для вас современный, функциональный и креативный веб-сайт, который выделяется среди конкурентов.",
+		img: "/images/serviceOne.png",
+		points: [
+			{icon: "figma", title: "Уникальный дизайн, отражающий ваш бренд"},
+			{icon: "smartphone", title: "Адаптивность под разные устройства и экраны"},
+			{icon: "thumbs-up", title: "Оптимизация для поисковых систем (SEO)"},
+		]
+	},
+	{
+		id: 2,
+		ru_title: "iOS/Android",
+		description: "Наша команда разработки приложений создаст мобильное или веб-приложение, которое повысит эффективность вашего бизнеса и улучшит взаимодействие с клиентами.",
+		img: "/images/servTwo.png",
+		points: [
+			{icon: "loader", title: "Высокая производительность и надежность"},
+			{icon: "toggle-right", title: "Решения под ваши потребности"},
+			{icon: "check", title: "Интерфейс, соответствующий вашему бренду"},
+		]
+	},
+	{
+		id: 3,
+		ru_title: "CRM-системы",
+		description: "Наши CRM-системы помогут вам эффективно управлять клиентами, улучшить продажи и оптимизировать бизнес-процессы.",
+		img: "/images/servThree.png",
+		points: [
+			{icon: "navigation", title: "Индивидуально-проектированные решения"},
+			{icon: "activity", title: "Автоматизация вашего бизнеса"},
+			{icon: "msg", title: "Аналитика и отчетность для принятия решений"},
+		]
+	}
+]
 
 export default function Home() {
 	return (
@@ -41,7 +77,7 @@ export default function Home() {
 					</div>
 				</div>
 			</section>
-			<ServicesCont />
+			<ServicesCont services={services_arr} />
 			<section className="flex items-start justify-between flex-col md:flex-row gap-6 w-full md:w-[90%] max-w-[1400px] mx-auto relative px-5 my-[60px] md:my-[120px]">
 				<div className="flex flex-col items-start gap-4 w-full">
 					<Image

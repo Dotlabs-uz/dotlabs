@@ -8,10 +8,15 @@ const PortfolioContainer: React.FC<PortfolioContainerProps> = ({arr}) => {
 	return (
 		<div className="custom-grid">
 			{arr.map((item: any) => (
-				<div className="job" key={item}>
-					<div></div>
+				<div className="job" key={item.id}>
+					<div
+						style={{
+							backgroundImage: `url(${item.image})`,
+							backgroundSize: "cover"
+						}}
+					></div>
 					<span className="text-xl md:text-2xl font-semibold">
-						Eleven CRM
+						{item.title}
 					</span>
 				</div>
 			))}

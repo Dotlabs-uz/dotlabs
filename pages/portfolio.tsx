@@ -1,10 +1,23 @@
 import PortfolioContainer from "@/components/containers/PortfolioContainer";
 import Layout from "@/layouts/Layout";
+import { GetServerSideProps } from "next";
 import React from "react";
 
 interface PortfolioProps {}
 
-const Portfolio: React.FC<PortfolioProps> = () => {
+export const getServerSideProps: GetServerSideProps = async () => {
+	const res = await fetch("https://dotlabs.uz/api/hello");
+
+
+	const data = await res.json();
+
+	return {
+		props: { data }
+	};
+};
+
+
+const Portfolio: React.FC<PortfolioProps> = ({data}: any) => {
 	return (
 		<Layout>
 			<section className="w-full md:w-[90%] max-w-[1400px] mx-auto px-5 pb-7">
@@ -15,7 +28,7 @@ const Portfolio: React.FC<PortfolioProps> = () => {
 						качестве нашей работы!
 					</p>
 				</div>
-				<PortfolioContainer arr={[1, 2, 3, 4, 5, 6, 7, 8]}/>
+				<PortfolioContainer arr={data}/>
 			</section>
 		</Layout>
 	);

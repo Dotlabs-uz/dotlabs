@@ -4,44 +4,80 @@ import "swiper/css";
 import ServicesCont from "@/components/containers/ServicesCont";
 import PortfolioContainer from "@/components/containers/PortfolioContainer";
 import { BsFillPlayFill } from "react-icons/bs";
+import { GetServerSideProps } from "next";
 
 const services_arr = [
 	{
 		id: 1,
 		ru_title: "Веб-сайты",
-		description: "Наши опытные дизайнеры и разработчики создадут для вас современный, функциональный и креативный веб-сайт, который выделяется среди конкурентов.",
+		description:
+			"Наши опытные дизайнеры и разработчики создадут для вас современный, функциональный и креативный веб-сайт, который выделяется среди конкурентов.",
 		img: "/images/serviceOne.png",
 		points: [
-			{icon: "figma", title: "Уникальный дизайн, отражающий ваш бренд"},
-			{icon: "smartphone", title: "Адаптивность под разные устройства и экраны"},
-			{icon: "thumbs-up", title: "Оптимизация для поисковых систем (SEO)"},
-		]
+			{ icon: "figma", title: "Уникальный дизайн, отражающий ваш бренд" },
+			{
+				icon: "smartphone",
+				title: "Адаптивность под разные устройства и экраны",
+			},
+			{
+				icon: "thumbs-up",
+				title: "Оптимизация для поисковых систем (SEO)",
+			},
+		],
 	},
 	{
 		id: 2,
 		ru_title: "iOS/Android",
-		description: "Наша команда разработки приложений создаст мобильное или веб-приложение, которое повысит эффективность вашего бизнеса и улучшит взаимодействие с клиентами.",
+		description:
+			"Наша команда разработки приложений создаст мобильное или веб-приложение, которое повысит эффективность вашего бизнеса и улучшит взаимодействие с клиентами.",
 		img: "/images/servTwo.png",
 		points: [
-			{icon: "loader", title: "Высокая производительность и надежность"},
-			{icon: "toggle-right", title: "Решения под ваши потребности"},
-			{icon: "check", title: "Интерфейс, соответствующий вашему бренду"},
-		]
+			{
+				icon: "loader",
+				title: "Высокая производительность и надежность",
+			},
+			{ icon: "toggle-right", title: "Решения под ваши потребности" },
+			{
+				icon: "check",
+				title: "Интерфейс, соответствующий вашему бренду",
+			},
+		],
 	},
 	{
 		id: 3,
 		ru_title: "CRM-системы",
-		description: "Наши CRM-системы помогут вам эффективно управлять клиентами, улучшить продажи и оптимизировать бизнес-процессы.",
+		description:
+			"Наши CRM-системы помогут вам эффективно управлять клиентами, улучшить продажи и оптимизировать бизнес-процессы.",
 		img: "/images/servThree.png",
 		points: [
-			{icon: "navigation", title: "Индивидуально-проектированные решения"},
-			{icon: "activity", title: "Автоматизация вашего бизнеса"},
-			{icon: "msg", title: "Аналитика и отчетность для принятия решений"},
-		]
-	}
-]
+			{
+				icon: "navigation",
+				title: "Индивидуально-проектированные решения",
+			},
+			{ icon: "activity", title: "Автоматизация вашего бизнеса" },
+			{
+				icon: "msg",
+				title: "Аналитика и отчетность для принятия решений",
+			},
+		],
+	},
+];
 
-export default function Home() {
+export const getServerSideProps: GetServerSideProps = async () => {
+	const res = await fetch("https://dotlabs.uz/api/hello");
+
+
+	const data = await res.json();
+
+	return {
+		props: { data }
+	};
+};
+
+export default function Home({data}:any) {
+
+	console.log(data);
+	
 	return (
 		<Layout>
 			<div className="custom-bg bg-image"></div>
@@ -155,8 +191,10 @@ export default function Home() {
 				</div>
 			</section>
 			<section className="w-full md:w-[90%] max-w-[1400px] mx-auto px-5 pb-7">
-				<h2 className="text-[44px] font-semibold mb-3 uppercase">Наши работы</h2>
-				<PortfolioContainer arr={[1, 2, 3, 4, 5, 6, 7, 8]}/>
+				<h2 className="text-[44px] font-semibold mb-3 uppercase">
+					Наши работы
+				</h2>
+				<PortfolioContainer arr={data} />
 			</section>
 		</Layout>
 	);

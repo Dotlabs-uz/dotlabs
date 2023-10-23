@@ -8,19 +8,19 @@ let portfolio: any = [
 		id: 4,
 		title: "Student's Platform",
 		image: "/images/portfolio/wepro.webp",
-		url: "go.wepro.uz",
+		url: "https://go.wepro.uz/",
 	},
 	{
 		id: 3,
-		title: "Fit-life",
+		title: "Epi-Help",
 		image: "/images/portfolio/feb.webp",
-		url: "",
+		url: "https://epi-help.com/",
 	},
 	{
 		id: 2,
 		title: "Polyglot-school",
 		image: "/images/portfolio/polyglot.webp",
-		url: "polyglot-school.uz",
+		url: "https://polyglot-school.uz/ru",
 	},
 	{
 		id: 1,

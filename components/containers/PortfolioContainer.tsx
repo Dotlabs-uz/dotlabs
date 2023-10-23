@@ -15,8 +15,8 @@ const PortfolioContainer: React.FC<PortfolioContainerProps> = ({ arr }) => {
 						<Image
 							src={item.image}
 							alt={item.title}
-							width="500"
-							height="500"
+							width="1000"
+							height="1000"
 							className="w-full h-full object-cover object-center scale-[1] hover:scale-[1.1] transition-all"
 						/>
 					</div>

@@ -8,6 +8,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import Contact from "@/components/Contact";
+import Head from "next/head";
 const pages = [
 	{
 		id: 1,
@@ -50,6 +51,10 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
 
 	return (
 		<>
+		<Head>
+			<link rel="shortcut icon" href="/icons/logo.svg" type="image/x-icon" />
+			<title>Dot Labs</title>
+		</Head>
 			<header className="w-full bg-white">
 				<div className="flex justify-between items-center py-4 md:w-[98%] w-full max-w-[1920px] my-0 mx-auto md:px-0 px-5">
 					<div className="flex items-center gap-10">
@@ -218,7 +223,7 @@ export const Menu = () => {
 					</nav>
 					<div className="flex flex-col items-start gap-4">
 						<h3 className="text-sm text-[#545A61]">
-							THE NETLIFY PLATFORM
+							Мы облегчим вашу рутину
 						</h3>
 						<p className="text-start font-normal text-[#545A61]">
 							<strong className="font-bold text-base text-black">

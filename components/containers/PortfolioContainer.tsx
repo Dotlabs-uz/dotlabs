@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 interface PortfolioContainerProps {
@@ -27,9 +28,9 @@ const PortfolioContainer: React.FC<PortfolioContainerProps> = ({ arr }) => {
 							WebkitBackgroundSize: "130%"
 						}}
 					></div> */}
-					<span className="text-xl md:text-2xl font-semibold">
+					<Link href={item.url} target="_blank" className="text-xl md:text-2xl font-semibold hover:underline">
 						{item.title}
-					</span>
+					</Link>
 				</div>
 			))}
 		</div>

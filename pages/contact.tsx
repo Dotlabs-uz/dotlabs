@@ -1,4 +1,5 @@
 import Layout from "@/layouts/Layout";
+import Head from "next/head";
 import Link from "next/link";
 import React from "react";
 
@@ -7,6 +8,9 @@ interface contactsProps {}
 const Contacts: React.FC<contactsProps> = () => {
 	return (
 		<Layout>
+			<Head>
+				<title>Dot Labs - Portfolio</title>
+			</Head>
 			<section>
 				<div className="w-full md:w-[90%] max-w-[1440px] mx-auto flex flex-col gap-5 items-start px-5 md:px-0">
 					<h1 className="text-3xl md:text-[64px] font-extrabold my-0 leading-[60px]">

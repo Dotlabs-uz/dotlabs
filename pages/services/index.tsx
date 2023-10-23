@@ -6,10 +6,14 @@ import { BsArrowReturnRight } from "react-icons/bs";
 import { BiRightArrowAlt } from "react-icons/bi";
 
 import serviceCss from "../../styles/services.module.scss";
+import Head from "next/head";
 
 export default function index() {
 	return (
 		<Layout>
+			<Head>
+				<title>Dot Labs - Services</title>
+			</Head>
 			<section className="pt-5 mx-auto">
 				<div className="w-full md:w-[90%] max-w-[1440px] mx-auto px-5 h-full mb-12">
 					<div className=" w-full  lg:w-[70%] mb-7 ">

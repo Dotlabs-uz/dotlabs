@@ -76,8 +76,6 @@ export const getServerSideProps: GetServerSideProps = async () => {
 
 export default function Home({data}:any) {
 
-	console.log(data);
-	
 	return (
 		<Layout>
 			<div className="custom-bg bg-image"></div>
@@ -103,10 +101,7 @@ export default function Home({data}:any) {
 						</button>
 					</div>
 					<div
-						className="hidden md:flex justify-center items-center w-full h-[256px] rounded-xl cursor-pointer"
-						style={{
-							backgroundImage: "url(/images/video.png)",
-						}}
+						className="hidden md:flex justify-center items-center w-full h-[256px] rounded-xl cursor-pointer bg-[url(/images/video.png)] bg-no-repeat bg-center bg-cover"
 						onClick={() => console.log("hello world")}
 					>
 						<BsFillPlayFill color="white" size="50" />
@@ -169,9 +164,9 @@ export default function Home({data}:any) {
 							Специалисты с большим опытом
 						</h3>
 						<Image
-							src="/images/team.png"
+							src="/images/team3.png"
 							alt="team"
-							width="270"
+							width="450"
 							height="80"
 						/>
 						<p className="font-normal  text-[#747474] w-[90%]">

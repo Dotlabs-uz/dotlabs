@@ -21,43 +21,38 @@ export default function AboutUs() {
 		{
 			name: "Алексей Задорожный",
 			position: "Дизайн-директор, основатель",
-			img: "/images/aboutTeamImg.png",
+			img: "/images/about/daler2.webp",
 		},
 		{
 			name: "Алексей Задорожный",
 			position: "Дизайн-директор, основатель",
-			img: "/images/aboutTeamImg.png",
+			img: "/images/about/mirsaid.webp",
 		},
 		{
 			name: "Алексей Задорожный",
 			position: "Дизайн-директор, основатель",
-			img: "/images/aboutTeamImg.png",
+			img: "/images/about/davlatshox.webp",
 		},
 		{
 			name: "Алексей Задорожный",
 			position: "Дизайн-директор, основатель",
-			img: "/images/aboutTeamImg.png",
+			img: "/images/about/jony.webp",
 		},
 		{
 			name: "Алексей Задорожный",
 			position: "Дизайн-директор, основатель",
-			img: "/images/aboutTeamImg.png",
+			img: "/images/about/samir.webp",
 		},
 		{
 			name: "Алексей Задорожный",
 			position: "Дизайн-директор, основатель",
-			img: "/images/aboutTeamImg.png",
+			img: "/images/about/ozod.webp",
 		},
 		{
 			name: "Алексей Задорожный",
 			position: "Дизайн-директор, основатель",
-			img: "/images/aboutTeamImg.png",
-		},
-		{
-			name: "Алексей Задорожный",
-			position: "Дизайн-директор, основатель",
-			img: "/images/aboutTeamImg.png",
-		},
+			img: "/images/about/kostya.webp",
+		}
 	];
 
 	return (

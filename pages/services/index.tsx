@@ -9,11 +9,9 @@ import serviceCss from "../../styles/services.module.scss";
 import Head from "next/head";
 import TranslateContext from "@/context/useTranslate";
 
-export default function index() {
+export default function Index() {
     const translation: any = useContext(TranslateContext);
 
-	console.log(translation?.servicesPage?.section3?.services);
-	
     return (
         <Layout>
             <Head>

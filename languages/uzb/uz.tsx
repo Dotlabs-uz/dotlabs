@@ -107,9 +107,12 @@ const uz = {
         pText:"Allaqachon amalga oshirilgan loyihalarga qarang va ishimiz sifatiga ishonch hosil qiling!"
     },
     contact: {
-        title: "VAZIFALAR HAQIDA BIZGA XABAR BERING, BIZ TEZDA BOG'LANAMIZ:",
+        title1: "VAZIFALAR HAQIDA BIZGA XABAR BERING,",
+        title2: "BIZ TEZDA BOG'LANAMIZ:",
         inputName: "Ism",
+        inputNameEror: "Ism maydoni majburiydir!",
         inputNumber: "Telefon raqami",
+        inputNumberEror: "Keyinroq qo'ng'iroq qilish uchun sizga raqamingiz kerak!",
         buttonText: "Yuborish",
     },
     footer: {

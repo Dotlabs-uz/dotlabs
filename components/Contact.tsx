@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import aboutCss from "../styles/about.module.scss";
 import { useForm, SubmitHandler } from "react-hook-form";
 import axios from "axios";
+import TranslateContext from "@/context/useTranslate";
 
 
 export default function Contact() {
@@ -38,11 +39,14 @@ export default function Contact() {
 		}
 	};
 
+    const translation: any = useContext(TranslateContext);
+
+
 	return (
 		<div className="w-full h-full bg-[#FFC000] ">
 			<section className="max-w-[1040px] w-full mx-auto py-12 px-5 md:px-6 xl:px-0  lg:py-16">
 				<h2 className=" uppercase text-2xl lg:text-5xl font-semibold mb-6 md:mb-16 leading-normal ">
-					Расскажите о задачах, <br /> мы оперативно свяжемся:
+					{translation?.contact?.title1} <br /> {translation?.contact?.title2}
 				</h2>
 				<form
 					onSubmit={handleSubmit(onSubmit)}
@@ -60,9 +64,9 @@ export default function Contact() {
 							htmlFor="name"
 							className=" z-10 peer-focus:font-medium absolute text-black  duration-500 transform -translate-y-5 scale-75 top-3 left-0  origin-[0] peer-focus:left-0 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0   text-2xl font-semibold"
 						>
-							Имя
+							{translation?.contact?.inputName} 
 						</label>
-						{errors?.userName && <span className="text-red-600" >Поле имя обязательное!</span>}
+						{errors?.userName && <span className="text-red-600" >{translation?.contact?.inputNameEror} </span>}
 					</div>
 					<div className=" md:w-2/5 relative ">
 						<input
@@ -77,12 +81,12 @@ export default function Contact() {
 							className={` ${aboutCss.input} relative mb-4 md:mb-0 z-10 bg-transparent border-b-2 border-b-[#000] w-full h-14 text-black pt-2 outline-none peer`}
 						/>
 						<label className=" -z-2 peer-focus:font-medium absolute text-black  duration-500 transform -translate-y-5 scale-75 top-3 left-0  origin-[0] peer-focus:left-0 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0  text-2xl font-semibold">
-							Номер телефона
+						{translation?.contact?.inputNumber} 
 						</label>
-						{errors?.phone && <span className="text-red-600" >Нам нужен ваш номер, что-бы позже перезвонить!</span>}
+						{errors?.phone && <span className="text-red-600" >{translation?.contact?.inputNumberEror} </span>}
 					</div>
 					<button className="mt-9 uppercase flex items-center gap-2 py-3  px-8 text-white font-semibold bg-black rounded-full">
-						отправить{" "}
+					{translation?.contact?.buttonText} {" "}
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
 							width="12"

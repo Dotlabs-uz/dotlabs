@@ -107,9 +107,12 @@ const en = {
         pText: "Take a look at the projects already implemented and make sure of the quality of our work!"
     },
     contact: {
-        title: "TELL US ABOUT THE TASKS, WE WILL CONTACT YOU PROMPTLY:",
+        title1: "TELL US ABOUT THE TASKS,",
+        title2: "WE WILL CONTACT YOU PROMPTLY:",
         inputName: "Name",
+        inputNameEror: "The name field is required!",
         inputNumber: "Phone number",
+        inputNumberEror: "We need your number to call back later!",
         buttonText: "Send",
     },
     footer: {

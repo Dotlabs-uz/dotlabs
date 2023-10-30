@@ -1,45 +1,20 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { BsFillTelephoneFill, BsTelephoneFill } from "react-icons/bs";
-import { GoGlobe } from "react-icons/go";
 import { SlMenu } from "react-icons/sl";
 import { IoMdClose } from "react-icons/io";
 import { Select } from "antd";
+import TranslateContext from "@/context/useTranslate";
 
-const pages = [
-    {
-        id: 1,
-        path: "/",
-        name: "Home",
-    },
-    {
-        id: 2,
-        path: "/about",
-        name: "About",
-    },
-    {
-        id: 3,
-        path: "/portfolio",
-        name: "Portfolio",
-    },
-    {
-        id: 4,
-        path: "/services",
-        name: "Services",
-    },
-    {
-        id: 5,
-        path: "/contact",
-        name: "Contact",
-    },
-];
 
 const Header = () => {
     const router = useRouter();
     const { locale } = router;
     const { pathname } = router;
+
+    const translation:any = useContext(TranslateContext)
 
     const [localeValue, setLocaleValue] = useState<any>(locale);
 
@@ -67,7 +42,7 @@ const Header = () => {
                         />
                     </Link>
                     <nav className="hidden md:flex items-center gap-6">
-                        {pages.map((item: any) => (
+                        {translation?.header?.links.map((item: any) => (
                             <Link
                                 key={item.id}
                                 href={item.path}
@@ -123,7 +98,7 @@ const Header = () => {
                         href="tel:+998905047494"
                         className="hidden md:flex items-center gap-2 py-2 px-5 text-white font-semibold bg-main rounded-full"
                     >
-                        Перезвоните мне
+                        {translation?.header?.buttonText}
                         <BsTelephoneFill />
                     </Link>
                     {/* <button className="md:hidden" onClick={changeLang}>
@@ -157,6 +132,7 @@ export default Header;
 
 export const Menu = () => {
     const [open, setOpen] = useState<boolean>(false);
+    const translation:any = useContext(TranslateContext)
     return (
         <>
             {!open ? (
@@ -194,7 +170,7 @@ export const Menu = () => {
                             more.
                         </p>
                         <ul className="text-start flex flex-col gap-1">
-                            {pages.map((item) => (
+                            {translation?.header?.links.map((item:any) => (
                                 <li
                                     key={item.id}
                                     onClick={() => setOpen(false)}

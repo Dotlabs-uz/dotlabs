@@ -1,418 +1,230 @@
 const ru = {
     header: {
-        courses: "Курсы",
-        teachers: "Преподаватели",
-        tests: "Мини тесты",
-        aboutSchool: "О школе",
-        application: "Оставить заявку",
-    },
-    hero: {
-        text1: "When you think it's too late, the truth is, it's still early!",
-        text2: "Изучите всё, что не смогли изучить раньше!",
-        text3: "Освойте иностранные языки на уровне носителя!",
-    },
-    entry: {
-        text1: "Запишитесь на бесплатный урок",
-        buttonText: "Проконсультироваться",
-        text2: "Нажимая кнопку я принимаю условия политики и пользовательского соглашения",
-        input: "Фамилия Имя",
-        inputNumber: "Контактный телефон",
-    },
-    courses: {
-        title: "Программа курсов",
-        input: "Фамилия Имя",
-        inputNumber: "Контактный телефон",
-        courses: [
-            {
-                name1: "English",
-                name2: "Kids",
-                info: "Благодаря методике разработанной Оксфордом, это лучший курс для пробуждения детей к изучению английского языка. Занятия проходят 3 раза в неделю по 2 часа. Также выдаются тетради и книги бесплатно. Возраст в детских группах от 6ти до 10ти лет. К группе прикрепляются 2 преподавателя, 1-ый -это основной-3 раза в неделю по 2часа, и 2-ой дополнительный -внеурочный.",
-                text1: "Онлайн консультация 24/7",
-                text2: "Английский до уровня С2- IELTS.",
-                text3: "Продвинутая грамматика",
-                text4: "Оффлайн формат",
-                learnTime: "Срок обучения:",
-                learnTime2: "",
-                mounth: "мес",
-                price: "Цена",
-                cumMounth: "сум/мес.",
-                application: "Оставить заявку",
-                details: "Подробно",
-                price2: "599 000",
-            },
-            {
-                name1: "GENERAL",
-                name2: "ENGLISH",
-                info: "Курсы 'General English' проводятся по методике, разработанной ведущими университетами Великобритании, соответствующей мировым стандартам. Ученикам предоставляется 4-х разовые уроки в неделю по 90 минут -General English и уроки IELTS, проводимые местными и Зарубежными преподавателями. Также 3-ий учитель- Academic Support, который индивидуально объяснит сложные либо пропущенные темы. В комплект для обучения входят учебники, тетради и раздаточные материалы бесплатно. Дополнительно предоставляются бонусные воскресные уроки- Sunday Event: Movie-Speaking Club и караоке на английском языке",
-                text1: "Онлайн консультация 24/7",
-                text2: "Английский до уровня С2- IELTS.",
-                text3: "Продвинутая грамматика",
-                text4: "Оффлайн формат",
-                learnTime: "Срок обучения:",
-                learnTime2: "",
-                mounth: "мес",
-                price: "Цена",
-                cumMounth: "сум/мес.",
-                application: "Оставить заявку",
-                details: "Подробно",
-                price2: "599 000",
-            },
-            {
-                name1: "Intensive",
-                name2: "",
-                info: "Преимуществом ускоренного курса в том, что обучение за 3 месяца ,вместо 6ти месяцев с А1 до В1. Каждому обучающемуся предоставляется: 1) основной учитель; 2) Academic Support- вне урока;  3) учебные материалы; 4) co-working space; 5) Sunday Event",
-                text1: "Онлайн консультация 24/7",
-                text2: "Английский до уровня C2",
-                text3: "Оффлайн формат",
-                text4: "Продвинутая грамматика",
-                learnTime: "Срок обучения:",
-                learnTime2: "3",
-                mounth: "мес",
-                price: "Цена",
-                cumMounth: "сум/мес.",
-                application: "Оставить заявку",
-                details: "Подробно",
-                price2: "1 000 000",
-            },
-            {
-                name1: "Немецкий",
-                name2: "",
-                info: "Курсы немецкого языка проводятся 3 раза в неделю по 2 часа на немецком, узбекском и русском языках преподавателем с высшим образованием, имеющим сертификат уровня C1. Работа во время этого курса вы можете подготовиться(к экзамену dsd1, если вы школьник) к сертификату Гете (A1-C1).",
-                text1: "Онлайн консультация 24/7",
-                text2: "Немецкий до уровня С1",
-                text3: "Оффлайн формат",
-                text4: "Продвинутая грамматика",
-                learnTime: "Срок обучения:",
-                learnTime2: "",
-                mounth: "мес",
-                price: "Цена",
-                cumMounth: "сум/мес.",
-                application: "Оставить заявку",
-                details: "Подробно",
-                price2: "500 000",
-            },
-            {
-                name1: "IELTS",
-                name2: "Rocket",
-                info: "Уроки проводятся ежедневно по 1,5 часа. Гарантия качественного обучения. Контроль прогресса проверяется 3-мя Mock exam - пробные тесты. Профиль последователя после курса: 2-х недельная структура обучения IELTS (5.5-6.0). Двухнедельный анализ и внутренние знания (6.5) 1 месяц анализа реальных изменений. Учитывая сотрудничество с IDP -возможность регистрации и сдачи IELTS exam в центре Polyglot.",
-                text1: "Онлайн консультация 24/7",
-                text2: "Английский до уровня IELTS 8.0-8.5",
-                text3: "Оффлайн формат",
-                text4: "Продвинутая грамматика",
-                learnTime: "",
-                learnTime2: "",
-                mounth: "",
-                application: "Оставить заявку",
-                details: "Подробно",
-                price2: "",
-            },
+        links:[
+                {
+                    id: 1,
+                    path: "/",
+                    name: "Главная",
+                },
+                {
+                    id: 2,
+                    path: "/about",
+                    name: "О нас",
+                },
+                {
+                    id: 3,
+                    path: "/portfolio",
+                    name: "Портфолио",
+                },
+                {
+                    id: 4,
+                    path: "/services",
+                    name: "Услуги",
+                },
+                {
+                    id: 5,
+                    path: "/contact",
+                    name: "Контакт",
+                },
         ],
+        buttonText: "Перезвонить мне",
     },
-    tests: {
-        title1: "Всё ещё сомневаетесь в своем уровне знаний языка?",
-        title2: "Давайте, проверим!",
-        title2Child:
-            "Пройдите мини-тест и узнайте свой уровень владения иностранным языком",
-        tests: "Тесты",
-        test: {
-            info: "Насколько хорошо Вы знаете английский язык. Давайте проверим. За определенное время, ответив на вопросы Вы узнаете свой уровень английского.",
-            time: "Отведённое время",
-            min: "мин",
-            quantity: "Количество вопросов",
-            question: "воп",
+    section1: {
+        h1Text: "Иноовации в каждом пикселе",
+        pText: "В DOT LABS мы привносим инновации в мир разработки, где каждый пиксель имеет значение. Мы следим за последними технологическими трендами и применяем их в каждом проекте, чтобы обеспечить выдающийся результат.",
+        buttonText: "Заказать проект",
+    },
+    services_arr: [
+        {
+            id: 1,
+            ru_title: "Веб-сайты",
+            description:
+                "Наши опытные дизайнеры и разработчики создадут для вас современный, функциональный и креативный веб-сайт, который выделяется среди конкурентов.",
+            img: "/images/serviceOne.png",
+            points: [
+                {
+                    icon: "figma",
+                    title: "Уникальный дизайн, отражающий ваш бренд",
+                },
+                {
+                    icon: "smartphone",
+                    title: "Адаптивность под разные устройства и экраны",
+                },
+                {
+                    icon: "thumbs-up",
+                    title: "Оптимизация для поисковых систем (SEO)",
+                },
+            ],
         },
-    },
-    students: {
-        ourStudents: "Успешные результаты наших выпускников",
-        student: {
-            name: "Шарифкулов Далер",
-            yearofLear: "год обучения",
-            about: "Я всё думал какой язык мне изучить Английский или Французский, в итоге выучил HTML, CSS, JavaScript. Ну и с компьютерами разговаривать веселее оказалось.",
+        {
+            id: 2,
+            ru_title: "iOS/Android",
+            description:
+                "Наша команда разработки приложений создаст мобильное или веб-приложение, которое повысит эффективность вашего бизнеса и улучшит взаимодействие с клиентами.",
+            img: "/images/servTwo.png",
+            points: [
+                {
+                    icon: "loader",
+                    title: "Высокая производительность и надежность",
+                },
+                { icon: "toggle-right", title: "Решения под ваши потребности" },
+                {
+                    icon: "check",
+                    title: "Интерфейс, соответствующий вашему бренду",
+                },
+            ],
         },
+        {
+            id: 3,
+            ru_title: "CRM-системы",
+            description:
+                "Наши CRM-системы помогут вам эффективно управлять клиентами, улучшить продажи и оптимизировать бизнес-процессы.",
+            img: "/images/servThree.png",
+            points: [
+                {
+                    icon: "navigation",
+                    title: "Индивидуально-проектированные решения",
+                },
+                { icon: "activity", title: "Автоматизация вашего бизнеса" },
+                {
+                    icon: "msg",
+                    title: "Аналитика и отчетность для принятия решений",
+                },
+            ],
+        },
+    ],
+    section2: {
+        title: "ВАШ НАДЕЖНЫЙ ПАРТНЕР В",
+        title2: "РАЗРАБОТКЕ ПО",
+        pText: "В Dot Labs мы страстно преданы созданию выдающихся веб-решений, которые поднимают ваш бизнес на новый уровень. С нашей экспертизой в разработке веб-сайтов, мобильных приложений и CRM-систем, мы стремимся быть вашим надежным технологическим партнером.",
+        persentText: "Удовлетворенность клиентов",
+        secontBlockTitle: "Специалисты с большим опытом",
+        secontBlockPText:"В DOT LABS мы страстно преданы созданию выдающихся веб-решений, которые поднимают ваш бизнес на новый уровень.",
+        blueButtonText: "Всего сотрудников",
     },
-    support: {
-        text1: "Выпускников не забываем!",
-        text2: "По окончанию курсов наши специалисты готовы помочь и проконсультировать в выборе ВУЗа для поступления и трудоустройстве.",
-        texts: [
-            { id: 1, text01: "Бесплатныe индивидуальныe занятия" },
-            { id: 2, text01: "Бесплатные учебные материалы: Work и Student books",},
-            { id: 3, text01: "Пробныe MOCK экзамены" },
-            { id: 4, text01: "Помощь при поступлении" },
-            { id: 5, text01: "Сo-working spaces" },
-            { id: 6, text01: "Официальный приём IELTS экзамена" },
-            { id: 7,text01: "Бесплатное консультирование с консалтинговой компанией по вопросам поступления в Зарубежные Университеты"},
-        ],
+    portfolio: {
+        title: "НАШИ РАБОТЫ",
+        pText:"Посмотрите на уже реализованные проекты и убедитесь в качестве нашей работы!"
     },
-    about: {
-        title: "Одна из ведущих школ по изучению иностранных языков в Самарканде",
-        text2: "Языковая школа премиум класса Polyglot Language school была основана в городе Самарканде, в 2021 году. И на данный момент , уже имеет два филиала. Они расположены по адресу ,Гагарина 86 и Ибн Сино 8. Основателями школы являются Шохрух Кудратов и Олимжон Кудратов.",
-        text3: "Удобная локация главного центра и филиала. Уже более 3 000 выпускников успешно закончили обучение курсов английского, немецкого и русского языков, поступили и выиграли гранты на обучение в Зарубежных Университетах",
-    },
-    info: {
-        title1: "Инновационная методика обучения",
-        text1: "Методика разработана зарубежными университетами и соответствует международным стандартам образования, согласно которым вы сможете за короткое время овладеть любым языком вплоть до высшего уровня",
-        title2: "Создаём все удобства",
-        text2: "Наши кабинеты оснащены всем необходимым оборудованием для комфортного обучения. Также, имеется отдельная зона 'Co-working', для самостоятельных занятий",
-        title3: "Разговорная практика",
-        text3: "Помимо основного обучения мы проводим отдельные практические занятия для развития разговорной речи",
-        title4: "Частота занятий",
-        text4: "Уроки английского языка проходят 4 раза в неделю. Продолжительность занятий 90 минут. Начиная с уровня A1 студенты начинают подготовку к IELTS с носителем . Также , есть возможность посещать центр на ежедневной основе ,чтобы дополнительно заниматься с Academic Support.",
-        title5: "Гарантированный успех",
-        text5: "Сейчас наши студенты учатся в топовых университетах мира ,в США, Англии, Германии и других развитых стран. Кроме того, 90% наших студентов успешно сдали экзамен IELTS и получили желаемые баллы.",
-        title6: "Разностороннее обучение",
-        text6: "Polyglot стремится не только к качественному обучению, но и к тому, чтобы ученики весело и с пользой проводили время. Поэтому каждое воскресенье в наших мини-кинотеатрах демонстрируются интересные фильмы на английском языке, устраиваются дебаты и поются песни. Кроме того, проводятся семинары и тренинги с иностранными и местными спикерами.",
-        title7: "Мотивация во время уроков",
-        text7: "Также ученикам, активно участвующим в занятиях, выдаются доллары-полиглоты, и они могут обменять эти деньги на ценные подарки на аукционе, который проводится в последнее воскресенье каждого месяца.",
-        title8: "Родительский контроль",
-        text8: "Также родители информируются об успеваемости своих детей посредством регулярных звонков и СМС.",
-    },
-    teacher: {
-        title1: "",
-        title2: "Самое время познакомиться!",
-        p: "Наши специалисты не просто любят своё дело, но также вместе с вами совершенствуются с каждым днём",
-        h1: "Преподаватели",
-        name: "Ms. Zuxra",
-        job_title: "Преподаватель английского языка",
-        moreInfo: "Подробнее",
-        teacher: [
-            {
-                id: 1,
-                img: "teacher-1",
-                name: "Ms. Mekhruza",
-                job_title: "Преподаватель английского языка",
-                local: "",
-                modal: {
-                    text: "Меня зовут Вафокулова Мехруза.",
-                    text2: "",
-                    text3: "Можете обращаться- Мисс Мехруза.",
-                    title:"Образование, степень учености",
-                    info:"Lecturer at SRIUT PHD-WESTMINSTER INTERNATIONL UNIVERSITY. TASHKENT.UZBEKISTAN MASTER'S DEGREE-SEJONG UNIVERSITY, SEOUL,SOUTH KOREA",
-                    title2:"FACTS ABOUT ME",
-                    info2:"MGF PHILOSOPHY IN LIFE- LIFE IS TOO SHORT TO WASTE hate procrastination love chocolates married, two sons hobby-collect books, TRAVELLING SAY NO TO BRIBARY TAJIKISTAN RUSSIA TURKEY"
-                }
-            },
-            {
-                id: 2,
-                img: "teacher-2",
-                name: "Mr. Shahrukh",
-                job_title: "Инструктор английского языка",
-                local: "",
-            },
-            {
-                id: 3,
-                img: "teacher-3",
-                name: "Ms. Anna",
-                job_title: "Преподаватель английского языка",
-                local: "",
-                modal: {
-                    text: "My name is Anna",
-                    text2: "",
-                    text3: "You can call me  Ms. Ann",
-                    title:"MY ACADEMIC BACKGROUND",
-                    info:"I finished school, which is specialised on foreign languages. I have graduated from Moscow International University passed IELTS",
-                    info1:"For the first time at the age of 18: Listening 8.0, Reading 6.5, Writing 6.0, Speaking 6.5",
-                    title2:"MY HOBBIES AND INTERESTS",
-                    info2:"I adore dancing and singing; Also I like reading books and listening to music ; I am really sociable and friendly person;"
-                }
-            },
-            {
-                id: 4,
-                img: "teacher-4",
-                name: "Ms. Maftuna",
-                job_title: "Преподаватель английского языка",
-                local: "",
-                modal: {
-                    text: "Меня зовут Бобоёрова Мафтуна.",
-                    text2: "Мои друзья зовут меня Мафтуна",
-                    text3: "Можете обращаться -Мисс Мафтуна.",
-                    title:"Образование, степень учености",
-                    info:"BACHELOR'S DEGREE- SAMARKAND STATE INSTITUTE OF FOREIGN LANGUAGES",
-                    info1:"CERTIFICATIONS: Teaching course - Adult Education Centre, Cambridge CELTA Course Online",
-                    title2:"INTERSTING FACTS ABOUT ME",
-                    info2:"My favorite genre of books to read is mystery and thriller books"
-                }
-            },
-            {
-                id: 5,
-                img: "teacher-5",
-                name: "Mr. Siyavush",
-                job_title: "Преподаватель английского языка/ IELTS инструктор",
-                local: "",
-                modal: {
-                    text: "Меня зовут Siyavush Yildizoglu.",
-                    text2: "Мои друзья зовут меня Сиявуш.",
-                    text3: "Можете обращаться - Мистер Сиявуш.",
-                    title:"Образование, степень учености",
-                    info:"2 years of European Education in College of Hotel Business ERASMUS and ERASMUS+ programs' winner Exchange student in London School of Commerce, UK ",
-                    info1:"Samarkand State Institute of Foreign Languages: 1.5 year of academic studies Academic gap yea",
-                    title2:"MY HOBBIES AND INTERESTS ",
-                    info2:"Singing and Dancing, Meeting new people, Reeading and Walking alone"
-                }
-            },
-            {
-                id: 7,
-                img: "teacher-7",
-                name: "Ms. Mohinur",
-                job_title: "Преподаватель английского языка",
-                local: "",
-                modal: {
-                    text: "Меня зовут Пулатова Мохинур",
-                    text2: "",
-                    text3: "Можете обращаться -Мисс Мохинур.",
-                    title:"Образование, степень учености",
-                    info:"BACHELOR'S DEGREE- SAMARKAND STATE INSTITUTE OF FOREIGN LANGUAGES",
-                    info1:"CERTIFICATIONS: Teaching course - Adult Education Centre, Cambridge CELTA Course Online",
-                    title2:"INTERSTING FACTS ABOUT ME",
-                    info2:"My favorite genre of books to read is mystery and thriller books"
-                }
-            },
-            {
-                id: 8,
-                img: "teacher-8",
-                name: "Ms. Nodirabegim",
-                job_title: "Преподаватель английского языка",
-                local: "",
-                modal: {
-                    text: "Меня зовут Нодирабегим.",
-                    text2: "",
-                    text3: "Можете обращаться -Мисс Нодирабегим.",
-                    title:"Образование, степень учености",
-                    info:"Samarkand state institution of foreign languages ",
-                    info1:"IELTS 7.5, Listening 8.0, Reading 7.5, Wiriting 6.5, Speaking 7.5",
-                    title2:"Hobbies and interests",
-                    info2:"READING BOOKS, TAKING PICTURES and PLAYING INDOOR GAMES"
-                }
-            },
-            {
-                id: 9,
-                img: "teacher-9",
-                name: "Ms. Hilola",
-                job_title: "Преподаватель немецкого языка",
-                local: "",
-                modal: {
-                    text: "To'liq ismim Hilola Rasulova",
-                    text2: "",
-                    text3: "Menga Miss Hilola deb murojat etishiz mumkin",
-                    title:"Bachelor's degree",
-                    info:"Государственная премия имени «Зульфия»(2019) Победитель олимпиады по немецкому языку(2018), проводимой Гёте Институтом во Фрайбурге, Федеративная республика Германия  Обладатель стипендии «Erasmus+» и обучалась 2 семестра в университете Международных языков и перевода в Мюнхене, Германия,2021-2022 Активно участвовала в конкурсах и международных конференциях, проводимых Посольством Германии в Узбекистане и Гёте- институтом.",
-                    info1:"",
-                    title2:"",
-                    info2:"Принимала активное участие в конкурсах, международных конференциях, проводимых посольством Германии в Узбекистане и Институтом Гете.Germaniyaning O'zbekistondagi elchixonasi hamda  Gyote instituti tomonidan o'tkazilgan tanlovlarda, xalqaro konferensiyalarda faol ishtirok etgan."
-                }
-            },
-            {
-                id: 10,
-                img: "teacher-10",
-                name: "Ms. Zuhra",
-                job_title: "Преподаватель английского языка",
-                local: "",
-                modal: {
-                    text: "Меня зовут Нуритдинова Зухра",
-                    text2: "",
-                    text3: "Можете обращаться Мисс Зухра",
-                    title:"Образование, степень учености",
-                    info:"Linguistic School 17, Tashkent 2nd Lyceum under World Languages University Tashkent MDIST Australian SCU",
-                    info1:"My hobbies: Walking, swimming, reading and watching YouTube",
-                    title2:"Honors and Achievements",
-                    info2:"Yakkasaroy District Olympiad, 2009-1st place Tashkent City Olympiad,2010-1st place Uzbekistan Republic Olympiad,2010-essay 1-st place Train the Trainer Passport -Dubai,2018 Dubai Way Certificate of Completion-Dubai College of Tourism, 2018 TEFL (Teaching English as a Foreign Language) certificate, 2021"
-                }
-            },
-            {
-                id: 11,
-                img: "teacher-11",
-                name: "Ms. Muhabbat",
-                job_title: "Преподаватель английского языка",
-                local: "",
-                modal: {
-                    text: "Меня зовут Султонова Мухаббат",
-                    text2: "",
-                    text3: "Можете обращаться Мисс Мухаббат",
-                    title:"Образование, степень учености",
-                    info:"Bachelor of English language faculty,2023 Group leader for 4 years in English faculty II Owner the medal of nomination `For educational` service Member of guide interpretaters in SamSIFL SamSU's 1-Academic Lyceum High School Diploma, Class of 2015-2018 Group leader for 3 years in English Languages class Samarkand Middle Educational School number 33 and 22 Training in Arm wrestling for 2 years in school gym Gained several nominations Certificate for excellent study at School CEFR B1 2018-B2 2019 MULTILEVEL SCORE B2 2023",
-                    info1:"",
-                    title2:"Work experience",
-                    info2:"Teaching children English as a second language Be Forward Study Centre (2018-2019) Teacher of English from elementary levels up to intermediate More than 10 graduated students Niners Academy English School (2019-2021) Teacher of English language from A0 up to B2 Leader of Speaking Club in the Centre Assistant of IELTS teacher Writing works analyst"
-                }
-            },
-            {
-                id: 12,
-                img: "teacher-12",
-                name: "Ms. Feruza",
-                job_title: "Преподаватель английского языка",
-                local: "",
-                modal: {
-                    text: "Меня зовут Феруза",
-                    text2: "",
-                    text3: "Можете обращаться Мисс Феруза",
-                    title:"Образование, степень учености",
-                    info:"Bachelor's Degree at Uzbek State World Languages University. CELTA International world-recognized certificate.",
-                    info1:"",
-                    title2:"Favourite activities:",
-                    info2:"Working out, Spending quality time with friends and Mountains"
-                }
-            }
-        ],
-    },
-    map: {
-        title: "Наши локации",
-        text1: "Polyglot Language school",
-        text2: "Главный центр",
-        text3: "Филиал",
-        telText: "Телефон для справок",
-        gagarina: "Гагарина 86",
-        ibnsino: "Ибн сино 8",
+    contact: {
+        title: "РАССКАЖИТЕ О ЗАДАЧАХ, МЫ ОПЕРАТИВНО СВЯЖЕМСЯ:",
+        inputName: "Имя",
+        inputNumber: "Номер телефона",
+        buttonText: "Отправить",
     },
     footer: {
-        title: "Подать заявку",
-        text1: "Если у вас имеются дополнительные вопросы, наши администраторы всегда рады",
-        text2: "вам помочь",
-        form: {
-            title: "Бесплатная консультация",
-            consult: "Проконсультироваться",
-            info: "Нажимая кнопку я принимаю условия политики и пользовательского соглашения",
-            nameSurname: "Фамилия Имя",
-            tel: "Контактный телефон",
-        },
-        scholl: {
-            title: "Школа",
-            aboutUs: "О Нас",
-            academick: "Академическая поддержка",
-            miniTest: "Мини-тест",
-        },
-        course: {
-            title: "Курсы",
-            general: "General English",
-            rocket: "IELTS Rocket",
-            intensive: "IELTS Intensive",
-            kids: "English Kids",
-            german: "Немецкий язык",
-        },
-        contact: {
-            title: "Контакты и локации",
-            adres: "Главный центр: ул.Гагарина 86,",
-            adres2: "Филиал: ул.Дагбитская 8 (ориентир Hilton Garden Inn),",
-        },
-        social: "Социальные сети",
+        adress: "Буюк Ипак Йули 52, Самарканд, Узбекистан",
+        bottomText: "Все права защищены",
     },
-    modalTestStart: {
-        title: "Заполните форму!",
-        button: "Начать",
-        inputName: "Фамилия Имя",
-        inputNumber: "Контактный телефон",
-        сontinueAs: "Продолжить как",
-        changeData: "Изменить данные",
+    aboutPage: {
+        title1: "Наша цель",
+        title2: "помочь вам достичь онлайн-успеха, предоставляя инновационные решения и высокий уровень профессионализма.",
+        text: "DOT LABS - Ваш надежный партнер в веб-разработке",
+        teamText:"КОМАНДА",
+        blackBlock: {
+            title: "НАШИ ПРИНЦИПЫ",
+            text1: "Всегда искренны с клиентами. Слышим, предлагаем и стараемся быть гибкими, не боимся говорить «нет».",
+            text2: "Нацелены не только на качественный результат, но и на комфортный и понятный процесс решения клиентских задач.",
+            text3: "Не берем проекты с политическим подтекстом. Имеем свой взгляд и допускаем наличие других точек зрения.",
+            text4: "Не участвуем в фиктивных тендерах, различных закупках, бартерных проектах и прочих непрозрачных схемах.",
+        },
+        team: [
+            {
+                name: "Алексей Задорожный",
+                position: "Дизайн-директор, основатель",
+                img: "/images/about/daler2.webp",
+            },
+            {
+                name: "Алексей Задорожный",
+                position: "Дизайн-директор, основатель",
+                img: "/images/about/mirsaid.webp",
+            },
+            {
+                name: "Алексей Задорожный",
+                position: "Дизайн-директор, основатель",
+                img: "/images/about/davlatshox.webp",
+            },
+            {
+                name: "Алексей Задорожный",
+                position: "Дизайн-директор, основатель",
+                img: "/images/about/jony.webp",
+            },
+            {
+                name: "Алексей Задорожный",
+                position: "Дизайн-директор, основатель",
+                img: "/images/about/samir.webp",
+            },
+            {
+                name: "Алексей Задорожный",
+                position: "Дизайн-директор, основатель",
+                img: "/images/about/ozod.webp",
+            },
+            {
+                name: "Алексей Задорожный",
+                position: "Дизайн-директор, основатель",
+                img: "/images/about/kostya.webp",
+            },
+        ],      
     },
-    textPage: {
-        title: "Пройдите мини-тест на уровень владения языком",
-        question: "Вопрос",
-        next: "Дальше",
-        submit: "Отправить",
+    servicesPage:{
+        section1:{
+            title:"Чем мы занимаемся",
+            pText:"Мы - команда профессионалов, специализирующихся на создании веб-решений и разработке программного обеспечения.",
+            bottomBlocks:{
+                title:"Инновации",
+                text:"Мы всегда в поиске новых идей и технологических решений, чтобы удивлять и вдохновлять наших клиентов."
+            }
+        },
+        section2:{
+            title:"посмотрите реализованные проекты",
+            pText:"Наши работы - это не просто проекты, это истории успеха, и мы гордимся ими. Посмотрите нашу коллекцию, и вы убедитесь, как мы помогли другим клиентам достичь своих целей и преуспеть в онлайне. Ваша история успеха может быть следующей",
+            buttonText:"Перейти"
+        },
+        section3:{
+            title:"ПРОЕКТЫ ЛЮБОЙ СЛОЖНОСТИ",
+            services:[
+                {
+                    id:1,
+                    text:"Разработка веб-сайтов"
+                },
+                {
+                    id:2,
+                    text:"Разработка мобильных приложений"
+                },
+                {
+                    id:3,
+                    text:"Разработка CRM-систем"
+                },
+                {
+                    id:4,
+                    text:"Веб-дизайн и UI/UX разработка "
+                },
+                {
+                    id:5,
+                    text:"SEO и поисковая оптимизация"
+                },
+                {
+                    id:6,
+                    text:"Электронная коммерция и онлайн-магазины"
+                },
+                {
+                    id:7,
+                    text:"Веб-хостинг и обслуживание"
+                }
+            ],
+            button:"Проконсультироваться"
+        }
     },
-    endTest: {
-        title: "Поздравляем",
-        text: "Мы скоро свяжемся с вами!",
-        goToBack: "Главная страница",
-    },
+    contactPage:{
+        title:"Контакты",
+        pText:"Позвоните нам и мы ответим на все ваши вопросы",
+        buttonText:"Позвонить",
+        connectWithUs:"Связаться с нами",
+        adressTitle:"Адрес",
+        adress1:"Буюк Ипак Йули 52,",
+        adress2:"Самарканд, Узбекистан",
+        social:"Соц.сети"
+    }
 };
 
 export default ru;

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import Layout from "@/layouts/Layout";
 import OurGoal from "@/components/OurGoal";
 import Team from "@/components/Team";
@@ -10,6 +10,7 @@ import aboutCss from "../../styles/about.module.scss";
 
 import { Grid } from "swiper/modules";
 import Head from "next/head";
+import TranslateContext from "@/context/useTranslate";
 
 // md:700
 // sm: 600
@@ -17,43 +18,8 @@ import Head from "next/head";
 // xl: 1280
 
 export default function AboutUs() {
-	const team = [
-		{
-			name: "Алексей Задорожный",
-			position: "Дизайн-директор, основатель",
-			img: "/images/about/daler2.webp",
-		},
-		{
-			name: "Алексей Задорожный",
-			position: "Дизайн-директор, основатель",
-			img: "/images/about/mirsaid.webp",
-		},
-		{
-			name: "Алексей Задорожный",
-			position: "Дизайн-директор, основатель",
-			img: "/images/about/davlatshox.webp",
-		},
-		{
-			name: "Алексей Задорожный",
-			position: "Дизайн-директор, основатель",
-			img: "/images/about/jony.webp",
-		},
-		{
-			name: "Алексей Задорожный",
-			position: "Дизайн-директор, основатель",
-			img: "/images/about/samir.webp",
-		},
-		{
-			name: "Алексей Задорожный",
-			position: "Дизайн-директор, основатель",
-			img: "/images/about/ozod.webp",
-		},
-		{
-			name: "Алексей Задорожный",
-			position: "Дизайн-директор, основатель",
-			img: "/images/about/kostya.webp",
-		}
-	];
+
+    const translation: any = useContext(TranslateContext);
 
 	return (
 		<Layout>
@@ -65,14 +31,12 @@ export default function AboutUs() {
 					<div className="h-full lg:w-3/5 pr-5">
 						<p className="text-xl font-medium sm:text-4xl  sm:leading-snug mb-3  xl:text-[40px] xl:font-semibold text-black xl:leading-tight xl:mb-6">
 							<span className="text-[#068FFF] font-bold ">
-								Наша цель
+								{translation?.aboutPage?.title1}
 							</span>{" "}
-							- помочь вам достичь онлайн-успеха, предоставляя
-							инновационные решения и высокий уровень
-							профессионализма.
+							- {translation?.aboutPage?.title2}
 						</p>
 						<p className=" text-lg font-normal  sm:text-2xl  xl:text-2xl  leading-normal ">
-							DOT LABS - Ваш надежный партнер в веб-разработке
+						{translation?.aboutPage?.text}
 						</p>
 					</div>
 				</div>
@@ -86,7 +50,7 @@ export default function AboutUs() {
 				<section className={`w-full h-full py-16 ${aboutCss.aboutBg}`}>
 					<div className="w-full md:w-[90%] max-w-[1440px] mx-auto">
 						<h1 className="text-white mx-8 xl:mx-0 text-2xl lg:mx-16  lg:text-4xl uppercase font-semibold mb-10">
-							наши принципы
+						{translation?.aboutPage?.blackBlock?.title}
 						</h1>
 						<div className="w-full max-w-[1440px] mx-auto px-8   grid lg:grid-cols-2 xl:grid-cols-2 xl:px-0 ">
 							<div className="w-full   mb-6 lg:pr-16 lg:mb-14 xl:pr-0 ">
@@ -94,9 +58,7 @@ export default function AboutUs() {
 									1.
 								</h1>
 								<p className="text-white text-lg md:text-2xl lg:text-2xl">
-									Всегда искренны с клиентами. Слышим,
-									предлагаем и стараемся быть гибкими, не
-									боимся говорить «нет».
+								{translation?.aboutPage?.blackBlock?.text1}
 								</p>
 							</div>
 							<div className="w-full mb-6 xl:pl-28 lg:pr-16 xl:pr-0 lg:mb-14">
@@ -104,9 +66,7 @@ export default function AboutUs() {
 									2.
 								</h1>
 								<p className="text-white text-lg md:text-2xl lg:text-2xl">
-									Нацелены не только на качественный
-									результат, но и на комфортный и понятный
-									процесс решения клиентских задач.
+								{translation?.aboutPage?.blackBlock?.text2}
 								</p>
 							</div>
 							<div className="w-full mb-6 lg:pr-16 lg:mb-14">
@@ -114,9 +74,7 @@ export default function AboutUs() {
 									3.
 								</h1>
 								<p className="text-white text-lg md:text-2xl lg:text-2xl">
-									Не берем проекты с политическим подтекстом.
-									Имеем свой взгляд и допускаем наличие других
-									точек зрения.
+								{translation?.aboutPage?.blackBlock?.text3}
 								</p>
 							</div>
 							<div className="w-full mb-6 xl:pl-28 lg:pr-16 xl:pr-0 lg:mb-14">
@@ -124,9 +82,7 @@ export default function AboutUs() {
 									4.
 								</h1>
 								<p className="text-white text-lg md:text-2xl lg:text-2xl">
-									Не участвуем в фиктивных тендерах, различных
-									закупках, бартерных проектах и прочих
-									непрозрачных схемах.
+								{translation?.aboutPage?.blackBlock?.text4}
 								</p>
 							</div>
 						</div>
@@ -135,10 +91,10 @@ export default function AboutUs() {
 
 				<section className="w-full md:w-[90%] mb-16 max-w-[1440px] mx-auto h-full  pt-10 pl-7 px-5 md:pt-16  xl:px-0 ">
 					<h1 className="text-4xl font-semibold mb-10 uppercase ">
-						команда
+					{translation?.aboutPage?.teamText}
 					</h1>
 					<div className="w-full h-full hidden  sm:hidden md:grid md:grid-cols-2  lg:grid-cols-3 xl:grid-cols-4 gap-5 ">
-						{team.map((item, index) => (
+						{translation?.aboutPage?.team.map((item:any, index:number) => (
 							<Team
 								key={index}
 								name={item.name}
@@ -161,7 +117,7 @@ export default function AboutUs() {
 						modules={[Grid]}
 						className={`mySwiper ${aboutCss.swiper} `}
 					>
-						{team.map((item, index) => (
+						{translation?.aboutPage?.team.map((item:any, index:number) => (
 							<SwiperSlide
 								className={`mr-4 h-48 ${aboutCss.swiperSlide} `}
 								key={index}

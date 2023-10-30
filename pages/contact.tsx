@@ -1,11 +1,15 @@
+import TranslateContext from "@/context/useTranslate";
 import Layout from "@/layouts/Layout";
 import Head from "next/head";
 import Link from "next/link";
-import React from "react";
+import React, { useContext } from "react";
 
 interface contactsProps {}
 
 const Contacts: React.FC<contactsProps> = () => {
+
+    const translation: any = useContext(TranslateContext);
+
 	return (
 		<Layout>
 			<Head>
@@ -14,19 +18,19 @@ const Contacts: React.FC<contactsProps> = () => {
 			<section>
 				<div className="w-full md:w-[90%] max-w-[1440px] mx-auto flex flex-col gap-5 items-start px-5 md:px-0">
 					<h1 className="text-3xl md:text-[64px] font-extrabold my-0 leading-[60px]">
-						Контакты
+						{translation?.contactPage?.title}
 					</h1>
 					<span className="text-xl md:text-[34px] font-normal">
-						Позвоните нам и мы ответим на все ваши вопросы
+					{translation?.contactPage?.pText}
 					</span>
 					<Link href="tel:+998905047494" className="text-base px-4 py-3 md:px-6 md:py-4 bg-black text-white uppercase rounded-full">
-						позвонить
+					{translation?.contactPage?.buttonText}
 					</Link>
 				</div>
 				<div className="w-full md:w-[90%] max-w-[1440px] mx-auto flex  item-start flex-col md:flex-row justify-between my-6 px-5 md:px-0">
 					<div className="flex flex-col items-start">
 						<h3 className="text-3xl md:text-[44px] font-semibold mb-7">
-							Связаться с нами
+						{translation?.contactPage?.connectWithUs}
 						</h3>
 						<div className="flex flex-col md:flex-row gap-5 md:gap-0 items-start justify-between w-full mb-7">
 							<div className="flex flex-col">
@@ -57,12 +61,11 @@ const Contacts: React.FC<contactsProps> = () => {
 					</div>
 					<div>
 						<h3 className="text-3xl md:text-[44px] font-semibold mb-7">
-							Адрес
+						{translation?.contactPage?.adressTitle}
 						</h3>
 						<div className="flex flex-col">
 							<h3 className="text-xl font-semibold">
-								Буюк Ипак Йули 52, <br />
-								Самарканд, Узбекистан
+							{translation?.contactPage?.adress1} <br /> {translation?.contactPage?.adress2}
 							</h3>
 							<span className="text-[#A3A7AC]">
 								Рабочее время:
@@ -71,7 +74,7 @@ const Contacts: React.FC<contactsProps> = () => {
 					</div>
 					<div>
 						<h3 className="text-3xl md:text-[44px] font-semibold mb-7">
-							Соц.сети
+						{translation?.contactPage?.social}
 						</h3>
 						<ul>
 							<li className="text-xl hover:underline">

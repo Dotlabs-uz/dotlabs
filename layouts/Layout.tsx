@@ -1,13 +1,16 @@
-import React from "react";
+import React, { useContext } from "react";
 
 import Image from "next/image";
 import Link from "next/link";
 import Contact from "@/components/Contact";
 import Head from "next/head";
 import Header from "@/components/Header";
+import TranslateContext from "@/context/useTranslate";
 
 
 const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+
+    const translation: any = useContext(TranslateContext);
 
 	return (
 		<>
@@ -72,12 +75,12 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
 							+998 (99) 911-01-11
 						</Link>
 						<span className="font-semibold text-[14px] md:text-[22px] text-[#A3A7AC] ">
-							Буюк Ипак Йули 52, Самарканд, Узбекистан
+							{translation?.footer?.adress}
 						</span>
 					</div>
 				</div>
 				<span className="block max-w-[1040px] w-full mx-auto mt-10 text-[#A3A7AC] ">
-					© Dot Labs 2023. Все права защищены
+					© Dot Labs 2023. {translation?.footer?.bottomText}
 				</span>
 			</footer>
 		</>

@@ -8,62 +8,62 @@ import { GetServerSideProps } from "next";
 import { useContext } from "react";
 import TranslateContext from "@/context/useTranslate";
 
-const services_arr = [
-    {
-        id: 1,
-        ru_title: "Веб-сайты",
-        description:
-            "Наши опытные дизайнеры и разработчики создадут для вас современный, функциональный и креативный веб-сайт, который выделяется среди конкурентов.",
-        img: "/images/serviceOne.png",
-        points: [
-            { icon: "figma", title: "Уникальный дизайн, отражающий ваш бренд" },
-            {
-                icon: "smartphone",
-                title: "Адаптивность под разные устройства и экраны",
-            },
-            {
-                icon: "thumbs-up",
-                title: "Оптимизация для поисковых систем (SEO)",
-            },
-        ],
-    },
-    {
-        id: 2,
-        ru_title: "iOS/Android",
-        description:
-            "Наша команда разработки приложений создаст мобильное или веб-приложение, которое повысит эффективность вашего бизнеса и улучшит взаимодействие с клиентами.",
-        img: "/images/servTwo.png",
-        points: [
-            {
-                icon: "loader",
-                title: "Высокая производительность и надежность",
-            },
-            { icon: "toggle-right", title: "Решения под ваши потребности" },
-            {
-                icon: "check",
-                title: "Интерфейс, соответствующий вашему бренду",
-            },
-        ],
-    },
-    {
-        id: 3,
-        ru_title: "CRM-системы",
-        description:
-            "Наши CRM-системы помогут вам эффективно управлять клиентами, улучшить продажи и оптимизировать бизнес-процессы.",
-        img: "/images/servThree.png",
-        points: [
-            {
-                icon: "navigation",
-                title: "Индивидуально-проектированные решения",
-            },
-            { icon: "activity", title: "Автоматизация вашего бизнеса" },
-            {
-                icon: "msg",
-                title: "Аналитика и отчетность для принятия решений",
-            },
-        ],
-    },
-];
+// const services_arr = [
+//     {
+//         id: 1,
+//         ru_title: "Веб-сайты",
+//         description:
+//             "Наши опытные дизайнеры и разработчики создадут для вас современный, функциональный и креативный веб-сайт, который выделяется среди конкурентов.",
+//         img: "/images/serviceOne.png",
+//         points: [
+//             { icon: "figma", title: "Уникальный дизайн, отражающий ваш бренд" },
+//             {
+//                 icon: "smartphone",
+//                 title: "Адаптивность под разные устройства и экраны",
+//             },
+//             {
+//                 icon: "thumbs-up",
+//                 title: "Оптимизация для поисковых систем (SEO)",
+//             },
+//         ],
+//     },
+//     {
+//         id: 2,
+//         ru_title: "iOS/Android",
+//         description:
+//             "Наша команда разработки приложений создаст мобильное или веб-приложение, которое повысит эффективность вашего бизнеса и улучшит взаимодействие с клиентами.",
+//         img: "/images/servTwo.png",
+//         points: [
+//             {
+//                 icon: "loader",
+//                 title: "Высокая производительность и надежность",
+//             },
+//             { icon: "toggle-right", title: "Решения под ваши потребности" },
+//             {
+//                 icon: "check",
+//                 title: "Интерфейс, соответствующий вашему бренду",
+//             },
+//         ],
+//     },
+//     {
+//         id: 3,
+//         ru_title: "CRM-системы",
+//         description:
+//             "Наши CRM-системы помогут вам эффективно управлять клиентами, улучшить продажи и оптимизировать бизнес-процессы.",
+//         img: "/images/servThree.png",
+//         points: [
+//             {
+//                 icon: "navigation",
+//                 title: "Индивидуально-проектированные решения",
+//             },
+//             { icon: "activity", title: "Автоматизация вашего бизнеса" },
+//             {
+//                 icon: "msg",
+//                 title: "Аналитика и отчетность для принятия решений",
+//             },
+//         ],
+//     },
+// ];
 
 export const getServerSideProps: GetServerSideProps = async () => {
     const res = await fetch("https://dotlabs.uz/api/hello");
@@ -84,15 +84,16 @@ export default function Home({ data }: any) {
             <section className="w-full flex justify-center items-center md:py-20">
                 <div className="flex items-center justify-between flex-col md:flex-row gap-10 max-w-[1040px] mx-auto my-10 md:my-0 z-50 relative max-h-[600px] w-[90%]">
                     <div className=" flex flex-col items-start gap-6 w-full">
-                        <h1 className="hidden">
-                            {translation?.section1?.h1Text}
+                        <h1 className="text-5xl uppercase font-black">
+                            <div className="flex items-center">
+                                {translation?.section1?.h1Text1}
+                                <div className="w-[75px] h-[35px] border-8 border-[#068FFF] rounded-full"></div>
+                                {translation?.section1?.h1Text2}
+                            </div>
+                            <div className="">
+                            {translation?.section1?.h1Text3}
+                            </div>
                         </h1>
-                        <Image
-                            src="/icons/mainTitle.svg"
-                            alt=""
-                            width="500"
-                            height="100"
-                        />
                         <p className="font-normal  text-lg text-[#747474] ">
                             {translation?.section1?.pText}
                         </p>
@@ -108,7 +109,7 @@ export default function Home({ data }: any) {
                     </div>
                 </div>
             </section>
-			
+
             <ServicesCont services={translation?.services_arr} />
 
             <section className="flex items-start justify-between flex-col md:flex-row gap-6 w-full md:w-[90%] max-w-[1400px] mx-auto relative px-5 my-[60px] md:my-[120px]">
@@ -122,11 +123,11 @@ export default function Home({ data }: any) {
                     <h2 className="text-3xl  md:text-[44px] leading-[39px] md:leading-[53px] md:uppercase font-bold">
                         {translation?.section2?.title}{" "}
                         <span className="text-main my-0 mx-0">
-						 {translation?.section2?.title2}
+                            {translation?.section2?.title2}
                         </span>
                     </h2>
                     <p className="font-normal md:text-lg text-[#747474]">
-					{translation?.section2?.pText}
+                        {translation?.section2?.pText}
                     </p>
                     <hr className="w-full" />
                     <div className="flex items-center justify-between w-full gap-3">
@@ -135,7 +136,7 @@ export default function Home({ data }: any) {
                                 78%
                             </span>
                             <span className="font-semibold text-[12px] md:text-sm text-[#747474]">
-							{translation?.section2?.persentText}
+                                {translation?.section2?.persentText}
                             </span>
                         </div>
                         <div className="flex flex-col items-start md:border-l-[1px] md:border-r-[1px] md:px-10">
@@ -143,7 +144,7 @@ export default function Home({ data }: any) {
                                 20%
                             </span>
                             <span className="font-semibold text-[12px] md:text-sm text-[#747474]">
-							{translation?.section2?.persentText}
+                                {translation?.section2?.persentText}
                             </span>
                         </div>
                         <div className="flex flex-col items-start">
@@ -151,7 +152,7 @@ export default function Home({ data }: any) {
                                 2.3М
                             </span>
                             <span className="font-semibold text-[12px] md:text-sm text-[#747474]">
-							{translation?.section2?.persentText}
+                                {translation?.section2?.persentText}
                             </span>
                         </div>
                     </div>
@@ -159,7 +160,7 @@ export default function Home({ data }: any) {
                 <div className="custom-shadow-sec custom-gradient w-full p-[10px] md:p-5 rounded-3xl h-full ">
                     <div className="w-full bg-white flex flex-col items-center gap-5 text-center rounded-2xl py-7">
                         <h3 className="text-xl md:text-2xl font-normal md:font-bold">
-						{translation?.section2?.secontBlockTitle}
+                            {translation?.section2?.secontBlockTitle}
                         </h3>
                         <Image
                             src="/images/team3.png"
@@ -168,11 +169,11 @@ export default function Home({ data }: any) {
                             height="80"
                         />
                         <p className="font-normal  text-[#747474] w-[90%]">
-						{translation?.section2?.secontBlockPText}
+                            {translation?.section2?.secontBlockPText}
                         </p>
                         <div className="flex flex-row md:flex-col items-center gap-2 py-2 px-5 text-white bg-main rounded-xl">
                             <span className="text-sm font-semibold">
-							{translation?.section2?.blueButtonText}
+                                {translation?.section2?.blueButtonText}
                             </span>
                             <span className="text-xl md:text-3xl font-semibold md:font-bold">
                                 24+
@@ -183,7 +184,7 @@ export default function Home({ data }: any) {
             </section>
             <section className="w-full md:w-[90%] max-w-[1400px] mx-auto px-5 pb-7">
                 <h2 className="text-[44px] font-semibold mb-3 uppercase">
-				{translation?.portfolio?.title}
+                    {translation?.portfolio?.title}
                 </h2>
                 <PortfolioContainer arr={data} />
             </section>

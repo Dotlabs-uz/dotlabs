@@ -30,7 +30,9 @@ const uz = {
         buttonText: "Menga qo'ng'iroq qiling",
     },
     section1: {
-        h1Text: "Har bir pikseldagi yangilik",
+        h1Text1: "In",
+        h1Text2: "vatsiya",
+        h1Text3: "har bir pikselda",
         pText: "DOT LABS - da biz har bir piksel muhim bo'lgan rivojlanish dunyosiga yangilik keltiramiz. Biz eng so'nggi texnologiya tendentsiyalarini kuzatib boramiz va ajoyib natijaga erishish uchun ularni har bir loyihada qo'llaymiz.",
         buttonText: "Loyihaga buyurtma bering",
     },

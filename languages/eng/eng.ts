@@ -30,7 +30,9 @@ const en = {
         buttonText: "Сall me back",
     },
     section1: {
-        h1Text: "Innovation in every pixel",
+        h1Text1: "Inn",
+        h1Text2: "vation",
+        h1Text3: "in every pixel",
         pText: "At DOT LABS, we bring innovation to the world of development, where every pixel matters. We stay up-to-date with the latest technological trends and apply them to every project to ensure outstanding results.",
         buttonText: "Order a project"
     },

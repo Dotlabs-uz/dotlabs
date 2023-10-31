@@ -77,7 +77,7 @@ export default function Home({ data }: any) {
                         animate={isOpen ? "open" : "closed"}
                         variants={sidebar}
                     >
-                        <h1 className="text-6xl text-black">KISKA 💋</h1>
+                        <h1 className="text-6xl text-black">Клик</h1>
                     </motion.div>
                 </div>
             </section>

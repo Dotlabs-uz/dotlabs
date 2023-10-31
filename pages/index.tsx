@@ -5,65 +5,9 @@ import ServicesCont from "@/components/containers/ServicesCont";
 import PortfolioContainer from "@/components/containers/PortfolioContainer";
 import { BsFillPlayFill } from "react-icons/bs";
 import { GetServerSideProps } from "next";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import TranslateContext from "@/context/useTranslate";
-
-// const services_arr = [
-//     {
-//         id: 1,
-//         ru_title: "Веб-сайты",
-//         description:
-//             "Наши опытные дизайнеры и разработчики создадут для вас современный, функциональный и креативный веб-сайт, который выделяется среди конкурентов.",
-//         img: "/images/serviceOne.png",
-//         points: [
-//             { icon: "figma", title: "Уникальный дизайн, отражающий ваш бренд" },
-//             {
-//                 icon: "smartphone",
-//                 title: "Адаптивность под разные устройства и экраны",
-//             },
-//             {
-//                 icon: "thumbs-up",
-//                 title: "Оптимизация для поисковых систем (SEO)",
-//             },
-//         ],
-//     },
-//     {
-//         id: 2,
-//         ru_title: "iOS/Android",
-//         description:
-//             "Наша команда разработки приложений создаст мобильное или веб-приложение, которое повысит эффективность вашего бизнеса и улучшит взаимодействие с клиентами.",
-//         img: "/images/servTwo.png",
-//         points: [
-//             {
-//                 icon: "loader",
-//                 title: "Высокая производительность и надежность",
-//             },
-//             { icon: "toggle-right", title: "Решения под ваши потребности" },
-//             {
-//                 icon: "check",
-//                 title: "Интерфейс, соответствующий вашему бренду",
-//             },
-//         ],
-//     },
-//     {
-//         id: 3,
-//         ru_title: "CRM-системы",
-//         description:
-//             "Наши CRM-системы помогут вам эффективно управлять клиентами, улучшить продажи и оптимизировать бизнес-процессы.",
-//         img: "/images/servThree.png",
-//         points: [
-//             {
-//                 icon: "navigation",
-//                 title: "Индивидуально-проектированные решения",
-//             },
-//             { icon: "activity", title: "Автоматизация вашего бизнеса" },
-//             {
-//                 icon: "msg",
-//                 title: "Аналитика и отчетность для принятия решений",
-//             },
-//         ],
-//     },
-// ];
+import { motion } from "framer-motion";
 
 export const getServerSideProps: GetServerSideProps = async () => {
     const res = await fetch("https://dotlabs.uz/api/hello");
@@ -75,7 +19,27 @@ export const getServerSideProps: GetServerSideProps = async () => {
     };
 };
 
+const sidebar = {
+    open: (height = 1000) => ({
+        clipPath: `circle(${height * 2 + 200}px at 50% 50%)`,
+        transition: {
+            type: "spring",
+            stiffness: 20,
+            restDelta: 1,
+        },
+    }),
+    closed: {
+        clipPath: "circle(0 at 50% 50%)",
+        transition: {
+            type: "spring",
+            stiffness: 10,
+            damping: 1000,
+        },
+    },
+};
+
 export default function Home({ data }: any) {
+    const [isOpen, setIsOpen] = useState(false);
     const translation: any = useContext(TranslateContext);
 
     return (
@@ -91,7 +55,7 @@ export default function Home({ data }: any) {
                                 {translation?.section1?.h1Text2}
                             </div>
                             <div className="">
-                            {translation?.section1?.h1Text3}
+                                {translation?.section1?.h1Text3}
                             </div>
                         </h1>
                         <p className="font-normal  text-lg text-[#747474] ">
@@ -103,10 +67,18 @@ export default function Home({ data }: any) {
                     </div>
                     <div
                         className="hidden md:flex justify-center items-center w-full h-[256px] rounded-xl cursor-pointer bg-[url(/images/video.png)] bg-no-repeat bg-center bg-cover"
-                        onClick={() => console.log("hello world")}
+                        onClick={() => setIsOpen(!isOpen)}
                     >
                         <BsFillPlayFill color="white" size="50" />
                     </div>
+                    <motion.div
+                        onClick={() => setIsOpen(!isOpen)}
+                        className="flex items-center justify-center w-full h-screen bg-[royalblue] fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+                        animate={isOpen ? "open" : "closed"}
+                        variants={sidebar}
+                    >
+                        <h1 className="text-6xl text-black">KISKA 💋</h1>
+                    </motion.div>
                 </div>
             </section>
 

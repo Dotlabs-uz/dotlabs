@@ -135,32 +135,32 @@ const en = {
         },
         team: [
             {
-                name: "Алексей Задорожный",
+                name: "Daler Sharifkulov",
                 position: "Дизайн-директор, основатель",
                 img: "/images/about/daler2.webp",
             },
             {
-                name: "Алексей Задорожный",
+                name: "Mirsaid Siddikov",
                 position: "Дизайн-директор, основатель",
                 img: "/images/about/mirsaid.webp",
             },
             {
-                name: "Алексей Задорожный",
+                name: "Davlatshoh Pardaqulov",
                 position: "Дизайн-директор, основатель",
                 img: "/images/about/davlatshox.webp",
             },
             {
-                name: "Алексей Задорожный",
+                name: "Jonibek Latipov",
                 position: "Дизайн-директор, основатель",
                 img: "/images/about/jony.webp",
             },
             {
-                name: "Алексей Задорожный",
+                name: "Samir Sattarov",
                 position: "Дизайн-директор, основатель",
                 img: "/images/about/samir.webp",
             },
             {
-                name: "Алексей Задорожный",
+                name: "Ozodbek Shukurov",
                 position: "Дизайн-директор, основатель",
                 img: "/images/about/ozod.webp",
             },

@@ -5,9 +5,9 @@ import ServicesCont from "@/components/containers/ServicesCont";
 import PortfolioContainer from "@/components/containers/PortfolioContainer";
 import { BsFillPlayFill } from "react-icons/bs";
 import { GetServerSideProps } from "next";
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import TranslateContext from "@/context/useTranslate";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 
 export const getServerSideProps: GetServerSideProps = async () => {
     const res = await fetch("https://dotlabs.uz/api/hello");
@@ -19,28 +19,19 @@ export const getServerSideProps: GetServerSideProps = async () => {
     };
 };
 
-const sidebar = {
-    open: (height = 1000) => ({
-        clipPath: `circle(${height * 2 + 200}px at 50% 50%)`,
-        transition: {
-            type: "spring",
-            stiffness: 20,
-            restDelta: 1,
-        },
-    }),
-    closed: {
-        clipPath: "circle(0 at 50% 50%)",
-        transition: {
-            type: "spring",
-            stiffness: 10,
-            damping: 1000,
-        },
-    },
-};
-
 export default function Home({ data }: any) {
     const [isOpen, setIsOpen] = useState(false);
     const translation: any = useContext(TranslateContext);
+
+    useEffect(() => {
+        const body: any = document.querySelector("body");
+
+        if (isOpen) {
+            body.style.overflow = "hidden";
+        } else {
+            body.style.overflow = "scroll";
+        }
+    }, [isOpen]);
 
     return (
         <Layout>
@@ -65,20 +56,35 @@ export default function Home({ data }: any) {
                             {translation?.section1?.buttonText}
                         </button>
                     </div>
-                    <div
-                        className="hidden md:flex justify-center items-center w-full h-[256px] rounded-xl cursor-pointer bg-[url(/images/video.png)] bg-no-repeat bg-center bg-cover"
-                        onClick={() => setIsOpen(!isOpen)}
-                    >
-                        <BsFillPlayFill color="white" size="50" />
-                    </div>
-                    <motion.div
-                        onClick={() => setIsOpen(!isOpen)}
-                        className="flex items-center justify-center w-full h-screen bg-[royalblue] fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
-                        animate={isOpen ? "open" : "closed"}
-                        variants={sidebar}
-                    >
-                        <h1 className="text-6xl text-black">Клик</h1>
-                    </motion.div>
+                    {!isOpen ? (
+                        <div
+                            className="hidden md:flex justify-center items-center w-full h-[256px] rounded-xl cursor-pointer bg-[url(/images/video.png)] bg-no-repeat bg-center bg-cover"
+                            onClick={() => setIsOpen(!isOpen)}
+                        >
+                            <BsFillPlayFill color="white" size="50" />
+                        </div>
+                    ) : (
+                        <>
+                            <div className="w-full"></div>
+                            <motion.div
+                                animate={{ backgroundColor: "#0000008d" }}
+                                className="fixed top-0 left-0 w-full h-full backdrop-blur-sm"
+                            >
+                                <motion.div
+                                    className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 hidden md:flex justify-center items-center w-full rounded-xl cursor-pointer bg-[url(/images/video.png)] bg-no-repeat bg-center bg-cover"
+                                    onClick={() => setIsOpen(!isOpen)}
+                                    initial={{
+                                        width: "300px",
+                                        height: "200px",
+                                    }}
+                                    animate={{ width: "80vw", height: "80vh" }}
+                                    transition={{ type: "tween", duration: 1 }}
+                                >
+                                    <BsFillPlayFill color="white" size="50" />
+                                </motion.div>
+                            </motion.div>
+                        </>
+                    )}
                 </div>
             </section>
 

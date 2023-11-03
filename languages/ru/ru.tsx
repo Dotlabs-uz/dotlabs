@@ -136,37 +136,37 @@ const ru = {
         team: [
             {
                 name: "Далер Шарифкулов",
-                position: "Дизайн-директор, основатель",
+                position: "Исполнительный директор",
                 img: "/images/about/daler2.webp",
             },
             {
                 name: "Мирсаид Сиддиков",
-                position: "Дизайн-директор, основатель",
+                position: "Фронтенд разработчик",
                 img: "/images/about/mirsaid.webp",
             },
             {
                 name: "Давлатшох Пардакулов",
-                position: "Дизайн-директор, основатель",
+                position: "Фронтенд разработчик",
                 img: "/images/about/davlatshox.webp",
             },
             {
                 name: "Джонибек Латипов",
-                position: "Дизайн-директор, основатель",
+                position: "Фронтенд разработчик",
                 img: "/images/about/jony.webp",
             },
             {
                 name: "Самир Саттаров",
-                position: "Дизайн-директор, основатель",
+                position: "Мобильный разработчик",
                 img: "/images/about/samir.webp",
             },
             {
                 name: "Озодбек Шукуров",
-                position: "Дизайн-директор, основатель",
+                position: "Full stack developer",
                 img: "/images/about/ozod.webp",
             },
             {
                 name: "Алексей Задорожный",
-                position: "Дизайн-директор, основатель",
+                position: "Менеджер по работе с клиентами",
                 img: "/images/about/kostya.webp",
             },
         ],      

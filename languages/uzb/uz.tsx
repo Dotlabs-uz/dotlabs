@@ -136,12 +136,12 @@ const uz = {
         team: [
             {
                 name: "Daler Sharifkulov",
-                position: "Дизайн-директор, основатель",
+                position: "Ijrochi direktor",
                 img: "/images/about/daler2.webp",
             },
             {
                 name: "Mirsaid Siddikov",
-                position: "Дизайн-директор, основатель",
+                position: "Frontend dasturchisi",
                 img: "/images/about/mirsaid.webp",
             },
             {
@@ -151,22 +151,22 @@ const uz = {
             },
             {
                 name: "Jonibek Latipov",
-                position: "Дизайн-директор, основатель",
+                position: "Frontend dasturchisi",
                 img: "/images/about/jony.webp",
             },
             {
                 name: "Samir Sattarov",
-                position: "Дизайн-директор, основатель",
+                position: "Mobil dasturchi",
                 img: "/images/about/samir.webp",
             },
             {
                 name: "Ozodbek Shukurov",
-                position: "Дизайн-директор, основатель",
+                position: "Fullstack dasturchisi",
                 img: "/images/about/ozod.webp",
             },
             {
                 name: "Алексей Задорожный",
-                position: "Дизайн-директор, основатель",
+                position: "Buyurtmachilar bilan ishlash bo'yicha menejer",
                 img: "/images/about/kostya.webp",
             },
         ],    

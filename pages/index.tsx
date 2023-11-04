@@ -56,18 +56,24 @@ export default function Home({ data }: any) {
                             {translation?.section1?.buttonText}
                         </button>
                     </div>
-                    <div
+                    {
+                        !isOpen ? (
+                          <div
                         className="hidden md:flex justify-center items-center w-full h-[256px] rounded-xl cursor-pointer bg-[url(/images/video.png)] bg-no-repeat bg-center bg-cover"
                         onClick={() => setIsOpen(!isOpen)}
                     >
                         <BsFillPlayFill color="white" size="50" />
-                    </div>
+                    </div>  
+                        ):
+                        null
+                    }
                     
+
                     <AnimatePresence>
                         {isOpen && (
                             <motion.div
                                 animate={{ backgroundColor: "#0000008d" }}
-                                className="fixed top-0 left-0 w-full h-full backdrop-blur-sm"
+                                className="fixed top-0 left-0 w-full h-full backdrop-blur-md"
                             >
                                 <motion.div
                                     initial={{

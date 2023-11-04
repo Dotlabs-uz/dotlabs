@@ -68,7 +68,6 @@ export default function Home({ data }: any) {
                         null
                     }
                     
-
                     <AnimatePresence>
                         {isOpen && (
                             <motion.div

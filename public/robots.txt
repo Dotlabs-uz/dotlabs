@@ -1,0 +1,13 @@
+# Block all crawlers for /accounts
+User-agent: *
+Disallow: /api/
+
+# Allow all crawlers
+User-agent: *
+Allow: /
+
+User-agent: Googlebot
+User-agent: AdsBot-Google
+Disallow: /api/
+
+Sitemap: http://localhost:3000/api/

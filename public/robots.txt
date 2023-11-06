@@ -10,4 +10,4 @@ User-agent: Googlebot
 User-agent: AdsBot-Google
 Disallow: /api/
 
-Sitemap: http://localhost:3000/api/
+Sitemap: https://dotlabs.uz/sitemap.xml

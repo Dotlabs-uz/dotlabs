@@ -7,17 +7,7 @@ export default async (req, res) => {
 
 
     let xml = '<?xml version="1.0" encoding="UTF-8"?>\n';
-    xml += `
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <title>Document</title>
-    </head>
-    <body>
-    <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n
-    `;
+    xml += `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n`;
 
     pages.forEach((page) => {
         xml += '<url>\n';
@@ -28,11 +18,7 @@ export default async (req, res) => {
         xml += '</url>\n';
     });
 
-    xml += `
-        </urlset>
-        </body>
-        </html>
-    `;
+    xml += `</urlset>`;
 
     res.setHeader('Content-Type', 'application/xml');
     res.send(xml);

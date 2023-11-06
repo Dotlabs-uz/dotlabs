@@ -1,6 +1,6 @@
 # Block all crawlers for /accounts
 User-agent: *
-Disallow: /api/
+Disallow: /api/hello
 
 # Allow all crawlers
 User-agent: *
@@ -8,6 +8,6 @@ Allow: /
 
 User-agent: Googlebot
 User-agent: AdsBot-Google
-Disallow: /api/
+Disallow: /api/hello
 
-Sitemap: http://localhost:3000/api/
+Sitemap: https://dotlabs.uz/api/sitemap.xml

@@ -1,15 +1,18 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import React, { useContext, useState } from "react";
+import React, { Dispatch, useContext, useState } from "react";
 import { BsFillTelephoneFill, BsTelephoneFill } from "react-icons/bs";
 import { SlMenu } from "react-icons/sl";
 import { IoMdClose } from "react-icons/io";
 import { Select } from "antd";
 import TranslateContext from "@/context/useTranslate";
 
+interface HeaderProps {
+    setModalHandel: Dispatch<boolean>
+}
 
-const Header = () => {
+const Header:React.FC<HeaderProps> = (setModalHandel) => {
     const router = useRouter();
     const { locale } = router;
     const { pathname } = router;

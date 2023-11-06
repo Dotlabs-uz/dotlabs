@@ -1,17 +1,67 @@
-import React, { useContext } from "react";
-
+import React, { useContext, useState } from "react";
+import InputMask from "react-input-mask";
+import { useForm, SubmitHandler } from "react-hook-form";
 import Image from "next/image";
 import Link from "next/link";
 import Contact from "@/components/Contact";
 import Head from "next/head";
 import Header from "@/components/Header";
 import TranslateContext from "@/context/useTranslate";
+import { IoClose } from "react-icons/io5";
+import ModalHandelContext from "@/context/modalHandel";
+import axios from "axios";
+
+type Inputs = {
+    userName: string;
+    phone: string;
+};
 
 const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
     const translation: any = useContext(TranslateContext);
+    const modalHandelContext: any = useContext(ModalHandelContext );
+
+    const [modalHandel, setModalHandel] = useState<boolean>(false);
+
+    const changeHandlerModal = (event:boolean) =>{
+        setModalHandel(event)
+    }
+
+    const {
+        register,
+        handleSubmit,
+        watch,
+        reset,
+        formState: { errors },
+    } = useForm<Inputs>();
+    const onSubmit: SubmitHandler<Inputs> = async (data) => {
+		try {
+			const res = await axios.post('https://sheet.best/api/sheets/f24ba5dc-114e-4649-9fcd-68b5ca52992f', data)
+
+			if(res.status === 200 || res.status === 201) {
+                setModalHandel(false)
+                reset()
+				const body = {
+					chat_id: '-1002062552409',
+					parse_mode: "html",
+					text: `
+						Новая заявка 
+						<a href="https://docs.google.com/spreadsheets/d/1Anq1vHx9tCmmDQAMa7A-MQ41S8culwb1fMIm7AYC7Dc/edit#gid=0" >
+							Взгянуть на таблицу
+						</a>
+					`,
+	
+				}
+				axios.post(`https://api.telegram.org/bot${'6710636505:AAHDUkdHn5187bpWzhGjZJr9EbX7eeclwPk'}/sendMessage`, body)
+					.then(res => console.log(res))
+			}
+
+		} catch(e) {
+			console.log(e);
+		}
+	};
 
     return (
-        <>
+        <ModalHandelContext.Provider value={changeHandlerModal}>
             <Head>
                 <link
                     rel="shortcut icon"
@@ -20,7 +70,7 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
                 />
                 <title>Dot Labs</title>
             </Head>
-            <Header />
+            <Header setModalHandel={setModalHandel}/>
             <main>{children}</main>
             {/* <div className="h-[120px]" ></div> */}
             <Contact />
@@ -73,7 +123,69 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
                     © Dot Labs 2023. {translation?.footer?.bottomText}
                 </span>
             </footer>
-        </>
+
+            {modalHandel ? (
+                <div className="z-[100] fixed top-0 left-0 bg-[#000000c4] backdrop-blur-sm w-full h-screen flex items-center justify-center">
+                    <IoClose
+                    onClick={()=>setModalHandel(false)}
+                        color="white"
+                        size={50}
+                        className="absolute top-4 right-4 cursor-pointer"
+                    />
+                    <div className="bg-[white] p-7 rounded-lg flex flex-col items-center justify-center w-1/4 max-lg:w-auto">
+                        <Image
+                            src={"/icons/logo.svg"}
+                            alt=""
+                            height={150}
+                            width={150}
+                        />
+                        <form
+                            onSubmit={handleSubmit(onSubmit)}
+                            className="flex flex-col"
+                        >
+                            <p className="mt-5 font-semibold text-3xl">
+                                Заказать проект
+                            </p>
+                            <input
+                                placeholder="Имя"
+                                {...register("userName", {
+                                    required: true,
+                                    pattern: {
+                                        value: /^[a-zA-Z ,ЁёА-я ']*$/,
+                                        message: "Введите только буквы!",
+                                    },
+                                })}
+                                className="mt-5 w-full border border-1 p-1 px-2 rounded-md"
+                            />
+                            {errors.userName ? (
+                                <p className="text-[red] text-sm mt-1">
+                                    {errors.userName.message}
+                                </p>
+                            ) : null}
+                            <InputMask
+                                className={
+                                    "text-start w-full mt-5 border border-1 p-1 px-2 rounded-md"
+                                }
+                                mask="+\9\98-(99)-999-99-99"
+                                placeholder="Номер"
+                                {...register("phone", {
+                                    required: true,
+                                    minLength: 19,
+                                })}
+                                // value={phone}
+                                // onChange={(e: any) => setPhone(e.target.value)}
+                            ></InputMask>
+                            <button
+                                type="submit"
+                                className="mt-5 bg-[#068FFF] text-white py-2 rounded-md"
+                            >
+                                Отправить
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            ) : null}
+        </ModalHandelContext.Provider>
     );
 };
 

@@ -132,22 +132,22 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
                         size={50}
                         className="absolute top-4 right-4 cursor-pointer"
                     />
-                    <div className="bg-[white] p-7 rounded-lg flex flex-col items-center justify-center w-1/4 max-lg:w-auto">
+                    <div className="bg-[white] p-7 rounded-lg flex flex-col items-start justify-center w-1/4 max-lg:w-auto">
                         <Image
                             src={"/icons/logo.svg"}
                             alt=""
-                            height={150}
-                            width={150}
+                            height={70}
+                            width={70}
                         />
                         <form
                             onSubmit={handleSubmit(onSubmit)}
-                            className="flex flex-col"
+                            className="flex flex-col w-full"
                         >
-                            <p className="mt-5 font-semibold text-3xl">
-                                Заказать проект
+                            <p className="mt-5 font-semibold text-3xl text-[#000000]">
+                            Заявка на заказ
                             </p>
                             <input
-                                placeholder="Имя"
+                                placeholder="Введите имя"
                                 {...register("userName", {
                                     required: true,
                                     pattern: {
@@ -155,7 +155,7 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
                                         message: "Введите только буквы!",
                                     },
                                 })}
-                                className="mt-5 w-full border border-1 p-1 px-2 rounded-md"
+                                className="mt-5 w-full border border-1 p-3 rounded-md"
                             />
                             {errors.userName ? (
                                 <p className="text-[red] text-sm mt-1">
@@ -164,10 +164,10 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
                             ) : null}
                             <InputMask
                                 className={
-                                    "text-start w-full mt-5 border border-1 p-1 px-2 rounded-md"
+                                    "text-start w-full mt-5 border border-1 p-3 rounded-md"
                                 }
                                 mask="+\9\98-(99)-999-99-99"
-                                placeholder="Номер"
+                                placeholder="Введите контактный номер"
                                 {...register("phone", {
                                     required: true,
                                     minLength: 19,
@@ -177,11 +177,13 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
                             ></InputMask>
                             <button
                                 type="submit"
-                                className="mt-5 bg-[#068FFF] text-white py-2 rounded-md"
+                                className="mt-5 bg-[#0659ff] text-white py-2.5 rounded-md text-xl border-2 border-[#0659ff] font-medium transition ease-in-out hover:bg-[white] hover:text-[#0659ff]"
                             >
-                                Отправить
+                                Отправить данные
                             </button>
                         </form>
+                        <hr className="mt-4 w-full border border-[#b3b3b3]"/>
+                        <p className="mt-4 text-sm">Пожалуйста, убедитесь, что правильно ввели данные.</p>
                     </div>
                 </div>
             ) : null}

@@ -177,7 +177,7 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
                             ></InputMask>
                             <button
                                 type="submit"
-                                className="mt-5 bg-[#0659ff] text-white py-2.5 rounded-md text-xl border-2 border-[#0659ff] font-medium transition ease-in-out hover:bg-[white] hover:text-[#0659ff]"
+                                className="mt-5 bg-[#0659ff] text-white py-2.5 rounded-md text-xl border-2 border-[#0659ff] font-medium transition duration-300 ease-in-out hover:bg-[white] hover:text-[#0659ff]"
                             >
                                 Отправить данные
                             </button>

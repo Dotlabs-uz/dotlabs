@@ -18,13 +18,13 @@ type Inputs = {
 
 const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
     const translation: any = useContext(TranslateContext);
-    const modalHandelContext: any = useContext(ModalHandelContext );
+    const modalHandelContext: any = useContext(ModalHandelContext);
 
     const [modalHandel, setModalHandel] = useState<boolean>(false);
 
-    const changeHandlerModal = (event:boolean) =>{
-        setModalHandel(event)
-    }
+    const changeHandlerModal = (event: boolean) => {
+        setModalHandel(event);
+    };
 
     const {
         register,
@@ -34,31 +34,36 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
         formState: { errors },
     } = useForm<Inputs>();
     const onSubmit: SubmitHandler<Inputs> = async (data) => {
-		try {
-			const res = await axios.post('https://sheet.best/api/sheets/f24ba5dc-114e-4649-9fcd-68b5ca52992f', data)
+        try {
+            const res = await axios.post(
+                "https://sheet.best/api/sheets/f24ba5dc-114e-4649-9fcd-68b5ca52992f",
+                data
+            );
 
-			if(res.status === 200 || res.status === 201) {
-                setModalHandel(false)
-                reset()
-				const body = {
-					chat_id: '-1002062552409',
-					parse_mode: "html",
-					text: `
+            if (res.status === 200 || res.status === 201) {
+                setModalHandel(false);
+                reset();
+                const body = {
+                    chat_id: "-1002062552409",
+                    parse_mode: "html",
+                    text: `
 						Новая заявка 
 						<a href="https://docs.google.com/spreadsheets/d/1Anq1vHx9tCmmDQAMa7A-MQ41S8culwb1fMIm7AYC7Dc/edit#gid=0" >
 							Взгянуть на таблицу
 						</a>
 					`,
-	
-				}
-				axios.post(`https://api.telegram.org/bot${'6710636505:AAHDUkdHn5187bpWzhGjZJr9EbX7eeclwPk'}/sendMessage`, body)
-					.then(res => console.log(res))
-			}
-
-		} catch(e) {
-			console.log(e);
-		}
-	};
+                };
+                axios
+                    .post(
+                        `https://api.telegram.org/bot${"6710636505:AAHDUkdHn5187bpWzhGjZJr9EbX7eeclwPk"}/sendMessage`,
+                        body
+                    )
+                    .then((res) => console.log(res));
+            }
+        } catch (e) {
+            console.log(e);
+        }
+    };
 
     return (
         <ModalHandelContext.Provider value={changeHandlerModal}>
@@ -70,8 +75,10 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
                 />
                 <title>Dot Labs</title>
             </Head>
-            <Header setModalHandel={setModalHandel}/>
-            <main>{children}</main>
+            <Header setModalHandel={setModalHandel} />
+            <main>
+                {children}
+            </main>
             {/* <div className="h-[120px]" ></div> */}
             <Contact />
             <footer className="w-full bg-white my-10 px-6">
@@ -127,7 +134,7 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
             {modalHandel ? (
                 <div className="z-[100] fixed top-0 left-0 bg-[#000000c4] backdrop-blur-sm w-full h-screen flex items-center justify-center">
                     <IoClose
-                    onClick={()=>setModalHandel(false)}
+                        onClick={() => setModalHandel(false)}
                         color="white"
                         size={50}
                         className="absolute top-4 right-4 cursor-pointer"
@@ -144,7 +151,7 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
                             className="flex flex-col w-full"
                         >
                             <p className="mt-5 font-semibold text-3xl max-sm:text-2xl text-[#000000]">
-                            {translation?.modal?.title}
+                                {translation?.modal?.title}
                             </p>
                             <input
                                 placeholder={translation?.modal?.inputName}
@@ -182,8 +189,10 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
                                 {translation?.modal?.button}
                             </button>
                         </form>
-                        <hr className="mt-4 w-full border border-[#b3b3b3]"/>
-                        <p className="mt-4 text-sm">{translation?.modal?.warring}</p>
+                        <hr className="mt-4 w-full border border-[#b3b3b3]" />
+                        <p className="mt-4 text-sm">
+                            {translation?.modal?.warring}
+                        </p>
                     </div>
                 </div>
             ) : null}

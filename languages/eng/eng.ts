@@ -229,6 +229,13 @@ const en = {
         adress1: "Buyuk Ipak Yuli 52,",
         adress2: "Samarkand, Uzbekistan",
         social: "Social networks"
+    },
+    modal:{
+        title:"Application for order",
+        inputName:"Enter your name",
+        inputNumber:"Enter contact number",
+        button:"Send data",
+        warring:"Please make sure you have entered the details correctly."
     }
 };
 

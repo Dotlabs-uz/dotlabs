@@ -3,12 +3,11 @@ import { AnimatePresence, motion } from "framer-motion";
 import { BsFillPlayFill } from "react-icons/bs";
 import ModalHandelContext from "@/context/modalHandel";
 
-
 interface FirstSectionProps {
-    translation :any
+    translation: any;
 }
 
-const FirstSection: React.FC<FirstSectionProps> = ({translation}) => {
+const FirstSection: React.FC<FirstSectionProps> = ({ translation }) => {
     const [isOpen, setIsOpen] = useState(false);
     const changeHandlerModal: any = useContext(ModalHandelContext);
 
@@ -27,7 +26,10 @@ const FirstSection: React.FC<FirstSectionProps> = ({translation}) => {
                     <p className="font-normal  text-lg text-[#747474] ">
                         {translation?.section1?.pText}
                     </p>
-                    <button onClick={()=>changeHandlerModal(true)} className="flex items-center gap-2 py-4 px-6 text-white font-semibold text-lg bg-black rounded-full uppercase">
+                    <button
+                        onClick={() => changeHandlerModal(true)}
+                        className="flex items-center gap-2 py-4 px-6 text-white font-semibold text-lg bg-black rounded-full uppercase"
+                    >
                         {translation?.section1?.buttonText}
                     </button>
                 </div>
@@ -46,31 +48,14 @@ const FirstSection: React.FC<FirstSectionProps> = ({translation}) => {
                             animate={{ backgroundColor: "#0000008d" }}
                             className="fixed top-0 left-0 w-full h-full backdrop-blur-md"
                         >
-                            <motion.div
-                                initial={{
-                                    width: "500px",
-                                    height: "256px",
-                                }}
-                                animate={{
-                                    width: "80vw",
-                                    height: "80vh",
-                                    top: "50%",
-                                    left: "50%",
-                                }}
-                                transition={{ type: "tween", duration: 1 }}
-                                exit={{
-                                    width: "500px",
-                                    height: "256px",
-                                    top: "33%",
-                                    left: "64%",
-                                }}
+                            <div
                                 onClick={() => setIsOpen(!isOpen)}
                                 className={
-                                    "bg-black fixed top-[33%] left-[64%] -translate-x-1/2 -translate-y-1/2 rounded-xl bg-[url(/images/video.png)] bg-no-repeat bg-center bg-cover flex items-center justify-center"
+                                    "bg-black fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-xl bg-[url(/images/video.png)] bg-no-repeat bg-center bg-cover flex items-center justify-center w-[80%] h-[80%]"
                                 }
                             >
                                 <BsFillPlayFill color="white" size="50" />
-                            </motion.div>
+                            </div>
                         </motion.div>
                     )}
                 </AnimatePresence>

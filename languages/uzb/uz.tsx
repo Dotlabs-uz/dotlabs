@@ -229,6 +229,13 @@ const uz = {
         adress1:"Buyuk Ipak Yo'li 52,",
         adress2:"Samarqand, O'zbekiston",
         social:"Ijtimoiy tarmoqlar"
+    },
+    modal:{
+        title:"Buyurtma uchun ariza",
+        inputName:"Ismingizni kiriting",
+        inputNumber:"Kontakt raqamini kiriting",
+        button:"Ma'lumotlarni yuborish",
+        warring:"Iltimos, ma'lumotlarni to'g'ri kiritganingizga ishonch hosil qiling."
     }
 };
 

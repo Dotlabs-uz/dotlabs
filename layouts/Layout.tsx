@@ -132,7 +132,7 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
                         size={50}
                         className="absolute top-4 right-4 cursor-pointer"
                     />
-                    <div className="bg-[white] p-7 rounded-lg flex flex-col items-start justify-center w-1/4 max-lg:w-auto">
+                    <div className="bg-[white] px-7 max-sm:px-5 max-sm:py-7 py-10 rounded-lg flex flex-col items-start justify-center w-[550px] max-lg:w-[500px] max-sm:w-[90%]">
                         <Image
                             src={"/icons/logo.svg"}
                             alt=""
@@ -143,11 +143,11 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
                             onSubmit={handleSubmit(onSubmit)}
                             className="flex flex-col w-full"
                         >
-                            <p className="mt-5 font-semibold text-3xl text-[#000000]">
-                            Заявка на заказ
+                            <p className="mt-5 font-semibold text-3xl max-sm:text-2xl text-[#000000]">
+                            {translation?.modal?.title}
                             </p>
                             <input
-                                placeholder="Введите имя"
+                                placeholder={translation?.modal?.inputName}
                                 {...register("userName", {
                                     required: true,
                                     pattern: {
@@ -167,7 +167,7 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
                                     "text-start w-full mt-5 border border-1 p-3 rounded-md"
                                 }
                                 mask="+\9\98-(99)-999-99-99"
-                                placeholder="Введите контактный номер"
+                                placeholder={translation?.modal?.inputNumber}
                                 {...register("phone", {
                                     required: true,
                                     minLength: 19,
@@ -177,13 +177,13 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
                             ></InputMask>
                             <button
                                 type="submit"
-                                className="mt-5 bg-[#0659ff] text-white py-2.5 rounded-md text-xl border-2 border-[#0659ff] font-medium transition duration-300 ease-in-out hover:bg-[white] hover:text-[#0659ff]"
+                                className="mt-5 bg-[#0659ff] text-white py-2.5 max-sm:py-2 rounded-md text-xl border-2 border-[#0659ff] font-medium transition duration-300 ease-in-out hover:bg-[white] hover:text-[#0659ff]"
                             >
-                                Отправить данные
+                                {translation?.modal?.button}
                             </button>
                         </form>
                         <hr className="mt-4 w-full border border-[#b3b3b3]"/>
-                        <p className="mt-4 text-sm">Пожалуйста, убедитесь, что правильно ввели данные.</p>
+                        <p className="mt-4 text-sm">{translation?.modal?.warring}</p>
                     </div>
                 </div>
             ) : null}

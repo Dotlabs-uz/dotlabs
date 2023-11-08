@@ -9,6 +9,8 @@ import uz from "@/languages/uzb/uz";
 import TranslateContext from "@/context/useTranslate";
 import { useState } from "react";
 import Loader from "@/components/Loader";
+import { motion } from "framer-motion";
+
 
 const myFont = localFont({ src: "../fonts/proximanova_regular.ttf" });
 
@@ -34,9 +36,14 @@ export default function App({ Component, pageProps }: AppProps) {
                 <Loader />
             ) : (
                 <TranslateContext.Provider value={translation}>
-                    <div style={myFont.style}>
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ duration: 0.5 }}
+                        style={myFont.style}
+                    >
                         <Component {...pageProps} />
-                    </div>
+                    </motion.div>
                 </TranslateContext.Provider>
             )}
         </>

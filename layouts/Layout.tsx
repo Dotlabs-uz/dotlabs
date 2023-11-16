@@ -70,7 +70,7 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
             <Head>
                 <link
                     rel="shortcut icon"
-                    href="/icons/logo.svg"
+                    href="/icons/favicon.svg"
                     type="image/x-icon"
                 />
                 <title>Dot Labs</title>

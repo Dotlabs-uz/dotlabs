@@ -4,33 +4,36 @@ import "swiper/css";
 import ServicesCont from "@/components/containers/ServicesCont";
 import PortfolioContainer from "@/components/containers/PortfolioContainer";
 import { GetServerSideProps } from "next";
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import TranslateContext from "@/context/useTranslate";
 import ModalHandelContext from "@/context/modalHandel";
 import FirstSection from "@/components/FirstSection";
+import axios from "axios";
 
-export const getServerSideProps: GetServerSideProps = async () => {
-   const res = await fetch("https://dotlabs.uz/api/hello");
+// export const getServerSideProps: GetServerSideProps = async () => {
+//     const res = await fetch("https://dotlabs.uz/api/hello");
 
-   const data = await res.json();
+//     const data = await res.json();
 
-   return {
-      props: { data },
-   };
-};
+//     return {
+//         props: { data },
+//     };
+// };
 
-export default function Home({ data }: any) {
+export default function Home() {
    const translation: any = useContext(TranslateContext);
+   const [data, setData] = useState([]);
 
-   // useEffect(() => {
-   //     const body: any = document.querySelector("body");
-
-   //     if (isOpen) {
-   //         body.style.overflow = "hidden";
-   //     } else {
-   //         body.style.overflow = "scroll";
-   //     }
-   // }, [isOpen]);
+   useEffect(() => {
+      axios
+         .get("http://localhost:3000/api/hello")
+         .then((res) => {
+            if (res.status === 200 || res.status === 201) {
+               setData(res.data);
+            }
+         })
+         .catch((err) => console.log("error", err));
+   }, []);
 
    return (
       <Layout>

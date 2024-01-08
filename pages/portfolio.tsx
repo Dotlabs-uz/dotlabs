@@ -25,6 +25,7 @@ const Portfolio: React.FC<PortfolioProps> = ({ data }: any) => {
          <Head>
             <title>Dot Labs - Portfolio</title>
          </Head>
+         d
          <section className="w-full md:w-[90%] max-w-[1400px] mx-auto px-5 pb-7">
             <div className="flex flex-col items-start gap-2 my-10">
                <h1 className="text-3xl md:text-6xl font-extrabold ">

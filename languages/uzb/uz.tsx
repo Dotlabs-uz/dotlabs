@@ -248,6 +248,11 @@ const uz = {
       warring:
          "Iltimos, ma'lumotlarni to'g'ri kiritganingizga ishonch hosil qiling.",
    },
+   thakns: {
+      title: "Arizangiz muvaffaqiyatli yuborildi",
+      title2:
+         "Biz har kuni soat 10:00 dan 19:00 gacha ochiqmiz (yakshanbadan tashqari)",
+   },
 };
 
 export default uz;

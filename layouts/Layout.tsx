@@ -71,23 +71,13 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
             <title>Dot Labs</title>
          </Head>
          <Header setModalHandel={setModalHandel} />
+
          <main>{children}</main>
-         {/* <div className="h-[120px]" ></div> */}
+
          <Contact />
          <footer className="w-full bg-white my-10 px-6">
             <div className="flex items-start justify-between flex-col-reverse gap-4 md:flex-row max-w-[1040px] w-full mx-auto">
                <div className="flex items-start justify-between w-full md:w-[50%]">
-                  <nav className="flex flex-col items-start gap-3">
-                     {translation?.header?.links.map((item: any) => (
-                        <Link
-                           key={item.id}
-                           href={item.path}
-                           className={`font-semibold`}
-                        >
-                           {item.name}
-                        </Link>
-                     ))}
-                  </nav>
                   <nav className="flex flex-col items-start gap-3">
                      {translation?.header?.links.map((item: any) => (
                         <Link
@@ -109,10 +99,10 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
                      className="mb-8"
                   />
                   <Link
-                     href=""
+                     href="tel:+998 (90) 504-74-94"
                      className="font-semibold text-[32px] md:text-[44px]"
                   >
-                     +998 (99) 911-01-11
+                     +998 (90) 504-74-94
                   </Link>
                   <span className="font-semibold text-[14px] md:text-[22px] text-[#A3A7AC] ">
                      {translation?.footer?.adress}

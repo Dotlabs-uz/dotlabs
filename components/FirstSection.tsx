@@ -16,7 +16,7 @@ const FirstSection: React.FC<FirstSectionProps> = ({ translation }) => {
       <section className="w-full flex justify-center items-center md:py-20">
          <div className="flex items-center justify-between flex-col md:flex-row gap-10 max-w-[1040px] mx-auto my-10 md:my-0 z-50 relative w-[90%]">
             <div className=" flex flex-col items-start gap-6 max-xl:gap-4 w-full">
-               <h1 className="text-6xl max-xl:text-4xl max-lg:text-3xl leading-[70px] max-xl:leading-[50px] max-lg:leading-[40px] uppercase font-black">
+               <h1 className="text-5xl max-xl:text-4xl max-lg:text-3xl leading-[60px] max-xl:leading-[50px] max-lg:leading-[40px] uppercase font-black">
                   {/* <div className="flex items-center">
                      {translation?.section1?.h1Text1}
                      <div className="w-[75px] h-[35px] border-8 border-[#068FFF] rounded-full"></div>

@@ -242,6 +242,10 @@ const en = {
       button: "Send data",
       warring: "Please make sure you have entered the details correctly.",
    },
+   thakns: {
+      title: "Your application has been successfully sent",
+      title2: "We are open every day from 10:00 to 19:00 (except Sundays)",
+   },
 };
 
 export default en;

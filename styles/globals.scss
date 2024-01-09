@@ -2,11 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-*{
- margin: 0;
- padding: 0;
- box-sizing: border-box;
- outline: none;
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	outline: none;
+}
+
+.custom-container {
+	@apply w-full md:w-[90%] max-w-[1440px] mx-auto px-5 md:px-0;
 }
 
 .custom-bg {
@@ -17,7 +21,6 @@
 	position: absolute;
 	top: 0px;
 	z-index: -1;
-
 }
 
 .custom-bg::before {
@@ -33,8 +36,6 @@
 	margin: 0 auto;
 	background-size: contain;
 }
-
-
 
 .bg-image::after {
 	content: "";
@@ -123,5 +124,5 @@
 }
 
 .service-component-li-icon {
-	@apply flex items-center justify-center min-w-[32px] min-h-[32px] bg-[#E9F0F9] rounded-full
+	@apply flex items-center justify-center min-w-[32px] min-h-[32px] bg-[#E9F0F9] rounded-full;
 }

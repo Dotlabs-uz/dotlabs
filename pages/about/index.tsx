@@ -27,12 +27,12 @@ export default function AboutUs() {
 				<title>Dot Labs - About us</title>
 			</Head>
 			<section className="pt-5 mx-auto">
-				<div className="w-full md:w-[90%] max-w-[1440px] mx-auto px-5 md:px-0 f-full mb-12">
+				<div className="w-full md:w-[90%] max-w-[1440px] mx-auto px-5 md:px-0 mb-12">
 					<div className="h-full lg:w-3/5 pr-5">
 						<p className="text-xl font-medium sm:text-4xl  sm:leading-snug mb-3  xl:text-[40px] xl:font-semibold text-black xl:leading-tight xl:mb-6">
 							<span className="text-[#068FFF] font-bold ">
 								{translation?.aboutPage?.title1}
-							</span>{" "}
+							</span>
 							- {translation?.aboutPage?.title2}
 						</p>
 						<p className=" text-lg font-normal  sm:text-2xl  xl:text-2xl  leading-normal ">

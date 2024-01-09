@@ -22,10 +22,13 @@ const FirstSection: React.FC<FirstSectionProps> = ({ translation }) => {
                      <div className="w-[75px] h-[35px] border-8 border-[#068FFF] rounded-full"></div>
                      {translation?.section1?.h1Text2}
                     </div> */}
-                  Создаем
+                  {translation?.section1?.title}
                   <span className="text-[#068FFF]"> /iOS/Android/ </span>
-                  мобильные приложения и
-                  <span className="text-[#068FFF]"> web сайты </span>
+                  {translation?.section1?.title2}
+
+                  <span className="text-[#068FFF]">
+                     {translation?.section1?.span}
+                  </span>
                   {/* <div className="">
                      <p>{translation?.section1?.h1Text3}</p>
                   </div> */}

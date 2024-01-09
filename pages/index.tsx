@@ -9,6 +9,7 @@ import TranslateContext from "@/context/useTranslate";
 import ModalHandelContext from "@/context/modalHandel";
 import FirstSection from "@/components/FirstSection";
 import axios from "axios";
+import InputMask from "react-input-mask";
 
 // export const getServerSideProps: GetServerSideProps = async () => {
 //     const res = await fetch("https://dotlabs.uz/api/hello");
@@ -44,24 +45,30 @@ export default function Home() {
             <form className="max-w-[1400px] w-full m-auto flex max-sm:flex-col sm:items-center justify-center gap-20 max-lg:gap-10 max-sm:gap-5 bg-white shadow-md my-10 max-lg:my-5 py-5 px-5 rounded-lg">
                <div className="max-sm:w-full">
                   <h2 className="text-3xl max-md:text-2xl font-bold">
-                     Оставьте заявку
+                     {translation?.contact?.title1}
                   </h2>
                   <p className="max-md:text-sm max-md:leading-4">
-                     Пожалуйста, убедитесь, что правильно ввели данные.
+                     {translation?.contact?.title2}
                   </p>
                   <button className="mt-5 max-lg:mt-2 flex items-center max-md:text-xs gap-2 py-3 max-xl:py-2 px-6 text-white font-semibold text-base max-xl:text-base bg-black rounded-full uppercase max-sm:hidden">
-                     ОСТАВИТЬ ЗАЯВКУ
+                     {translation?.contact?.buttonText}
                   </button>
                </div>
                <div className="max-w-md max-md:max-w-[250px] max-sm:max-w-full w-full">
                   <input
                      type="text"
-                     placeholder="Имя"
+                     placeholder={translation?.contact?.inputName}
                      className="w-full mb-5 max-md:mb-3 px-3 py-4 max-md:py-2 rounded-lg border"
                   />
-                  <input
+                  <InputMask
+                     mask="+\9\98-(99)-999-99-99"
                      type="text"
-                     placeholder="Номер"
+                     // {...register("phone", {
+                     //    required: true,
+                     //    pattern:
+                     //       /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/,
+                     // })}
+                     placeholder={translation?.contact?.inputNumber}
                      className="w-full px-3 py-4 max-md:py-2 rounded-lg border"
                   />
                </div>

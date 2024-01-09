@@ -16,7 +16,7 @@ const FirstSection: React.FC<FirstSectionProps> = ({ translation }) => {
       <section className="w-full flex justify-center items-center md:py-20">
          <div className="flex items-center justify-between flex-col md:flex-row gap-10 max-w-[1040px] mx-auto my-10 md:my-0 z-50 relative w-[90%]">
             <div className=" flex flex-col items-start gap-6 max-xl:gap-4 w-full">
-               <h1 className="text-6xl max-xl:text-5xl max-lg:text-[40px] max-md:text-2xl leading-[70px] max-xl:leading-[60px] max-lg:leading-[50px] uppercase font-black">
+               <h1 className="text-6xl max-xl:text-4xl max-lg:text-3xl leading-[70px] max-xl:leading-[50px] max-lg:leading-[40px] uppercase font-black">
                   {/* <div className="flex items-center">
                      {translation?.section1?.h1Text1}
                      <div className="w-[75px] h-[35px] border-8 border-[#068FFF] rounded-full"></div>
@@ -32,9 +32,17 @@ const FirstSection: React.FC<FirstSectionProps> = ({ translation }) => {
                      <p>{translation?.section1?.h1Text3}</p>
                   </div> */}
                </h1>
-               <div className="max-w-[150px] w-full m-auto max-md:block hidden">
+               <div className="max-w-[350px] w-full m-auto max-md:block hidden relative my-2">
                   <Image
-                     src={"/images/phone.png"}
+                     className="w-full"
+                     src={"/images/macbook.png"}
+                     width={1000}
+                     height={1000}
+                     alt="photo"
+                  />
+                  <Image
+                     className="absolute top-8 -left-3 max-w-[100px]"
+                     src={"/images/iphone.png"}
                      width={1000}
                      height={1000}
                      alt="photo"
@@ -50,9 +58,17 @@ const FirstSection: React.FC<FirstSectionProps> = ({ translation }) => {
                   {translation?.section1?.buttonText}
                </button> */}
             </div>
-            <div className="max-w-[210px] max-lg:max-w-[180px] w-full max-md:hidden">
+            <div className="max-w-[410px] w-full max-md:hidden relative">
                <Image
-                  src={"/images/phone.png"}
+                  className="max-w-[500px] max-xl:max-w-[400px] max-lg:max-w-[350px]"
+                  src={"/images/macbook.png"}
+                  width={1000}
+                  height={1000}
+                  alt="photo"
+               />
+               <Image
+                  className="max-w-[150px] max-xl:max-w-[120px] max-lg:max-w-[110px] w-full absolute -left-10 max-xl:-left-5 top-14 max-xl:top-10"
+                  src={"/images/iphone.png"}
                   width={1000}
                   height={1000}
                   alt="photo"

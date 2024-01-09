@@ -26,7 +26,7 @@ export default function Home() {
 
    useEffect(() => {
       axios
-         .get("http://localhost:3000/api/hello")
+         .get("https://dotlabs.uz/api/hello")
          .then((res) => {
             if (res.status === 200 || res.status === 201) {
                setData(res.data);

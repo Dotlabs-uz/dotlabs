@@ -4,9 +4,12 @@ import { useForm, SubmitHandler } from "react-hook-form";
 import axios from "axios";
 import InputMask from "react-input-mask";
 import TranslateContext from "@/context/useTranslate";
+import { useRouter } from "next/router";
 
 export default function Contact() {
    type userData = { userName: string; phone: string };
+   const { push } = useRouter();
+
    const {
       register,
       handleSubmit,
@@ -34,6 +37,7 @@ export default function Contact() {
             .then((res) => {
                if (res.status === 200 || res.status === 201) {
                   reset();
+                  push("/thanks");
                }
             });
       } catch (e) {
@@ -81,12 +85,10 @@ export default function Contact() {
                <div className=" md:w-2/5 relative ">
                   <InputMask
                      mask="+\9\98-(99)-999-99-99"
-                     type="tel"
-                     id="tel"
+                     // type="tel"
+                     // id="tel"
                      {...register("phone", {
                         required: true,
-                        pattern:
-                           /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/,
                      })}
                      placeholder=""
                      className={` ${aboutCss.input} relative mb-4 md:mb-0 z-10 bg-transparent border-b-2 border-b-[#000] w-full h-14 text-black pt-2 outline-none peer`}

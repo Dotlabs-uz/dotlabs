@@ -35,31 +35,26 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
    } = useForm<Inputs>();
    const onSubmit: SubmitHandler<Inputs> = async (data) => {
       try {
-         const res = await axios.post(
-            "https://sheet.best/api/sheets/f24ba5dc-114e-4649-9fcd-68b5ca52992f",
-            data
-         );
-
-         if (res.status === 200 || res.status === 201) {
-            setModalHandel(false);
-            reset();
-            const body = {
-               chat_id: "-1002062552409",
-               parse_mode: "html",
-               text: `
+         const body = {
+            chat_id: "-1002062552409",
+            parse_mode: "html",
+            text: `
 						Новая заявка 
-						<a href="https://docs.google.com/spreadsheets/d/1Anq1vHx9tCmmDQAMa7A-MQ41S8culwb1fMIm7AYC7Dc/edit#gid=0" >
-							Взгянуть на таблицу
-						</a>
+						${data?.userName}
+						${data?.phone}
 					`,
-            };
-            axios
-               .post(
-                  `https://api.telegram.org/bot${"6710636505:AAHDUkdHn5187bpWzhGjZJr9EbX7eeclwPk"}/sendMessage`,
-                  body
-               )
-               .then((res) => console.log(res));
-         }
+         };
+         axios
+            .post(
+               `https://api.telegram.org/bot${"6710636505:AAHDUkdHn5187bpWzhGjZJr9EbX7eeclwPk"}/sendMessage`,
+               body
+            )
+            .then((res) => {
+               if (res.status === 200 || res.status === 201) {
+                  reset();
+                  setModalHandel(false);
+               }
+            });
       } catch (e) {
          console.log(e);
       }

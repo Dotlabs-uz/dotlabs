@@ -30,6 +30,9 @@ const uz = {
       buttonText: "Menga qo'ng'iroq qiling",
    },
    section1: {
+      title: "Biz",
+      title2: "mobil ilovalar va",
+      span: "veb-saytlarni yaratamiz",
       h1Text1: "In",
       h1Text2: "vatsiya",
       h1Text3: "har bir pikselda",

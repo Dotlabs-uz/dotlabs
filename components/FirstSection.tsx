@@ -25,8 +25,7 @@ const FirstSection: React.FC<FirstSectionProps> = ({ translation }) => {
                   {translation?.section1?.title}
                   <span className="text-[#068FFF]"> /iOS/Android/ </span>
                   {translation?.section1?.title2}
-
-                  <span className="text-[#068FFF]">
+                  <span className="text-[#068FFF] ml-2">
                      {translation?.section1?.span}
                   </span>
                   {/* <div className="">

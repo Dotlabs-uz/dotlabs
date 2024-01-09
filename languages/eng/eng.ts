@@ -30,6 +30,9 @@ const en = {
       buttonText: "Сall me back",
    },
    section1: {
+      title: "Create",
+      title2: "mobile applications and",
+      span: "web sites",
       h1Text1: "Inn",
       h1Text2: "vation",
       h1Text3: "in every pixel",

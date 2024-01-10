@@ -8,7 +8,7 @@ import { useRouter } from "next/router";
 
 export default function Contact() {
    const translation: any = useContext(TranslateContext);
-   type userData = { userName: string; phone: string };
+   type userData = { name: string; phone: string };
    const { push } = useRouter();
 
    const {
@@ -20,21 +20,11 @@ export default function Contact() {
    } = useForm<userData>();
 
    const onSubmit: SubmitHandler<userData> = async (data) => {
+      console.log(data);
+
       try {
-         const body = {
-            chat_id: "-1002062552409",
-            parse_mode: "html",
-            text: `
-					Новая заявка 
-						${data?.userName}
-					   ${data?.phone}
-					`,
-         };
          axios
-            .post(
-               `https://api.telegram.org/bot${"6710636505:AAHDUkdHn5187bpWzhGjZJr9EbX7eeclwPk"}/sendMessage`,
-               body
-            )
+            .post(`https://dotlabs.onrender.com/applications`, data)
             .then((res) => {
                if (res.status === 200 || res.status === 201) {
                   reset();
@@ -61,12 +51,11 @@ export default function Contact() {
                   <input
                      type="text"
                      id="name"
-                     {...register("userName", {
+                     {...register("name", {
                         required: true,
                         pattern:
                            /^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+$/u,
                      })}
-                     placeholder=""
                      className={`${aboutCss.input} relative mb-4 md:mb-0 z-10 bg-transparent border-b-2 border-b-[#fff] w-full h-14 text-white pt-2 outline-none peer autofill:bg-[#fff]`}
                   />
                   <label
@@ -75,9 +64,9 @@ export default function Contact() {
                   >
                      {translation?.contact?.inputName}
                   </label>
-                  {errors?.userName && (
+                  {errors?.name && (
                      <span className="text-red-600">
-                        {translation?.contact?.inputNameEror}{" "}
+                        {translation?.contact?.inputNameEror}
                      </span>
                   )}
                </div>
@@ -89,7 +78,6 @@ export default function Contact() {
                      {...register("phone", {
                         required: true,
                      })}
-                     placeholder=""
                      className={` ${aboutCss.input} relative mb-4 md:mb-0 z-10 bg-transparent border-b-2 border-b-[#fff] w-full h-14 text-white pt-2 outline-none peer`}
                   />
                   <label className=" -z-2 peer-focus:font-medium absolute text-white duration-500 transform -translate-y-5 scale-75 top-3 left-0  origin-[0] peer-focus:left-0 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 text-2xl font-semibold">

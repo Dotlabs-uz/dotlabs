@@ -42,7 +42,7 @@ const FirstSection: React.FC<FirstSectionProps> = ({ translation }) => {
                      alt="photo"
                   />
                </div>
-               <p className="font-normal text-xl max-lg:text-lg max-md:text-base max-sm:leading-5 text-[#747474]">
+               <p className="text-xl max-lg:text-lg max-md:text-base max-sm:leading-5 text-gray-700">
                   {translation?.section1?.pText}
                </p>
                {/* <button

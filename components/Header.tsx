@@ -157,13 +157,6 @@ export const Menu = () => {
                   <h3 className="text-sm text-[#545A61]">
                      Мы облегчим вашу рутину
                   </h3>
-                  <p className="text-start font-normal text-[#545A61]">
-                     <strong className="font-bold text-base text-black">
-                        Instantly build and deploy
-                     </strong>
-                     your sites to our global network from Git. Custom domains,
-                     https, deploy previews, rollbacks and much more.
-                  </p>
                   <ul className="text-start flex flex-col gap-1">
                      {translation?.header?.links.map((item: any) => (
                         <li key={item.id} onClick={() => setOpen(false)}>

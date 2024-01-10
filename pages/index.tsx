@@ -139,8 +139,8 @@ export default function Home() {
                <p className="font-normal md:text-lg text-[#747474]">
                   {translation?.section2?.pText}
                </p>
-               <hr className="w-full" />
-               <div className="flex items-center justify-between max-sm:justify-center w-full gap-3 max-sm:flex-wrap">
+               {/* <hr className="w-full" /> */}
+               {/* <div className="flex items-center justify-between max-sm:justify-center w-full gap-3 max-sm:flex-wrap">
                   <div className="flex flex-col items-start max-sm:items-center">
                      <span className="font-semibold text-3xl md:text-[44px]">
                         78%
@@ -165,7 +165,7 @@ export default function Home() {
                         {translation?.section2?.persentText}
                      </span>
                   </div>
-               </div>
+               </div> */}
             </div>
             <div className="custom-shadow-sec custom-gradient w-full p-[10px] md:p-5 rounded-3xl h-full ">
                <div className="w-full bg-white flex flex-col items-center gap-5 text-center rounded-2xl py-7">

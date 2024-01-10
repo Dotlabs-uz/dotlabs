@@ -8,6 +8,8 @@ import TranslateContext from "@/context/useTranslate";
 import FirstSection from "@/components/FirstSection";
 import axios from "axios";
 import InputMask from "react-input-mask";
+import { useForm, SubmitHandler } from "react-hook-form";
+import { useRouter } from "next/router";
 
 // export const getServerSideProps: GetServerSideProps = async () => {
 //     const res = await fetch("https://dotlabs.uz/api/hello");
@@ -22,6 +24,43 @@ import InputMask from "react-input-mask";
 export default function Home() {
    const translation: any = useContext(TranslateContext);
    const [data, setData] = useState([]);
+
+   const { push } = useRouter();
+   type userData = { userName: string; phone: string };
+   const {
+      register,
+      handleSubmit,
+      watch,
+      reset,
+      formState: { errors },
+   } = useForm<userData>();
+
+   const onSubmit: SubmitHandler<userData> = async (data) => {
+      try {
+         const body = {
+            chat_id: "-1002062552409",
+            parse_mode: "html",
+            text: `
+					Новая заявка 
+						${data?.userName}
+					   ${data?.phone}
+					`,
+         };
+         axios
+            .post(
+               `https://api.telegram.org/bot${"6710636505:AAHDUkdHn5187bpWzhGjZJr9EbX7eeclwPk"}/sendMessage`,
+               body
+            )
+            .then((res) => {
+               if (res.status === 200 || res.status === 201) {
+                  reset();
+                  push("/thanks");
+               }
+            });
+      } catch (e) {
+         console.log(e);
+      }
+   };
 
    useEffect(() => {
       axios
@@ -40,7 +79,11 @@ export default function Home() {
          <FirstSection translation={translation} />
 
          <section className="">
-            <form className="max-w-[1400px] w-full m-auto flex max-sm:flex-col sm:items-center justify-center gap-20 max-lg:gap-10 max-sm:gap-5 bg-white shadow-md my-10 max-lg:my-5 py-5 px-5 rounded-lg">
+            <form
+               id="form"
+               onSubmit={handleSubmit(onSubmit)}
+               className="max-w-[1400px] w-full m-auto flex max-sm:flex-col sm:items-center justify-center gap-20 max-lg:gap-10 max-sm:gap-5 bg-white shadow-md my-10 max-lg:my-5 py-5 px-5 rounded-lg"
+            >
                <div className="max-sm:w-full">
                   <h2 className="text-3xl max-md:text-2xl font-bold">
                      {translation?.contact?.title1}
@@ -48,12 +91,15 @@ export default function Home() {
                   <p className="max-md:text-sm max-md:leading-4">
                      {translation?.contact?.title2}
                   </p>
-                  <button className="mt-5 max-lg:mt-2 flex items-center max-md:text-xs gap-2 py-3 max-xl:py-2 px-6 text-white font-semibold text-base max-xl:text-base bg-black rounded-full uppercase max-sm:hidden">
+                  <button className="mt-5 max-lg:mt-2 flex items-center max-md:text-xs gap-2 py-3 max-xl:py-2 px-6 text-white font-semibold text-base max-xl:text-base bg-[#068FFF] rounded-full uppercase max-sm:hidden">
                      {translation?.contact?.buttonText}
                   </button>
                </div>
                <div className="max-w-md max-md:max-w-[250px] max-sm:max-w-full w-full">
                   <input
+                     {...register("userName", {
+                        required: true,
+                     })}
                      type="text"
                      placeholder={translation?.contact?.inputName}
                      className="w-full mb-5 max-md:mb-3 px-3 py-4 max-md:py-2 rounded-lg border"
@@ -61,16 +107,14 @@ export default function Home() {
                   <InputMask
                      mask="+\9\98-(99)-999-99-99"
                      type="text"
-                     // {...register("phone", {
-                     //    required: true,
-                     //    pattern:
-                     //       /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/,
-                     // })}
+                     {...register("phone", {
+                        required: true,
+                     })}
                      placeholder={translation?.contact?.inputNumber}
                      className="w-full px-3 py-4 max-md:py-2 rounded-lg border"
                   />
                </div>
-               <button className="w-fit py-2 px-6 text-white font-semibold bg-black rounded-full uppercase max-sm:block hidden">
+               <button className="w-fit py-2 px-6 text-white font-semibold bg-[#068FFF] rounded-full uppercase max-sm:block hidden">
                   ОСТАВИТЬ ЗАЯВКУ
                </button>
             </form>
@@ -96,28 +140,28 @@ export default function Home() {
                   {translation?.section2?.pText}
                </p>
                <hr className="w-full" />
-               <div className="flex items-center justify-between w-full gap-3">
-                  <div className="flex flex-col items-start">
+               <div className="flex items-center justify-between max-sm:justify-center w-full gap-3 max-sm:flex-wrap">
+                  <div className="flex flex-col items-start max-sm:items-center">
                      <span className="font-semibold text-3xl md:text-[44px]">
                         78%
                      </span>
-                     <span className="font-semibold text-[12px] md:text-sm text-[#747474]">
+                     <span className="font-semibold text-[10px] md:text-sm text-[#747474]">
                         {translation?.section2?.persentText}
                      </span>
                   </div>
-                  <div className="flex flex-col items-start md:border-l-[1px] md:border-r-[1px] md:px-10">
+                  <div className="flex flex-col items-start max-sm:items-center md:border-l-[1px] md:border-r-[1px] md:px-10">
                      <span className="font-semibold text-3xl md:text-[44px]">
                         20%
                      </span>
-                     <span className="font-semibold text-[12px] md:text-sm text-[#747474]">
+                     <span className="font-semibold text-[10px] md:text-sm text-[#747474]">
                         {translation?.section2?.persentText}
                      </span>
                   </div>
-                  <div className="flex flex-col items-start">
+                  <div className="flex flex-col items-start max-sm:items-center">
                      <span className="font-semibold text-3xl md:text-[44px]">
                         2.3М
                      </span>
-                     <span className="font-semibold text-[12px] md:text-sm text-[#747474]">
+                     <span className="font-semibold text-[10px] md:text-sm text-[#747474]">
                         {translation?.section2?.persentText}
                      </span>
                   </div>

@@ -7,6 +7,7 @@ import TranslateContext from "@/context/useTranslate";
 import { useRouter } from "next/router";
 
 export default function Contact() {
+   const translation: any = useContext(TranslateContext);
    type userData = { userName: string; phone: string };
    const { push } = useRouter();
 
@@ -45,15 +46,13 @@ export default function Contact() {
       }
    };
 
-   const translation: any = useContext(TranslateContext);
-
    return (
-      <div className="w-full h-full bg-[#FFC000] ">
+      <div className="w-full h-full bg-[#068FFF] ">
          <section className="max-w-[1040px] w-full mx-auto py-12 px-5 md:px-6 xl:px-0  lg:py-16">
-            <h2 className=" uppercase text-2xl lg:text-5xl font-semibold leading-normal ">
+            <h2 className=" uppercase text-2xl lg:text-5xl font-semibold leading-normal text-white">
                {translation?.contact?.title1}
             </h2>
-            <p>{translation?.contact?.title2}</p>
+            <p className="text-white">{translation?.contact?.title2}</p>
             <form
                onSubmit={handleSubmit(onSubmit)}
                className="w-full gap-3 md:flex justify-between items-center relative "
@@ -67,12 +66,12 @@ export default function Contact() {
                         pattern:
                            /^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+$/u,
                      })}
-                     placeholder=" "
-                     className={`${aboutCss.input} relative mb-4 md:mb-0 z-10 bg-transparent border-b-2 border-b-[#000] w-full h-14 text-black pt-2 outline-none peer autofill:bg-[#FFC000] `}
+                     placeholder=""
+                     className={`${aboutCss.input} relative mb-4 md:mb-0 z-10 bg-transparent border-b-2 border-b-[#fff] w-full h-14 text-white pt-2 outline-none peer autofill:bg-[#fff]`}
                   />
                   <label
                      htmlFor="name"
-                     className=" z-10 peer-focus:font-medium absolute text-black  duration-500 transform -translate-y-5 scale-75 top-3 left-0  origin-[0] peer-focus:left-0 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0   text-2xl font-semibold"
+                     className=" z-10 peer-focus:font-medium absolute text-white duration-500 transform -translate-y-5 scale-75 top-3 left-0 origin-[0] peer-focus:left-0 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 text-2xl font-semibold"
                   >
                      {translation?.contact?.inputName}
                   </label>
@@ -91,14 +90,14 @@ export default function Contact() {
                         required: true,
                      })}
                      placeholder=""
-                     className={` ${aboutCss.input} relative mb-4 md:mb-0 z-10 bg-transparent border-b-2 border-b-[#000] w-full h-14 text-black pt-2 outline-none peer`}
+                     className={` ${aboutCss.input} relative mb-4 md:mb-0 z-10 bg-transparent border-b-2 border-b-[#fff] w-full h-14 text-white pt-2 outline-none peer`}
                   />
-                  <label className=" -z-2 peer-focus:font-medium absolute text-black  duration-500 transform -translate-y-5 scale-75 top-3 left-0  origin-[0] peer-focus:left-0 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0  text-2xl font-semibold">
+                  <label className=" -z-2 peer-focus:font-medium absolute text-white duration-500 transform -translate-y-5 scale-75 top-3 left-0  origin-[0] peer-focus:left-0 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 text-2xl font-semibold">
                      {translation?.contact?.inputNumber}
                   </label>
                   {errors?.phone && (
                      <span className="text-red-600">
-                        {translation?.contact?.inputNumberEror}{" "}
+                        {translation?.contact?.inputNumberEror}
                      </span>
                   )}
                </div>

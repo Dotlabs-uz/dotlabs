@@ -145,7 +145,7 @@ export const Menu = () => {
                   <Image
                      src={"/icons/logo.svg"}
                      alt=""
-                     width="90"
+                     width="80"
                      height="36"
                   />
 
@@ -160,7 +160,7 @@ export const Menu = () => {
                   <p className="text-start font-normal text-[#545A61]">
                      <strong className="font-bold text-base text-black">
                         Instantly build and deploy
-                     </strong>{" "}
+                     </strong>
                      your sites to our global network from Git. Custom domains,
                      https, deploy previews, rollbacks and much more.
                   </p>
@@ -176,7 +176,7 @@ export const Menu = () => {
                         </li>
                      ))}
                   </ul>
-                  <h3 className="text-sm text-[#545A61]">KEY FEATURES</h3>
+                  {/* <h3 className="text-sm text-[#545A61]">KEY FEATURES</h3>
                   <ul className="text-start flex flex-col gap-1">
                      <li>
                         <Link href="#" className="underline text-base">
@@ -203,7 +203,7 @@ export const Menu = () => {
                            Contact
                         </Link>
                      </li>
-                  </ul>
+                  </ul> */}
                </div>
             </aside>
          )}

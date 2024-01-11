@@ -78,7 +78,7 @@ export default function Home() {
          <div className="custom-bg bg-image"></div>
          <FirstSection translation={translation} />
 
-         <section className="">
+         <section className="w-full">
             <form
                id="form"
                onSubmit={handleSubmit(onSubmit)}

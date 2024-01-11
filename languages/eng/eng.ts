@@ -243,6 +243,7 @@ const en = {
    thakns: {
       title: "Your application has been successfully sent",
       title2: "We are open every day from 10:00 to 19:00 (except Sundays)",
+      goback: "Go Back",
    },
 };
 

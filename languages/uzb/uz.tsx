@@ -250,6 +250,7 @@ const uz = {
       title: "Arizangiz muvaffaqiyatli yuborildi",
       title2:
          "Biz har kuni soat 10:00 dan 19:00 gacha ochiqmiz (yakshanbadan tashqari)",
+      goback: "Orqaga",
    },
 };
 

@@ -37,18 +37,18 @@ const Contacts: React.FC<contactsProps> = () => {
                   <div className="flex flex-col md:flex-row gap-5 md:gap-0 items-start justify-between w-full mb-7">
                      <div className="flex flex-col">
                         <Link className="text-xl font-semibold" href="">
-                           +998 (99) 911-01-11
+                           +998 (90) 504-74-94
                         </Link>
                         <span className="text-[#A3A7AC] ">
                            По вопросам услуг
                         </span>
                      </div>
-                     <div className="flex flex-col">
+                     {/* <div className="flex flex-col">
                         <Link className="text-xl font-semibold" href="">
                            +998 (99) 026-88-67{" "}
                         </Link>
                         <span className="text-[#A3A7AC] ">Вакансии</span>
-                     </div>
+                     </div> */}
                   </div>
                   <div className="flex flex-col">
                      <h3 className="text-xl font-semibold">

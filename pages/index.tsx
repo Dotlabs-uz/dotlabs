@@ -26,7 +26,7 @@ export default function Home() {
    const [data, setData] = useState([]);
 
    const { push } = useRouter();
-   type userData = { userName: string; phone: string };
+   type userData = { name: string; phone: string };
    const {
       register,
       handleSubmit,
@@ -37,20 +37,8 @@ export default function Home() {
 
    const onSubmit: SubmitHandler<userData> = async (data) => {
       try {
-         const body = {
-            chat_id: "-1002062552409",
-            parse_mode: "html",
-            text: `
-					Новая заявка 
-						${data?.userName}
-					   ${data?.phone}
-					`,
-         };
          axios
-            .post(
-               `https://api.telegram.org/bot${"6710636505:AAHDUkdHn5187bpWzhGjZJr9EbX7eeclwPk"}/sendMessage`,
-               body
-            )
+            .post(`${process.env.NEXT_PUBLIC_TOKEN}/applications`, data)
             .then((res) => {
                if (res.status === 200 || res.status === 201) {
                   reset();
@@ -83,7 +71,7 @@ export default function Home() {
                id="form"
                onSubmit={handleSubmit(onSubmit)}
                className="max-w-[1400px] w-full m-auto flex max-sm:flex-col sm:items-center justify-center gap-20 max-lg:gap-10 max-sm:gap-5 bg-white shadow-md my-10 max-lg:my-5 py-5 px-5 rounded-lg"
-            >
+            >  
                <div className="max-sm:w-full">
                   <h2 className="text-3xl max-md:text-2xl font-bold">
                      {translation?.contact?.title1}
@@ -97,7 +85,7 @@ export default function Home() {
                </div>
                <div className="max-w-md max-md:max-w-[250px] max-sm:max-w-full w-full">
                   <input
-                     {...register("userName", {
+                     {...register("name", {
                         required: true,
                      })}
                      type="text"

@@ -24,7 +24,7 @@ export default function Contact() {
 
       try {
          axios
-            .post(`https://dotlabs.onrender.com/applications`, data)
+            .post(`${process.env.NEXT_PUBLIC_TOKEN}/applications`, data)
             .then((res) => {
                if (res.status === 200 || res.status === 201) {
                   reset();
@@ -53,10 +53,10 @@ export default function Contact() {
                      id="name"
                      {...register("name", {
                         required: true,
-                        pattern:
-                           /^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+$/u,
+                        // pattern:
+                        //    /^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+$/u,
                      })}
-                     className={`${aboutCss.input} relative mb-4 md:mb-0 z-10 bg-transparent border-b-2 border-b-[#fff] w-full h-14 text-white pt-2 outline-none peer autofill:bg-[#fff]`}
+                     className={`relative mb-4 md:mb-0 z-10 bg-transparent border-b-2 border-b-[#fff] w-full h-14 text-white pt-2 outline-none autofill:bg-[#068FFF] focus:bg-[#068FFF]`}
                   />
                   <label
                      htmlFor="name"

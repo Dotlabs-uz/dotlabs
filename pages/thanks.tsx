@@ -15,7 +15,7 @@ const Thanks: React.FC<ThanksProps> = () => {
          <Head>
             <title>Dot Labs - Thanks</title>
          </Head>
-         <section className="max-w-[1200px] w-full m-auto my-10 px-5">
+         <section className="max-w-[1200px] w-full m-auto mt-10 mb-80 max-sm:mb-60 px-5">
             <div className="">
                <h2 className="text-4xl max-lg:text-3xl font-semibold mb-1">
                   {translation?.thakns?.title}
@@ -28,6 +28,7 @@ const Thanks: React.FC<ThanksProps> = () => {
                   +998 (90) 504-74-94
                </Link>
             </div>
+            <Link href={"/"}>{translation?.thakns?.goback}</Link>
          </section>
       </Layout>
    );

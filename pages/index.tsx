@@ -24,6 +24,7 @@ import { useRouter } from "next/router";
 export default function Home() {
    const translation: any = useContext(TranslateContext);
    const [data, setData] = useState([]);
+   const [loader, setLoader] = useState(false);
 
    const { push } = useRouter();
    type userData = { name: string; phone: string };
@@ -36,6 +37,8 @@ export default function Home() {
    } = useForm<userData>();
 
    const onSubmit: SubmitHandler<userData> = async (data) => {
+      console.log(data);
+      setLoader(true);
       try {
          axios
             .post(`${process.env.NEXT_PUBLIC_TOKEN}/applications`, data)
@@ -43,6 +46,7 @@ export default function Home() {
                if (res.status === 200 || res.status === 201) {
                   reset();
                   push("/thanks");
+                  setLoader(false);
                }
             });
       } catch (e) {
@@ -63,6 +67,12 @@ export default function Home() {
 
    return (
       <Layout>
+         {loader ? (
+            <div className="w-full h-screen fixed top-0 left-0 flex z-[400] bg-white/30 backdrop-blur-sm">
+               <div className="w-16 h-16 m-auto rounded-full animate-spin border-r border-black"></div>
+            </div>
+         ) : null}
+
          <div className="custom-bg bg-image"></div>
          <FirstSection translation={translation} />
 
@@ -71,7 +81,7 @@ export default function Home() {
                id="form"
                onSubmit={handleSubmit(onSubmit)}
                className="max-w-[1400px] w-full m-auto flex max-sm:flex-col sm:items-center justify-center gap-20 max-lg:gap-10 max-sm:gap-5 bg-white shadow-md my-10 max-lg:my-5 py-5 px-5 rounded-lg"
-            >  
+            >
                <div className="max-sm:w-full">
                   <h2 className="text-3xl max-md:text-2xl font-bold">
                      {translation?.contact?.title1}

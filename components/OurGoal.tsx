@@ -17,8 +17,7 @@ export default function OurGoal({item}:any) {
                     {item.title}
                 </h1>
                 <p className=" text-sm xl:text-base font-normal   ">
-                    Мы всегда в поиске новых идей и технологических решений,
-                    чтобы удивлять и вдохновлять наших клиентов.
+                    {item.text}
                 </p>
             </div>
         </div>

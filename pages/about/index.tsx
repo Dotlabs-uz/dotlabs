@@ -30,7 +30,7 @@ export default function AboutUs() {
                             <span className="text-[#068FFF] font-bold ">
                                 {translation?.aboutPage?.title1}
                             </span>
-                            - {translation?.aboutPage?.title2}
+                            {" "} - {translation?.aboutPage?.title2}
                         </p>
                         <p className=" text-lg font-normal  sm:text-2xl  xl:text-2xl  leading-normal ">
                             {translation?.aboutPage?.text}

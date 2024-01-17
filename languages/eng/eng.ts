@@ -136,7 +136,7 @@ const en = {
 				text:"We combine experience and passion by providing outstanding solutions in mobile development, web design and the creation of telegram bots. Our team of experts is familiar with different industries, which allows us to adapt each project to the unique needs of your business. Trust us for innovative and effective solutions in your field.",
 			},
 			{
-				title:"Сильный проектный менеджмент",
+				title:"Strong project management",
 				img:"company-1.png",
 				text:"We value every project and guarantee its successful implementation thanks to our strong project management. Our approach ensures effective planning, strict control and attention to detail at every stage of development. Trust us — your reliable leader in the world of web technologies.",
 			},

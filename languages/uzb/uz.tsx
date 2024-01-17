@@ -136,19 +136,19 @@ const uz = {
       teamText: "Jamoa",
 		infoBlock:[
 			{
-				title:"Инновации",
+				title:"Turli sohalardagi tajriba",
 				img:"company-1.png",
-				text:"Мы всегда в поиске новых идей и технологических решений, чтобы удивлять и вдохновлять наших клиентов.",
+				text:"Biz mobil ishlab chiqish, veb-dizayn va Telegram botlarini yaratishda ajoyib echimlarni taqdim etish orqali tajriba va ishtiyoqni birlashtiramiz. Bizning mutaxassislar jamoasi turli sohalar bilan tanish bo'lib, har bir loyihani sizning biznesingizning o'ziga xos ehtiyojlariga moslashtirishga imkon beradi. O'z sohangizdagi innovatsion va samarali echimlar uchun bizga ishoning.",
 			},
 			{
-				title:"Инновации",
+				title:"Loyihalarni boshqarish",
 				img:"company-1.png",
-				text:"Мы всегда в поиске новых идей и технологических решений, чтобы удивлять и вдохновлять наших клиентов.",
+				text:"Biz har bir loyihani qadrlaymiz va kuchli loyihalarni boshqarish orqali uning muvaffaqiyatli amalga oshirilishini kafolatlaymiz. Bizning yondashuvimiz rivojlanishning har bir bosqichida samarali rejalashtirish, qat'iy nazorat va tafsilotlarga e'tiborni ta'minlaydi. Bizga ishoning-veb-texnologiyalar dunyosidagi ishonchli rahbaringiz.",
 			},
 			{
-				title:"Инновации",
+				title:"Mutaxassislarning yuqori darajasi",
 				img:"company-1.png",
-				text:"Мы всегда в поиске новых идей и технологических решений, чтобы удивлять и вдохновлять наших клиентов.",
+				text:"DOT LABS-da biz mutaxassislarimizning yuqori darajasi bilan faxrlanamiz. Bizning jamoamiz sizning loyihalaringizni muvaffaqiyatli amalga oshirish uchun o'z bilimlari va ijodkorligini qo'llashga tayyor bo'lgan tajribali mutaxassislardan iborat. Veb-ishlab chiqish va mobil texnologiyalar dunyosida ajoyib natijalarga erishish uchun bizga ishoning.",
 			}
 		],
       blackBlock: {

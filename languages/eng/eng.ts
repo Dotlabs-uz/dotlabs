@@ -131,19 +131,19 @@ const en = {
       teamText: "TEAM",  
 		infoBlock:[
 			{
-				title:"Инновации",
+				title:"Expertise in various industries",
 				img:"company-1.png",
-				text:"Мы всегда в поиске новых идей и технологических решений, чтобы удивлять и вдохновлять наших клиентов.",
+				text:"We combine experience and passion by providing outstanding solutions in mobile development, web design and the creation of telegram bots. Our team of experts is familiar with different industries, which allows us to adapt each project to the unique needs of your business. Trust us for innovative and effective solutions in your field.",
 			},
 			{
-				title:"Инновации",
+				title:"Сильный проектный менеджмент",
 				img:"company-1.png",
-				text:"Мы всегда в поиске новых идей и технологических решений, чтобы удивлять и вдохновлять наших клиентов.",
+				text:"We value every project and guarantee its successful implementation thanks to our strong project management. Our approach ensures effective planning, strict control and attention to detail at every stage of development. Trust us — your reliable leader in the world of web technologies.",
 			},
 			{
-				title:"Инновации",
+				title:"High level of specialists",
 				img:"company-1.png",
-				text:"Мы всегда в поиске новых идей и технологических решений, чтобы удивлять и вдохновлять наших клиентов.",
+				text:"DOT LABS is proud of the high level of our specialists. Our team consists of experienced professionals who are ready to apply their knowledge and creativity to the successful implementation of your projects. Count on us to achieve outstanding results in the world of web development and mobile technologies.",
 			}
 		],
       blackBlock: {

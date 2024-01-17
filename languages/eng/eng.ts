@@ -128,7 +128,24 @@ const en = {
       title2:
          "to help you achieve online success by providing innovative solutions and a high level of professionalism.",
       text: "DOT LABS is your reliable partner in web development",
-      teamText: "TEAM",
+      teamText: "TEAM",  
+		infoBlock:[
+			{
+				title:"Инновации",
+				img:"company-1.png",
+				text:"Мы всегда в поиске новых идей и технологических решений, чтобы удивлять и вдохновлять наших клиентов.",
+			},
+			{
+				title:"Инновации",
+				img:"company-1.png",
+				text:"Мы всегда в поиске новых идей и технологических решений, чтобы удивлять и вдохновлять наших клиентов.",
+			},
+			{
+				title:"Инновации",
+				img:"company-1.png",
+				text:"Мы всегда в поиске новых идей и технологических решений, чтобы удивлять и вдохновлять наших клиентов.",
+			}
+		],
       blackBlock: {
          title: "OUR PRINCIPLES",
          text1: 'Always sincere with customers. We hear, we offer and we try to be flexible, we are not afraid to say "no".',

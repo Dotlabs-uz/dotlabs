@@ -134,6 +134,23 @@ const uz = {
          "innovatsion echimlar va yuqori darajadagi professionallikni taqdim etish orqali onlayn muvaffaqiyatga erishishingizga yordam bering.",
       text: "DOT LABS veb-ishlab chiqishda sizning ishonchli hamkoringizdir",
       teamText: "Jamoa",
+		infoBlock:[
+			{
+				title:"Инновации",
+				img:"company-1.png",
+				text:"Мы всегда в поиске новых идей и технологических решений, чтобы удивлять и вдохновлять наших клиентов.",
+			},
+			{
+				title:"Инновации",
+				img:"company-1.png",
+				text:"Мы всегда в поиске новых идей и технологических решений, чтобы удивлять и вдохновлять наших клиентов.",
+			},
+			{
+				title:"Инновации",
+				img:"company-1.png",
+				text:"Мы всегда в поиске новых идей и технологических решений, чтобы удивлять и вдохновлять наших клиентов.",
+			}
+		],
       blackBlock: {
          title: "BIZNING PRINTSIPLARIMIZ",
          text1: "Har doim mijozlar bilan samimiy. Eshitamiz, taklif qilamiz va moslashuvchan bo'lishga harakat qilamiz, ``yo'q`` deyishdan qo'rqmaymiz.",

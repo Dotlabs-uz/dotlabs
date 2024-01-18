@@ -27,18 +27,18 @@ const FirstSection: React.FC<FirstSectionProps> = ({ translation }) => {
                   ОСТАВИТЬ ЗАЯВКУ
                </Link>
                <div className="max-w-[300px] w-full m-auto max-md:block hidden relative my-2">
-                  <img
+                  <Image
                      className="w-full"
-                     src={"/images/macbook.png"}
-                     // width={1000}
-                     // height={1000}
+                     src={"/images/macbook.webp"}
+                     width={1000}
+                     height={1000}
                      alt="photo"
                   />
-                  <img
+                  <Image
                      className="absolute top-8 -left-3 max-w-[80px]"
-                     src={"/images/iphone.png"}
-                     // width={1000}
-                     // height={1000}
+                     src={"/images/iphone.webp"}
+                     width={1000}
+                     height={1000}
                      alt="photo"
                   />
                </div>
@@ -53,18 +53,18 @@ const FirstSection: React.FC<FirstSectionProps> = ({ translation }) => {
                </button> */}
             </div>
             <div className="max-w-[410px] w-full max-md:hidden relative">
-               <img
+               <Image
                   className="max-w-[500px] max-xl:max-w-[400px] max-lg:max-w-[350px]"
-                  src={"/images/macbook.png"}
-                  // width={1000}
-                  // height={1000}
+                  src={"/images/macbook.webp"}
+                  width={1000}
+                  height={1000}
                   alt="photo"
                />
-               <img
+               <Image
                   className="max-w-[150px] max-xl:max-w-[120px] max-lg:max-w-[110px] w-full absolute -left-10 max-xl:-left-5 top-14 max-xl:top-10"
-                  src={"/images/iphone.png"}
-                  // width={1000}
-                  // height={1000}
+                  src={"/images/iphone.webp"}
+                  width={1000}
+                  height={1000}
                   alt="photo"
                />
             </div>

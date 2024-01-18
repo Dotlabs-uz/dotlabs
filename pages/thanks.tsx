@@ -2,8 +2,9 @@ import { useContext } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import TranslateContext from "@/context/useTranslate";
-
 import Layout from "@/layouts/Layout";
+
+import { IoIosArrowRoundBack } from "react-icons/io";
 
 interface ThanksProps {}
 
@@ -28,7 +29,10 @@ const Thanks: React.FC<ThanksProps> = () => {
                   +998 (90) 504-74-94
                </Link>
             </div>
-            <Link href={"/"}>{translation?.thakns?.goback}</Link>
+            <Link href={"/"} className="bg-[#068FFF] text-white w-fit flex gap-1 py-1 px-3 rounded-full">
+               <IoIosArrowRoundBack size={25} />
+               {translation?.thakns?.goback}
+            </Link>
          </section>
       </Layout>
    );

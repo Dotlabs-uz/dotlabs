@@ -10,6 +10,7 @@ import axios from "axios";
 import InputMask from "react-input-mask";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { useRouter } from "next/router";
+import * as fbq from "../lib/fpixel";
 
 // export const getServerSideProps: GetServerSideProps = async () => {
 //     const res = await fetch("https://dotlabs.uz/api/hello");
@@ -47,6 +48,7 @@ export default function Home() {
                   reset();
                   push("/thanks");
                   setLoader(false);
+                  fbq.event("Заявка отправлена", { value: 1 });
                }
             });
       } catch (e) {

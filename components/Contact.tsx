@@ -5,6 +5,7 @@ import axios from "axios";
 import InputMask from "react-input-mask";
 import TranslateContext from "@/context/useTranslate";
 import { useRouter } from "next/router";
+import * as fbq from "../lib/fpixel";
 
 export default function Contact() {
    const translation: any = useContext(TranslateContext);
@@ -32,6 +33,7 @@ export default function Contact() {
                   reset();
                   push("/thanks");
                   setLoader(false);
+                  fbq.event("Заявка отправлена", { value: 1 });
                }
             });
       } catch (e) {

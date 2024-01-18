@@ -7,10 +7,11 @@ import eng from "@/languages/eng/eng";
 import ru from "@/languages/ru/ru";
 import uz from "@/languages/uzb/uz";
 import TranslateContext from "@/context/useTranslate";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Loader from "@/components/Loader";
 import { motion } from "framer-motion";
 import Script from "next/script";
+import * as fbq from "../lib/fpixel";
 
 const myFont = localFont({ src: "../fonts/proximanova_regular.ttf" });
 
@@ -18,9 +19,23 @@ export default function App({ Component, pageProps }: AppProps) {
     const router = useRouter();
     const { locale } = router;
 
-    // useEffect(() => {
-    //     initFacebookPixel();
-    // }, []);
+
+
+    useEffect(() => {
+        // This pageview only triggers the first time (it's important for Pixel to have real information)
+        fbq.pageview();
+    
+        const handleRouteChange = () => {
+          fbq.pageview();
+        };
+    
+        router.events.on("routeChangeComplete", handleRouteChange);
+        return () => {
+          router.events.off("routeChangeComplete", handleRouteChange);
+        };
+      }, [router.events]);
+
+
 
     const translation = locale === "uz" ? uz : locale === "ru" ? ru : eng;
 

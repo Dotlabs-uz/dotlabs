@@ -10,6 +10,7 @@ import TranslateContext from "@/context/useTranslate";
 import { IoClose } from "react-icons/io5";
 import ModalHandelContext from "@/context/modalHandel";
 import axios from "axios";
+import * as fbq from "../lib/fpixel";
 
 type Inputs = {
    userName: string;
@@ -53,6 +54,7 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
                if (res.status === 200 || res.status === 201) {
                   reset();
                   setModalHandel(false);
+                  fbq.event("Заявка отправлена", { value: 1 });
                }
             });
       } catch (e) {

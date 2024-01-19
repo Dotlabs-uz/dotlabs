@@ -66,7 +66,6 @@ export default function App({ Component, pageProps }: AppProps) {
           'https://connect.facebook.net/en_US/fbevents.js');
           fbq('init', '280922751657091');
           fbq('track', 'PageView');
-          fbq('track', 'Lead');
         `,
                 }}
             ></Script>

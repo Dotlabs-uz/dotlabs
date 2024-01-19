@@ -12,16 +12,6 @@ import { useForm, SubmitHandler } from "react-hook-form";
 import { useRouter } from "next/router";
 import * as fbq from "../lib/fpixel";
 
-// export const getServerSideProps: GetServerSideProps = async () => {
-//     const res = await fetch("https://dotlabs.uz/api/hello");
-
-//     const data = await res.json();
-
-//     return {
-//         props: { data },
-//     };
-// };
-
 export default function Home() {
    const translation: any = useContext(TranslateContext);
    const [data, setData] = useState([]);

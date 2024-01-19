@@ -5,6 +5,12 @@ type Data = {};
 
 let portfolio: any = [
    {
+      id: 5,
+      title: "Clinics website",
+      image: "/images/portfolio/turonMed.png",
+      url: "https://turon-med.uz/",
+   },
+   {
       id: 4,
       title: "Student's Platform",
       image: "/images/portfolio/wepro.webp",

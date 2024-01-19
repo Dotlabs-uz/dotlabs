@@ -4,41 +4,41 @@ import type { NextApiRequest, NextApiResponse } from "next";
 type Data = {};
 
 let portfolio: any = [
-   {
-      id: 5,
-      title: "Clinics website",
-      image: "/images/portfolio/turonMed.png",
-      url: "https://turon-med.uz/",
-   },
-   {
-      id: 4,
-      title: "Student's Platform",
-      image: "/images/portfolio/wepro.webp",
-      url: "https://go.wepro.uz/",
-   },
-   {
-      id: 3,
-      title: "Epi-Help",
-      image: "/images/portfolio/feb.webp",
-      url: "https://epi-help.com/",
-   },
-   {
-      id: 2,
-      title: "Polyglot-school",
-      image: "/images/portfolio/polyglot.webp",
-      url: "https://polyglot-school.uz/ru",
-   },
-   {
-      id: 1,
-      title: "Eleven CRM",
-      image: "/images/portfolio/eleven.webp",
-      url: "",
-   },
+	{
+		id: 4,
+		title: "Student's Platform",
+		image: "/images/portfolio/wepro.webp",
+		url: "https://go.wepro.uz/",
+	},
+	{
+		id: 3,
+		title: "Epi-Help",
+		image: "/images/portfolio/feb.webp",
+		url: "https://epi-help.com/",
+	},
+	{
+		id: 2,
+		title: "Polyglot-school",
+		image: "/images/portfolio/polyglot.webp",
+		url: "https://polyglot-school.uz/ru",
+	},
+	{
+		id: 1,
+		title: "Eleven CRM",
+		image: "/images/portfolio/eleven.webp",
+		url: "",
+	},
+	{
+		id: 5,
+		title: "Clinics website",
+		image: "/images/portfolio/turonMed.png",
+		url: "https://turon-med.uz/",
+	}
 ];
 
 export default function handler(
-   req: NextApiRequest,
-   res: NextApiResponse<Data>
+	req: NextApiRequest,
+	res: NextApiResponse<Data>
 ) {
-   res.status(200).json(portfolio);
+	res.status(200).json(portfolio);
 }

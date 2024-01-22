@@ -185,7 +185,7 @@ const en = {
             img: "/images/about/ozod.webp",
          },
          {
-            name: "Алексей Задорожный",
+            name: "Konstantin Kuznetsov",
             position: "Account Manager",
             img: "/images/about/kostya.webp",
          },

@@ -190,7 +190,7 @@ const uz = {
             img: "/images/about/ozod.webp",
          },
          {
-            name: "Алексей Задорожный",
+            name: "Konstantin Kuznetsov",
             position: "Buyurtmachilar bilan ishlash bo'yicha menejer",
             img: "/images/about/kostya.webp",
          },

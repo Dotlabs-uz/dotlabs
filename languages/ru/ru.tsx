@@ -185,7 +185,7 @@ const ru = {
             img: "/images/about/ozod.webp",
          },
          {
-            name: "Алексей Задорожный",
+            name: "Константин Кузнецов",
             position: "Менеджер по работе с клиентами",
             img: "/images/about/kostya.webp",
          },

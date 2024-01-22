@@ -133,6 +133,7 @@ export default Header;
 export const Menu = () => {
    const [open, setOpen] = useState<boolean>(false);
    const translation: any = useContext(TranslateContext);
+   
    return (
       <>
          {!open ? (

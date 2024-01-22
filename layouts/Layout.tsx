@@ -11,15 +11,18 @@ import { IoClose } from "react-icons/io5";
 import ModalHandelContext from "@/context/modalHandel";
 import axios from "axios";
 import * as fbq from "../lib/fpixel";
+import { useRouter } from "next/router";
 
 type Inputs = {
-   userName: string;
+   name: string;
    phone: string;
 };
 
 const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
    const translation: any = useContext(TranslateContext);
    const modalHandelContext: any = useContext(ModalHandelContext);
+   const { push } = useRouter();
+   const [loader, setLoader] = useState(false);
 
    const [modalHandel, setModalHandel] = useState<boolean>(false);
 
@@ -34,25 +37,19 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
       reset,
       formState: { errors },
    } = useForm<Inputs>();
+
    const onSubmit: SubmitHandler<Inputs> = async (data) => {
+      console.log(data);
+      setLoader(true);
+
       try {
-         const body = {
-            chat_id: "-1002062552409",
-            parse_mode: "html",
-            text: `
-						Новая заявка 
-						${data?.userName}
-						${data?.phone}
-					`,
-         };
          axios
-            .post(
-               `https://api.telegram.org/bot${"6710636505:AAHDUkdHn5187bpWzhGjZJr9EbX7eeclwPk"}/sendMessage`,
-               body
-            )
+            .post(`${process.env.NEXT_PUBLIC_TOKEN}/applications`, data)
             .then((res) => {
                if (res.status === 200 || res.status === 201) {
                   reset();
+                  push("/thanks");
+                  setLoader(false);
                   setModalHandel(false);
                   fbq.event("Заявка отправлена", { value: 1 });
                }
@@ -77,9 +74,11 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
             />
          </Head>
          <Header setModalHandel={setModalHandel} />
-
-        
-
+         {loader ? (
+            <div className="w-full h-screen fixed top-0 left-0 flex z-[400] bg-white/30 backdrop-blur-sm">
+               <div className="w-16 h-16 m-auto rounded-full animate-spin border-r border-black"></div>
+            </div>
+         ) : null}
          <main>{children}</main>
 
          <Contact />
@@ -146,7 +145,7 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
                      </p>
                      <input
                         placeholder={translation?.modal?.inputName}
-                        {...register("userName", {
+                        {...register("name", {
                            required: true,
                            pattern: {
                               value: /^[a-zA-Z ,ЁёА-я ']*$/,
@@ -155,9 +154,9 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
                         })}
                         className="mt-5 w-full border border-1 p-3 rounded-md"
                      />
-                     {errors.userName ? (
+                     {errors.name ? (
                         <p className="text-[red] text-sm mt-1">
-                           {errors.userName.message}
+                           {errors.name.message}
                         </p>
                      ) : null}
                      <InputMask

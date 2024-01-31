@@ -9,7 +9,7 @@ interface contactsProps {}
 
 const Contacts: React.FC<contactsProps> = () => {
 	const translation: any = useContext(TranslateContext);
-	const { modalHandel, setModalHandel }: any = useContext(ModalHandelContext);
+	const { setModalHandel }: any = useContext(ModalHandelContext);
 	return (
 		<Layout>
 			<Head>

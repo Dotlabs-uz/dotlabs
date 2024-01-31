@@ -8,10 +8,15 @@ import { BiRightArrowAlt } from "react-icons/bi";
 import serviceCss from "../../styles/services.module.scss";
 import Head from "next/head";
 import TranslateContext from "@/context/useTranslate";
+import Link from "next/link";
+import ModalHandelContext from "@/context/modalHandel";
 
 export default function Index() {
     const translation: any = useContext(TranslateContext);
+    const  { setModalHandel }: any = useContext(ModalHandelContext);
 
+    
+    
     return (
         <Layout>
             <Head>
@@ -101,10 +106,12 @@ export default function Index() {
                         <p className="text-white text-base md:w-7/12 md:text-xl font-normal mb-5 ">
                             {translation?.servicesPage?.section2?.pText}
                         </p>
-                        <button className="border border-solid border-white font-normal uppercase px-6 py-2 rounded-full flex items-center justify-between text-white">
-                            {translation?.servicesPage?.section2?.buttonText}{" "}
-                            <FiArrowUpRight className="text-white text-xl " />{" "}
-                        </button>
+                        <Link href="/portfolio" >
+                            <button className="border border-solid border-white font-normal uppercase px-6 py-2 rounded-full flex items-center justify-between text-white" >
+                                {translation?.servicesPage?.section2?.buttonText}{" "}
+                                <FiArrowUpRight className="text-white text-xl " />{" "}
+                            </button>
+                        </Link>
                     </div>
                 </div>
                 <div className="w-full md:w-[90%] px-5 max-w-[1440px] mx-auto block relative md:flex items-center justify-between py-16 gap-8 ">
@@ -133,7 +140,9 @@ export default function Index() {
 								)
                             )}
                         </ul>
-                        <button className="flex items-center gap-2 py-2 px-4 md:py-4 md:px-6 text-white font-medium text-sm md:text-lg bg-black rounded-full uppercase">
+                        <button className="flex items-center gap-2 py-2 px-4 md:py-4 md:px-6 text-white font-medium text-sm md:text-lg bg-black rounded-full uppercase"
+                            onClick={() => setModalHandel(true)}
+                        >
                             {translation?.servicesPage?.section3?.button}{" "}
                             <BiRightArrowAlt
                                 size="25"

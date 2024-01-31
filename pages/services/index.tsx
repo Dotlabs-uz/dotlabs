@@ -38,13 +38,13 @@ export default function Index() {
                                 <h2 className=" text-xl md:text-4xl font-bold mb-2  ">
                                     {
                                         translation?.servicesPage?.section1
-                                            ?.bottomBlocks?.title
+                                            ?.bottomBlocks[0]?.title
                                     }
                                 </h2>
                                 <p className=" text-base font-normal leading-5 ">
                                     {
                                         translation?.servicesPage?.section1
-                                            ?.bottomBlocks?.text
+                                            ?.bottomBlocks[0]?.text
                                     }
                                 </p>
                             </div>
@@ -59,13 +59,13 @@ export default function Index() {
                                 <h2 className=" text-xl md:text-4xl font-bold mb-2  ">
                                     {
                                         translation?.servicesPage?.section1
-                                            ?.bottomBlocks?.title
+                                            ?.bottomBlocks[1]?.title
                                     }
                                 </h2>
                                 <p className=" text-base font-normal leading-5 ">
                                     {
                                         translation?.servicesPage?.section1
-                                            ?.bottomBlocks?.text
+                                            ?.bottomBlocks[1]?.text
                                     }
                                 </p>
                             </div>
@@ -80,13 +80,13 @@ export default function Index() {
                                 <h2 className=" text-xl md:text-4xl font-bold mb-2  ">
                                     {
                                         translation?.servicesPage?.section1
-                                            ?.bottomBlocks?.title
+                                            ?.bottomBlocks[2]?.title
                                     }
                                 </h2>
                                 <p className=" text-base font-normal leading-5 ">
                                     {
                                         translation?.servicesPage?.section1
-                                            ?.bottomBlocks?.text
+                                            ?.bottomBlocks[2]?.text
                                     }
                                 </p>
                             </div>

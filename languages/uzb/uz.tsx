@@ -200,10 +200,20 @@ const uz = {
       section1: {
          title: "Biz nima qilamiz",
          pText: "Biz veb-echimlarni yaratish va dasturiy ta'minotni ishlab chiqishga ixtisoslashgan mutaxassislar guruhimiz.",
-         bottomBlocks: {
-            title: "Innovatsiyalar",
-            text: "Biz har doim mijozlarimizni hayratda qoldirish va ilhomlantirish uchun yangi g'oyalar va texnologik echimlarni izlaymiz.",
-         },
+         bottomBlocks: [
+            {
+               title: "Dizayn",
+               text: "Zamonaviy dizayn, o'zingizning engilayishini ifodalaydi. Prototipdan yakun mahsulotgacha - davom etayotgan visual tasavvurlarni yaratamiz.",
+            },
+            {
+               title: "Tajribali jamoa",
+               text: "Malakali jamoa bilan tajribali. Muddatga rioya qilamiz va loyihangizning har bir bosqichida eng yuqori standartlarni kafolatlaymiz.",
+            },
+            {
+               title: "Samarali mahsulot",
+               text: "Yangiliklar bilan barcha muammolarni hal qiladigan innovatsion yechimlar. Bizning maqsadimiz - mijozlar uchun ilhomlantiradigan va samarali mahsulotlar yaratish.",
+            },
+         ]
       },
       section2: {
          title: "amalga oshirilgan loyihalarni ko'ring",

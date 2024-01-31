@@ -195,10 +195,20 @@ const en = {
       section1: {
          title: "What we do",
          pText: "We are a team of professionals specializing in creating web solutions and software development.",
-         bottomBlocks: {
-            title: "Innovations",
-            text: "We are always on the lookout for new ideas and technological solutions to surprise and inspire our customers.",
-         },
+         bottomBlocks: [
+            {
+               title: "Design",
+               text: "Modern design reflecting your uniqueness. From prototype to final product - creating a visual impression that lasts.",
+            },
+            {
+               title: "Experienced specialists",
+               text: "Expert team with rich experience. We meet deadlines and guarantee the highest standards at every stage of your project.",
+            },
+            {
+               title: "Cool Product",
+               text: "Innovative solutions delivering real results. Our mission is to create products that inspire and effectively solve clients' challenges.",
+            },
+         ]
       },
       section2: {
          title: "look at the implemented projects",

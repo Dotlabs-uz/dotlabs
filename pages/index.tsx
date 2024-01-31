@@ -48,10 +48,10 @@ export default function Home() {
 
    useEffect(() => {
       axios
-         .get("https://dotlabs.uz/api/hello")
+         .get(process.env.NEXT_PUBLIC_TOKEN + "/portfolios")
          .then((res) => {
             if (res.status === 200 || res.status === 201) {
-               setData(res.data);
+               setData(res.data?.data);
             }
          })
          .catch((err) => console.log("error", err));

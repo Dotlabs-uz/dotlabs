@@ -8,7 +8,7 @@ import React, { useContext } from "react";
 interface PortfolioProps {}
 
 export const getServerSideProps: GetServerSideProps = async () => {
-   const res = await fetch("https://dotlabs.uz/api/hello");
+   const res = await fetch(`${process.env.NEXT_PUBLIC_TOKEN}/portfolios`);
 
    const data = await res.json();
 
@@ -33,7 +33,7 @@ const Portfolio: React.FC<PortfolioProps> = ({ data }: any) => {
                </h1>
                <p>{translation?.portfolio?.pText}</p>
             </div>
-            <PortfolioContainer arr={data} />
+            <PortfolioContainer arr={data?.data} />
          </section>
       </Layout>
    );

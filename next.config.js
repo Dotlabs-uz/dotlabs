@@ -13,11 +13,18 @@ const nextConfig = {
 		defaultLocale: "ru",
 	},
 	images: {
-		remotePatterns: [{
-			protocol: 'https',
-			hostname: "mc.yandex.ru",
-			port: ''
-		}]
+		remotePatterns: [
+			{
+				protocol: 'https',
+				hostname: "mc.yandex.ru",
+				port: ''
+			},
+			{
+				protocol: 'https',
+				hostname: "storage.googleapis.com",
+				port: ''
+			},
+		]
 	}
 }
 

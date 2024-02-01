@@ -110,6 +110,52 @@
 	}
 }
 
+:root {
+	--gradient-shadow: linear-gradient(
+		45deg,
+		#fb0094,
+		#0000ff,
+		#ff0000,
+		#fb0094,
+		#0000ff,
+		#ff0000
+	);
+}
+
+.shadow {
+	position: relative;
+}
+.shadow:before,
+.shadow:after {
+	content: "";
+	position: absolute;
+	top: -2px;
+	left: -2px;
+	background: var(--gradient-shadow);
+	background-size: 400%;
+	width: calc(100% + 4px);
+	height: calc(100% + 4px);
+	z-index: -1;
+	animation: animate 20s linear infinite;
+}
+
+.shadow:after {
+	filter: blur(30px);
+}
+
+@keyframes animate {
+	0% {
+		background-position: 0 0;
+	}
+	50% {
+		background-position: 300% 0;
+	}
+	100% {
+		background-position: 0 0;
+	}
+}
+
+
 @media (max-width: 600px) {
 	.custom-grid {
 		grid-template-columns: repeat(1, 1fr);

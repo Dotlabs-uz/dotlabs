@@ -12,24 +12,22 @@ import { useForm, SubmitHandler } from "react-hook-form";
 import { useRouter } from "next/router";
 import * as fbq from "../lib/fpixel";
 import Link from "next/link";
+import { HeroParallax } from "@/components/ui/hero-parallax";
 
 export default function Home() {
 	const translation: any = useContext(TranslateContext);
 	const [data, setData] = useState([]);
 	const [loader, setLoader] = useState(false);
-
 	const { push } = useRouter();
 	type userData = { name: string; phone: string };
 	const {
 		register,
 		handleSubmit,
-		watch,
 		reset,
 		formState: { errors },
 	} = useForm<userData>();
 
 	const onSubmit: SubmitHandler<userData> = async (data) => {
-		console.log(data);
 		setLoader(true);
 		try {
 			axios
@@ -42,10 +40,12 @@ export default function Home() {
 						fbq.event("Заявка отправлена", { value: 1 });
 					}
 				});
-		} catch (e) {
-			console.log(e);
+		} catch (e: any) {
+			throw new Error(e.message);
 		}
 	};
+
+	console.log({ data });
 
 	useEffect(() => {
 		axios
@@ -185,12 +185,15 @@ export default function Home() {
 					</div>
 				</div>
 			</section>
-			<section className="w-full md:w-[90%] max-w-[1400px] mx-auto px-5 pb-7">
+			<section className="my-20">
+				<HeroParallax products={data} translation={translation} />
+			</section>
+			{/* <section className="w-full md:w-[90%] max-w-[1400px] mx-auto px-5 pb-7">
 				<h2 className="text-[44px] font-semibold mb-3 uppercase">
 					{translation?.portfolio?.title}
 				</h2>
 				<PortfolioContainer arr={data} />
-			</section>
+			</section> */}
 		</Layout>
 	);
 }

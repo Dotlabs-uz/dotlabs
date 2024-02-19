@@ -110,8 +110,8 @@ const uz = {
       blueButtonText: "Jami xodimlar",
    },
    portfolio: {
-      title: "BIZNING ISHLARIMIZ",
-      pText: "Allaqachon amalga oshirilgan loyihalarga qarang va ishimiz sifatiga ishonch hosil qiling!",
+      title: "So'nggi texnologiyalar bilan ishlovchi dasturlash studiyasi.",
+      pText: "Biz yangi texnologiyalardan va frameworklardan foydalanib, chiroyli mahsulotlar yaratamiz. Biz - dasturchilar va dizaynerlardan iborat guruh.",
    },
    contact: {
       title1: "So'rov qoldiring",

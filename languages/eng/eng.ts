@@ -107,8 +107,8 @@ const en = {
       blueButtonText: "Total employees",
    },
    portfolio: {
-      title: "OUR WORKS",
-      pText: "Take a look at the projects already implemented and make sure of the quality of our work!",
+      title: "The Ultimate <br /> development studio",
+      pText: "We build beautiful products with the latest technologies and frameworks. We are a team of passionate developers and designers that love to build amazing products.",
    },
    contact: {
       title1: "Leave a request",

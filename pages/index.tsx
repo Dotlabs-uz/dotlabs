@@ -188,6 +188,9 @@ export default function Home() {
 			<section className="my-20">
 				<HeroParallax products={data} translation={translation} />
 			</section>
+			<center className="mb-10" >
+				<Link href={"/portfolio"} className="text-xl font-bold underline hover:text-blue-500" >Посмотреть все работы</Link>
+			</center>
 			{/* <section className="w-full md:w-[90%] max-w-[1400px] mx-auto px-5 pb-7">
 				<h2 className="text-[44px] font-semibold mb-3 uppercase">
 					{translation?.portfolio?.title}

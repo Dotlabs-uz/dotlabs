@@ -13,6 +13,7 @@ import { useRouter } from "next/router";
 import * as fbq from "../lib/fpixel";
 import Link from "next/link";
 import { HeroParallax } from "@/components/ui/hero-parallax";
+import getPortfolios from "@/actions/get-portfolios";
 
 export default function Home() {
 	const translation: any = useContext(TranslateContext);
@@ -45,14 +46,16 @@ export default function Home() {
 		}
 	};
 
-	console.log({ data });
+	// console.log(getPortfolios());
+	
 
 	useEffect(() => {
 		axios
-			.get(process.env.NEXT_PUBLIC_TOKEN + "/portfolios")
+			.get("https://dotlabs-admin.vercel.app/api/portfolios")
 			.then((res) => {
 				if (res.status === 200 || res.status === 201) {
-					setData(res.data?.data);
+					setData(res.data);
+					// console.log(res.data);
 				}
 			})
 			.catch((err) => console.log("error", err));

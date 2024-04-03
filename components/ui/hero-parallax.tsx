@@ -56,6 +56,7 @@ export const HeroParallax = ({
 		useTransform(scrollYProgress, [0, 0.2], [-700, 500]),
 		springConfig
 	);
+	
 	return (
 		<div
 			ref={ref}

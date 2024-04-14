@@ -7,14 +7,15 @@ interface PortfolioContainerProps {
 }
 
 const PortfolioContainer: React.FC<PortfolioContainerProps> = ({ arr }) => {
+	
 	return (
 		<div className="custom-grid">
 			{arr.map((item: any) => (
-				<div className="job relative" key={item._id}>
+				<div className="job relative" key={item.id}>
 					<div className="w-full h-full overflow-hidden">
-						<Link href={"/portfolio/" + item._id}>
+						<Link href={"/portfolio/" + item.id}>
 							<Image
-								src={item.image}
+								src={item.imageUrl}
 								alt={item.title}
 								width="1000"
 								height="1000"

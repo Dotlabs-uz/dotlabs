@@ -13,19 +13,14 @@ const nextConfig = {
 		defaultLocale: "ru",
 	},
 	images: {
-		remotePatterns: [
-			{
-				protocol: 'https',
-				hostname: "mc.yandex.ru",
-				port: ''
-			},
-			{
-				protocol: 'https',
-				hostname: "storage.googleapis.com",
-				port: ''
-			},
-		]
-	}
+        remotePatterns: [
+            {
+                protocol: "https",
+                hostname: "res.cloudinary.com",
+                port: "",
+            },
+        ],
+    },
 }
 
 module.exports = nextConfig

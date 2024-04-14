@@ -18,7 +18,7 @@ export const getServerSideProps: GetServerSideProps = async () => {
 };
 
 const Portfolio: React.FC<PortfolioProps> = ({ data }: any) => {
-   const translation: any = useContext(TranslateContext);
+   const translation: any = useContext(TranslateContext);   
 
    return (
       <Layout>
@@ -35,7 +35,7 @@ const Portfolio: React.FC<PortfolioProps> = ({ data }: any) => {
                />
                <p>{translation?.portfolio?.pText}</p>
             </div>
-            <PortfolioContainer arr={data?.data} />
+            <PortfolioContainer arr={data} />
          </section>
       </Layout>
    );

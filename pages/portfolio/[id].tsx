@@ -16,13 +16,15 @@ const PageProject: React.FC<PageProjectProps> = () => {
          .then(res => setData(res.data))
    }, []);
 
+   console.log(data);
+   
    return (
       <Layout>
          <div className="w-full relative overflow-hidden flex justify-between items-start gap-[100px] max-w-[90%] my-0 mx-auto" >
             <p className="mt-20" >
                {data?.description}
             </p>
-            <MacbookScroll src={data?.image} showGradient={false} />
+            <MacbookScroll src={data?.imageUrl} showGradient={false} />
          </div>
       </Layout>
    );

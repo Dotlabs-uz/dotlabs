@@ -13,6 +13,7 @@ import { useRouter } from "next/router";
 import * as fbq from "../lib/fpixel";
 import Link from "next/link";
 import { HeroParallax } from "@/components/ui/hero-parallax";
+import postApplication from "@/actions/postApplications";
 
 export default function Home() {
     const translation: any = useContext(TranslateContext);
@@ -28,7 +29,7 @@ export default function Home() {
     } = useForm<userData>();
 
     const onSubmit: SubmitHandler<userData> = async (data) => {
-        setLoader(true);
+        // setLoader(true);
         try {
             axios
                 .post(`${process.env.NEXT_PUBLIC_TOKEN}/applications`, data)

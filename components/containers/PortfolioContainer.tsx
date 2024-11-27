@@ -7,13 +7,19 @@ interface PortfolioContainerProps {
 }
 
 const PortfolioContainer: React.FC<PortfolioContainerProps> = ({ arr }) => {
-	
 	return (
 		<div className="custom-grid">
 			{arr.map((item: any) => (
 				<div className="job relative" key={item.id}>
 					<div className="w-full h-full overflow-hidden">
-						<Link href={"/portfolio/" + item.id}>
+						<Link
+							href={
+								item.title?.includes("in progress")
+									? "#"
+									: item.url
+							}
+							target="_blank"
+						>
 							<Image
 								src={item.imageUrl}
 								alt={item.title}
@@ -24,7 +30,9 @@ const PortfolioContainer: React.FC<PortfolioContainerProps> = ({ arr }) => {
 						</Link>
 					</div>
 					<Link
-						href={item.url}
+						href={
+							item.title?.includes("in progress") ? "#" : item.url
+						}
 						target="_blank"
 						className="text-xl md:text-2xl font-semibold hover:underline
                      "

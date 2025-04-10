@@ -24,6 +24,19 @@ const Portfolio: React.FC<PortfolioProps> = ({ data }: any) => {
       <Layout>
          <Head>
             <title>Dot Labs - Portfolio</title>
+
+            {/* Open Graph / Facebook */}
+            <meta property="og:title" content="Dot Labs - Portfolio" />
+            <meta property="og:description" content="Check out our latest portfolio of projects at Dot Labs." />
+            <meta property="og:type" content="website" />
+            <meta property="og:url" content="https://dotlabs.uz/en/portfolio" />
+            <meta property="og:image" content="https://dotlabs.uz/en/images/og-image.jpg" />
+
+            {/* Twitter */}
+            <meta name="twitter:card" content="summary_large_image" />
+            <meta name="twitter:title" content="Dot Labs - Portfolio" />
+            <meta name="twitter:description" content="Check out our latest portfolio of projects at Dot Labs." />
+            <meta name="twitter:image" content="https://dotlabs.uz/en/images/og-image.jpg" />
          </Head>
          
          <section className="w-full md:w-[90%] max-w-[1400px] mx-auto px-5 pb-7">

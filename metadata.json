@@ -1,0 +1,7 @@
+{
+  "name": "Dotlabs Studio | Cutting-Edge Digital Agency",
+  "description": "A high-end, award-worthy creative tech studio website designed for 2026 standards, featuring fluid animations and premium UI/UX.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
